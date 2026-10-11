@@ -167,7 +167,7 @@ def test_a_dominated_route_ships_when_its_tail_price_is_lower() -> None:
     )
     assert (
         "B is dominated by A on expected cost, expected hours, and delay risk. "
-        "Its risk-adjusted cost is still lower, so it ships."
+        "Its risk-adjusted cost is $4,900 lower, so it ships."
     ) in tail_pick.explanation.details
 
 
@@ -208,7 +208,11 @@ def test_catalog_seed_ships_a_dominated_route_when_the_tail_is_cheaper() -> None
     rec = recommend(shipment, scenarios=2_000, seed=42)
     assert isinstance(rec, Chosen)
     assert rec.pick.label == "E"
-    assert any(line.startswith("E is dominated by B") for line in rec.explanation.details)
+    assert (
+        "E is dominated by B on expected cost, expected hours, and delay risk. "
+        "Its risk-adjusted cost is $546 lower, so it ships. "
+        "The gap is under 5% of the score, so another sample of the same routes can flip the pick."
+    ) in rec.explanation.details
 
 
 def test_tail_weight_avoids_the_rare_cargo_loss() -> None:

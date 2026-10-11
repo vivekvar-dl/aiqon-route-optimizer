@@ -16,6 +16,7 @@ from routeplan.model import (
 )
 
 MATERIAL_CHANGE = 0.05
+NEAR_TIE_SHARE = 0.05
 Candidate = Option | Infeasible | Dominated
 
 
@@ -46,10 +47,8 @@ def explain_choice(
         details.append(_reconcile(pick, alternatives[0], weights))
         reconciled.add(alternatives[0].label)
     if dominated_by_label is not None:
-        details.append(
-            f"{pick.label} is dominated by {dominated_by_label} on expected cost, "
-            "expected hours, and delay risk. Its risk-adjusted cost is still lower, so it ships."
-        )
+        owner = next(option for option in alternatives if option.label == dominated_by_label)
+        details.append(_dominated_pick_sentence(pick, owner))
     if len(featured) > 1:
         role, other = featured[1]
         details.append(_from_their_side(pick, role, other))
@@ -235,6 +234,27 @@ def _reconcile(pick: Option, other: Option, weights: Weights) -> str:
         else "Priced with custom prices"
     )
     return f"{priced}, {lead}{extra}"
+
+
+def _dominated_pick_sentence(pick: Option, owner: Option) -> str:
+    margin = round(owner.breakdown.total - pick.breakdown.total)
+    if margin <= 0:
+        return (
+            f"{pick.label} is dominated by {owner.label} on expected cost, "
+            "expected hours, and delay risk. The rounded risk-adjusted scores tie, "
+            "so another sample of the same routes can flip the pick."
+        )
+    sentence = (
+        f"{pick.label} is dominated by {owner.label} on expected cost, "
+        "expected hours, and delay risk. "
+        f"Its risk-adjusted cost is ${_money(margin)} lower, so it ships."
+    )
+    if pick.breakdown.total > 0 and margin / pick.breakdown.total < NEAR_TIE_SHARE:
+        return (
+            sentence
+            + " The gap is under 5% of the score, so another sample of the same routes can flip the pick."
+        )
+    return sentence
 
 
 def _dominated_sentence(item: Dominated, winner: Option) -> str:

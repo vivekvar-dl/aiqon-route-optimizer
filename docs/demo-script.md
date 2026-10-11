@@ -20,7 +20,7 @@ In the Streamlit page, keep the same shipment and switch the priority from the s
 
 ## 3:20 A shipment with no feasible route
 
-Select SHP-010. The page should say that no route meets the deadline and name how late the fastest schedule is. Say that the tool refuses to pretend a late schedule is on time, and that lateness is still priced when a planner has to ship anyway.
+Select SHP-010. The page should say that no route meets the deadline and name how late the fastest schedule is. A saved frame of that page is `docs/streamlit-shp010.png`. Say that the tool refuses to pretend a late schedule is on time, and that lateness is still priced when a planner has to ship anyway.
 
 ## 4:10 The scorecard
 
