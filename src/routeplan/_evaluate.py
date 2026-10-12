@@ -7,8 +7,8 @@ from enum import StrEnum
 
 import numpy as np
 
-from routeplan._decide import DEFAULT_SCENARIOS, dominated_by, landed_cost, recommend
-from routeplan._simulate import Outcomes, Stream, simulate
+from routeplan._decide import DEFAULT_SCENARIOS, dominated_by, landed_cost, price, recommend
+from routeplan._simulate import Environment, NOMINAL, Outcomes, Stream, simulate
 from routeplan.model import Chosen, Criteria, NoFeasibleRoute, Priority, Shipment
 
 DEFAULT_REALIZATIONS = 1_000
@@ -38,6 +38,7 @@ class Realized:
     feasible: bool
     pareto: bool
     fallback: bool = False
+    risk_adjusted_cost: float = 0.0
 
 
 @dataclass(frozen=True, slots=True)
@@ -46,6 +47,8 @@ class Row:
     priority: Priority
     recommendation: Chosen | NoFeasibleRoute
     realized: dict[Policy, Realized]
+    risk_oracle_cost: float
+    feasible_risk_oracle_cost: float
 
 
 @dataclass(frozen=True, slots=True)
@@ -56,6 +59,8 @@ class PolicyStats:
     feasible_rate: float
     pareto_rate: float
     mean_regret: float
+    total_risk_adjusted_cost: float
+    mean_risk_regret: float
 
 
 @dataclass(frozen=True, slots=True)
@@ -65,6 +70,7 @@ class Report:
     stability: float
     infeasible: int
     feasible_stats: dict[Policy, PolicyStats]
+    environment: Environment
 
 
 def evaluate(
@@ -73,6 +79,7 @@ def evaluate(
     scenarios: int = DEFAULT_SCENARIOS,
     realizations: int = DEFAULT_REALIZATIONS,
     seed: int = 0,
+    environment: Environment = NOMINAL,
 ) -> Report:
     """Replay each policy on arrivals drawn from a stream the planner never saw."""
     if not shipments:
@@ -80,8 +87,8 @@ def evaluate(
     rows: list[Row] = []
     for shipment in shipments:
         recommendation = recommend(shipment, scenarios=scenarios, seed=seed)
-        rows.append(_row(shipment, recommendation, realizations, seed))
-    return _aggregate(tuple(rows))
+        rows.append(_row(shipment, recommendation, realizations, seed, environment))
+    return _aggregate(tuple(rows), environment)
 
 
 def _row(
@@ -89,13 +96,21 @@ def _row(
     recommendation: Chosen | NoFeasibleRoute,
     realizations: int,
     seed: int,
+    environment: Environment,
 ) -> Row:
     outcomes = {
-        label: simulate(shipment, route, scenarios=realizations, seed=seed, stream=Stream.REALITY)
+        label: simulate(
+            shipment, route, scenarios=realizations, seed=seed,
+            stream=Stream.REALITY, environment=environment,
+        )
         for label, route in shipment.labeled()
     }
     means = {
         label: float(landed_cost(shipment, shipment.route(label), draw, shipment.priority.weights).mean())
+        for label, draw in outcomes.items()
+    }
+    scores = {
+        label: price(shipment, shipment.route(label), draw, shipment.priority.weights).total
         for label, draw in outcomes.items()
     }
     owners = dominated_by(_criteria(recommendation))
@@ -114,12 +129,15 @@ def _row(
     }
     realized = {
         policy: _realized(
-            shipment, label, outcomes[label], means[label], label not in owners,
+            shipment, label, outcomes[label], means[label], scores[label], label not in owners,
             fallback=not eligible and policy in DEADLINE_POLICIES,
         )
         for policy, label in labels.items()
     }
-    return Row(shipment.id, shipment.priority, recommendation, realized)
+    return Row(
+        shipment.id, shipment.priority, recommendation, realized,
+        min(scores.values()), min(scores[label] for label, _ in pool),
+    )
 
 
 def _realized(
@@ -127,13 +145,15 @@ def _realized(
     label: str,
     outcomes: Outcomes,
     cost: float,
+    risk_adjusted_cost: float,
     pareto: bool,
     *,
     fallback: bool = False,
 ) -> Realized:
     on_time = float(np.mean(outcomes.hours <= shipment.deadline))
     return Realized(
-        label, cost, on_time, shipment.route(label).hours <= shipment.deadline, pareto, fallback
+        label, cost, on_time, shipment.route(label).hours <= shipment.deadline,
+        pareto, fallback, risk_adjusted_cost,
     )
 
 
@@ -151,20 +171,24 @@ def _recommended_label(recommendation: Chosen | NoFeasibleRoute) -> str:
     return recommendation.closest.label
 
 
-def _aggregate(rows: tuple[Row, ...]) -> Report:
+def _aggregate(rows: tuple[Row, ...], environment: Environment) -> Report:
     stats = _policy_stats(rows, Policy.ORACLE)
     feasible_rows = tuple(row for row in rows if isinstance(row.recommendation, Chosen))
     feasible_stats = (
-        _policy_stats(feasible_rows, Policy.ORACLE_FEASIBLE, policies=DEADLINE_POLICIES)
+        _policy_stats(
+            feasible_rows, Policy.ORACLE_FEASIBLE, policies=DEADLINE_POLICIES,
+            constrained=True,
+        )
         if feasible_rows else {}
     )
     chosen = [row.recommendation for row in rows if isinstance(row.recommendation, Chosen)]
     stability = sum(item.sensitivity.stability for item in chosen) / len(chosen) if chosen else 0.0
-    return Report(rows, stats, stability, len(rows) - len(feasible_rows), feasible_stats)
+    return Report(rows, stats, stability, len(rows) - len(feasible_rows), feasible_stats, environment)
 
 
 def _policy_stats(
-    rows: tuple[Row, ...], reference: Policy, *, policies: tuple[Policy, ...] = tuple(Policy)
+    rows: tuple[Row, ...], reference: Policy, *, policies: tuple[Policy, ...] = tuple(Policy),
+    constrained: bool = False,
 ) -> dict[Policy, PolicyStats]:
     stats: dict[Policy, PolicyStats] = {}
     for policy in policies:
@@ -174,6 +198,11 @@ def _policy_stats(
         ratios = [cost / base if base else 1.0 for cost, base in zip(costs, recommended, strict=True)]
         regrets = [cost - best for cost, best in zip(costs, oracle, strict=True)]
         picked = [row.realized[policy] for row in rows]
+        risk_regrets = [
+            row.realized[policy].risk_adjusted_cost
+            - (row.feasible_risk_oracle_cost if constrained else row.risk_oracle_cost)
+            for row in rows
+        ]
         stats[policy] = PolicyStats(
             sum(costs),
             sum(ratios) / len(ratios),
@@ -181,5 +210,7 @@ def _policy_stats(
             sum(item.feasible for item in picked) / len(picked),
             sum(item.pareto for item in picked) / len(picked),
             sum(regrets) / len(regrets),
+            sum(item.risk_adjusted_cost for item in picked),
+            sum(risk_regrets) / len(risk_regrets),
         )
     return stats

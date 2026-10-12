@@ -25,4 +25,5 @@ jobs:
           python -m routeplan generate --seed 7 --shipments 30 > /tmp/shipments.json
           cmp data/shipments.json /tmp/shipments.json
           python scripts/run_evaluation.py
-          git diff --exit-code -- results/evaluation.json
+          python scripts/run_robustness.py
+          git diff --exit-code -- results/evaluation.json results/robustness.json

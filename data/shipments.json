@@ -4,14 +4,14 @@
     "origin": "Singapore",
     "destination": "Dubai",
     "priority": "cost-first",
-    "deadline": 156.0,
+    "deadline": 206.0,
     "cargo_value": 430981.0,
     "routes": [
       {
         "first": {
           "mode": "sea",
-          "cost": 473.01,
-          "hours": 101.42,
+          "cost": 496.72,
+          "hours": 117.89,
           "delay_probability": 0.43,
           "congestion": 0.625,
           "geopolitical_risk": 0.3
@@ -21,8 +21,8 @@
             "at": "Colombo",
             "leg": {
               "mode": "sea",
-              "cost": 498.86,
-              "hours": 119.38,
+              "cost": 590.84,
+              "hours": 183.25,
               "delay_probability": 0.39,
               "congestion": 0.525,
               "geopolitical_risk": 0.45
@@ -55,23 +55,23 @@
       },
       {
         "first": {
-          "mode": "rail",
-          "cost": 615.1,
-          "hours": 42.77,
-          "delay_probability": 0.243,
-          "congestion": 0.65,
-          "geopolitical_risk": 0.15
+          "mode": "sea",
+          "cost": 554.9,
+          "hours": 158.29,
+          "delay_probability": 0.47,
+          "congestion": 0.725,
+          "geopolitical_risk": 0.2
         },
         "onward": [
           {
-            "at": "Shenzhen",
+            "at": "Shanghai",
             "leg": {
-              "mode": "rail",
-              "cost": 1081.26,
-              "hours": 87.17,
-              "delay_probability": 0.221,
-              "congestion": 0.55,
-              "geopolitical_risk": 0.27
+              "mode": "air",
+              "cost": 4434.44,
+              "hours": 13.24,
+              "delay_probability": 0.1125,
+              "congestion": 0.625,
+              "geopolitical_risk": 0.1575
             }
           }
         ]
@@ -83,27 +83,27 @@
     "origin": "Busan",
     "destination": "Dubai",
     "priority": "balanced",
-    "deadline": 388.0,
+    "deadline": 446.0,
     "cargo_value": 265562.0,
     "routes": [
       {
         "first": {
           "mode": "sea",
-          "cost": 387.14,
-          "hours": 41.79,
-          "delay_probability": 0.41,
-          "congestion": 0.575,
+          "cost": 595.25,
+          "hours": 186.31,
+          "delay_probability": 0.4,
+          "congestion": 0.55,
           "geopolitical_risk": 0.2
         },
         "onward": [
           {
-            "at": "Shanghai",
+            "at": "Singapore",
             "leg": {
               "mode": "sea",
-              "cost": 639.18,
-              "hours": 216.82,
-              "delay_probability": 0.43,
-              "congestion": 0.625,
+              "cost": 737.55,
+              "hours": 285.14,
+              "delay_probability": 0.42,
+              "congestion": 0.6,
               "geopolitical_risk": 0.45
             }
           }
@@ -134,56 +134,45 @@
       },
       {
         "first": {
-          "mode": "rail",
-          "cost": 532.13,
-          "hours": 34.87,
-          "delay_probability": 0.21,
-          "congestion": 0.5,
-          "geopolitical_risk": 0.15
+          "mode": "sea",
+          "cost": 741.97,
+          "hours": 288.2,
+          "delay_probability": 0.37,
+          "congestion": 0.475,
+          "geopolitical_risk": 0.3
         },
         "onward": [
           {
-            "at": "Shenzhen",
+            "at": "Colombo",
             "leg": {
-              "mode": "rail",
-              "cost": 1081.26,
-              "hours": 87.17,
-              "delay_probability": 0.221,
-              "congestion": 0.55,
-              "geopolitical_risk": 0.27
+              "mode": "air",
+              "cost": 2719.46,
+              "hours": 9.24,
+              "delay_probability": 0.1025,
+              "congestion": 0.525,
+              "geopolitical_risk": 0.1575
             }
           }
         ]
       },
       {
         "first": {
-          "mode": "sea",
-          "cost": 387.14,
-          "hours": 41.79,
-          "delay_probability": 0.41,
-          "congestion": 0.575,
-          "geopolitical_risk": 0.2
+          "mode": "air",
+          "cost": 5448.09,
+          "hours": 15.6,
+          "delay_probability": 0.0975,
+          "congestion": 0.475,
+          "geopolitical_risk": 0.14
         },
         "onward": [
           {
-            "at": "Shanghai",
+            "at": "Istanbul",
             "leg": {
               "mode": "sea",
-              "cost": 1185.56,
-              "hours": 596.25,
-              "delay_probability": 0.42,
-              "congestion": 0.6,
-              "geopolitical_risk": 0.2
-            }
-          },
-          {
-            "at": "Santos",
-            "leg": {
-              "mode": "sea",
-              "cost": 899.55,
-              "hours": 397.63,
-              "delay_probability": 0.37,
-              "congestion": 0.475,
+              "cost": 685.37,
+              "hours": 248.9,
+              "delay_probability": 0.39,
+              "congestion": 0.525,
               "geopolitical_risk": 0.45
             }
           }
@@ -196,28 +185,28 @@
     "origin": "Hamburg",
     "destination": "Colombo",
     "priority": "time-critical",
-    "deadline": 265.0,
+    "deadline": 520.0,
     "cargo_value": 105252.0,
     "routes": [
       {
         "first": {
           "mode": "sea",
-          "cost": 569.58,
-          "hours": 168.49,
-          "delay_probability": 0.36,
-          "congestion": 0.45,
-          "geopolitical_risk": 0.45
+          "cost": 731.38,
+          "hours": 280.85,
+          "delay_probability": 0.37,
+          "congestion": 0.475,
+          "geopolitical_risk": 0.35
         },
         "onward": [
           {
-            "at": "Dubai",
+            "at": "Port Said",
             "leg": {
               "mode": "sea",
-              "cost": 498.86,
-              "hours": 119.38,
-              "delay_probability": 0.39,
-              "congestion": 0.525,
-              "geopolitical_risk": 0.45
+              "cost": 673.95,
+              "hours": 240.96,
+              "delay_probability": 0.4,
+              "congestion": 0.55,
+              "geopolitical_risk": 0.35
             }
           }
         ]
@@ -247,56 +236,45 @@
       },
       {
         "first": {
-          "mode": "rail",
-          "cost": 528.22,
-          "hours": 34.5,
-          "delay_probability": 0.2045,
+          "mode": "sea",
+          "cost": 664.68,
+          "hours": 234.53,
+          "delay_probability": 0.37,
           "congestion": 0.475,
-          "geopolitical_risk": 0.24
+          "geopolitical_risk": 0.4
         },
         "onward": [
           {
             "at": "Istanbul",
             "leg": {
-              "mode": "rail",
-              "cost": 1129.58,
-              "hours": 91.77,
-              "delay_probability": 0.221,
+              "mode": "air",
+              "cost": 4355.51,
+              "hours": 13.05,
+              "delay_probability": 0.105,
               "congestion": 0.55,
-              "geopolitical_risk": 0.24
+              "geopolitical_risk": 0.14
             }
           }
         ]
       },
       {
         "first": {
-          "mode": "sea",
-          "cost": 569.58,
-          "hours": 168.49,
-          "delay_probability": 0.36,
-          "congestion": 0.45,
-          "geopolitical_risk": 0.45
+          "mode": "air",
+          "cost": 5587.26,
+          "hours": 15.93,
+          "delay_probability": 0.1075,
+          "congestion": 0.575,
+          "geopolitical_risk": 0.07
         },
         "onward": [
           {
-            "at": "Dubai",
+            "at": "Shanghai",
             "leg": {
               "mode": "sea",
-              "cost": 954.16,
-              "hours": 435.56,
-              "delay_probability": 0.41,
-              "congestion": 0.575,
-              "geopolitical_risk": 0.45
-            }
-          },
-          {
-            "at": "Los Angeles",
-            "leg": {
-              "mode": "sea",
-              "cost": 1029.77,
-              "hours": 488.06,
-              "delay_probability": 0.42,
-              "congestion": 0.6,
+              "cost": 701.62,
+              "hours": 260.18,
+              "delay_probability": 0.44,
+              "congestion": 0.65,
               "geopolitical_risk": 0.3
             }
           }
@@ -305,22 +283,22 @@
       {
         "first": {
           "mode": "air",
-          "cost": 5909.0,
-          "hours": 16.68,
-          "delay_probability": 0.1025,
-          "congestion": 0.525,
-          "geopolitical_risk": 0.035
+          "cost": 1993.0,
+          "hours": 7.55,
+          "delay_probability": 0.0975,
+          "congestion": 0.475,
+          "geopolitical_risk": 0.14
         },
         "onward": [
           {
-            "at": "Los Angeles",
+            "at": "Istanbul",
             "leg": {
               "mode": "air",
-              "cost": 9208.3,
-              "hours": 24.37,
-              "delay_probability": 0.11,
-              "congestion": 0.6,
-              "geopolitical_risk": 0.105
+              "cost": 4355.51,
+              "hours": 13.05,
+              "delay_probability": 0.105,
+              "congestion": 0.55,
+              "geopolitical_risk": 0.14
             }
           }
         ]
@@ -332,28 +310,28 @@
     "origin": "Shanghai",
     "destination": "Santos",
     "priority": "risk-averse",
-    "deadline": 317.0,
+    "deadline": 528.0,
     "cargo_value": 273084.0,
     "routes": [
       {
         "first": {
           "mode": "sea",
-          "cost": 709.32,
-          "hours": 265.52,
+          "cost": 701.62,
+          "hours": 260.18,
           "delay_probability": 0.44,
           "congestion": 0.65,
-          "geopolitical_risk": 0.4
+          "geopolitical_risk": 0.3
         },
         "onward": [
           {
-            "at": "Istanbul",
+            "at": "Colombo",
             "leg": {
               "mode": "sea",
-              "cost": 826.64,
-              "hours": 347.0,
+              "cost": 1093.94,
+              "hours": 532.63,
               "delay_probability": 0.38,
               "congestion": 0.5,
-              "geopolitical_risk": 0.4
+              "geopolitical_risk": 0.3
             }
           }
         ]
@@ -383,23 +361,23 @@
       },
       {
         "first": {
-          "mode": "rail",
-          "cost": 1149.68,
-          "hours": 93.68,
-          "delay_probability": 0.2375,
-          "congestion": 0.625,
-          "geopolitical_risk": 0.27
+          "mode": "sea",
+          "cost": 934.57,
+          "hours": 421.95,
+          "delay_probability": 0.46,
+          "congestion": 0.7,
+          "geopolitical_risk": 0.2
         },
         "onward": [
           {
-            "at": "Dubai",
+            "at": "Los Angeles",
             "leg": {
-              "mode": "rail",
-              "cost": 1959.7,
-              "hours": 170.83,
-              "delay_probability": 0.2045,
-              "congestion": 0.475,
-              "geopolitical_risk": 0.27
+              "mode": "air",
+              "cost": 6369.02,
+              "hours": 17.75,
+              "delay_probability": 0.105,
+              "congestion": 0.55,
+              "geopolitical_risk": 0.07
             }
           }
         ]
@@ -411,28 +389,28 @@
     "origin": "Dubai",
     "destination": "Los Angeles",
     "priority": "cost-first",
-    "deadline": 704.0,
+    "deadline": 669.0,
     "cargo_value": 86947.0,
     "routes": [
       {
         "first": {
           "mode": "sea",
-          "cost": 569.58,
-          "hours": 168.49,
-          "delay_probability": 0.36,
-          "congestion": 0.45,
+          "cost": 942.46,
+          "hours": 427.43,
+          "delay_probability": 0.43,
+          "congestion": 0.625,
           "geopolitical_risk": 0.45
         },
         "onward": [
           {
-            "at": "Hamburg",
+            "at": "Shanghai",
             "leg": {
               "mode": "sea",
-              "cost": 759.83,
-              "hours": 300.6,
-              "delay_probability": 0.39,
-              "congestion": 0.525,
-              "geopolitical_risk": 0.1
+              "cost": 934.57,
+              "hours": 421.95,
+              "delay_probability": 0.46,
+              "congestion": 0.7,
+              "geopolitical_risk": 0.2
             }
           }
         ]
@@ -462,56 +440,45 @@
       },
       {
         "first": {
-          "mode": "rail",
-          "cost": 669.25,
-          "hours": 47.93,
-          "delay_probability": 0.2155,
-          "congestion": 0.525,
-          "geopolitical_risk": 0.27
+          "mode": "sea",
+          "cost": 942.46,
+          "hours": 427.43,
+          "delay_probability": 0.43,
+          "congestion": 0.625,
+          "geopolitical_risk": 0.45
         },
         "onward": [
           {
-            "at": "Istanbul",
+            "at": "Shanghai",
             "leg": {
-              "mode": "rail",
-              "cost": 1797.35,
-              "hours": 155.37,
-              "delay_probability": 0.232,
-              "congestion": 0.6,
-              "geopolitical_risk": 0.24
+              "mode": "air",
+              "cost": 6650.86,
+              "hours": 18.41,
+              "delay_probability": 0.12,
+              "congestion": 0.7,
+              "geopolitical_risk": 0.07
             }
           }
         ]
       },
       {
         "first": {
-          "mode": "sea",
-          "cost": 569.58,
-          "hours": 168.49,
-          "delay_probability": 0.36,
-          "congestion": 0.45,
-          "geopolitical_risk": 0.45
+          "mode": "air",
+          "cost": 4434.44,
+          "hours": 13.24,
+          "delay_probability": 0.1125,
+          "congestion": 0.625,
+          "geopolitical_risk": 0.1575
         },
         "onward": [
           {
-            "at": "Hamburg",
+            "at": "Shanghai",
             "leg": {
               "mode": "sea",
-              "cost": 807.67,
-              "hours": 333.83,
-              "delay_probability": 0.35,
-              "congestion": 0.425,
-              "geopolitical_risk": 0.2
-            }
-          },
-          {
-            "at": "Santos",
-            "leg": {
-              "mode": "sea",
-              "cost": 797.47,
-              "hours": 326.74,
-              "delay_probability": 0.4,
-              "congestion": 0.55,
+              "cost": 934.57,
+              "hours": 421.95,
+              "delay_probability": 0.46,
+              "congestion": 0.7,
               "geopolitical_risk": 0.2
             }
           }
@@ -524,28 +491,28 @@
     "origin": "Santos",
     "destination": "Shanghai",
     "priority": "balanced",
-    "deadline": 555.0,
+    "deadline": 865.0,
     "cargo_value": 982306.0,
     "routes": [
       {
         "first": {
           "mode": "sea",
-          "cost": 826.64,
-          "hours": 347.0,
+          "cost": 1093.94,
+          "hours": 532.63,
           "delay_probability": 0.38,
           "congestion": 0.5,
-          "geopolitical_risk": 0.4
+          "geopolitical_risk": 0.3
         },
         "onward": [
           {
-            "at": "Istanbul",
+            "at": "Colombo",
             "leg": {
               "mode": "sea",
-              "cost": 709.32,
-              "hours": 265.52,
+              "cost": 701.62,
+              "hours": 260.18,
               "delay_probability": 0.44,
               "congestion": 0.65,
-              "geopolitical_risk": 0.4
+              "geopolitical_risk": 0.3
             }
           }
         ]
@@ -575,57 +542,23 @@
       },
       {
         "first": {
-          "mode": "rail",
-          "cost": 1959.7,
-          "hours": 170.83,
-          "delay_probability": 0.2045,
-          "congestion": 0.475,
-          "geopolitical_risk": 0.27
-        },
-        "onward": [
-          {
-            "at": "Dubai",
-            "leg": {
-              "mode": "rail",
-              "cost": 1149.68,
-              "hours": 93.68,
-              "delay_probability": 0.2375,
-              "congestion": 0.625,
-              "geopolitical_risk": 0.27
-            }
-          }
-        ]
-      },
-      {
-        "first": {
           "mode": "sea",
-          "cost": 826.64,
-          "hours": 347.0,
-          "delay_probability": 0.38,
-          "congestion": 0.5,
-          "geopolitical_risk": 0.4
+          "cost": 897.48,
+          "hours": 396.2,
+          "delay_probability": 0.35,
+          "congestion": 0.425,
+          "geopolitical_risk": 0.2
         },
         "onward": [
           {
-            "at": "Istanbul",
+            "at": "Hamburg",
             "leg": {
-              "mode": "sea",
-              "cost": 847.36,
-              "hours": 361.39,
-              "delay_probability": 0.42,
-              "congestion": 0.6,
-              "geopolitical_risk": 0.4
-            }
-          },
-          {
-            "at": "Los Angeles",
-            "leg": {
-              "mode": "sea",
-              "cost": 820.53,
-              "hours": 342.75,
-              "delay_probability": 0.46,
-              "congestion": 0.7,
-              "geopolitical_risk": 0.2
+              "mode": "air",
+              "cost": 5587.26,
+              "hours": 15.93,
+              "delay_probability": 0.1075,
+              "congestion": 0.575,
+              "geopolitical_risk": 0.07
             }
           }
         ]
@@ -643,12 +576,35 @@
           {
             "at": "Los Angeles",
             "leg": {
-              "mode": "air",
-              "cost": 6650.86,
-              "hours": 18.41,
-              "delay_probability": 0.12,
+              "mode": "sea",
+              "cost": 934.57,
+              "hours": 421.95,
+              "delay_probability": 0.46,
               "congestion": 0.7,
-              "geopolitical_risk": 0.07
+              "geopolitical_risk": 0.2
+            }
+          }
+        ]
+      },
+      {
+        "first": {
+          "mode": "air",
+          "cost": 7616.68,
+          "hours": 20.66,
+          "delay_probability": 0.0975,
+          "congestion": 0.475,
+          "geopolitical_risk": 0.1575
+        },
+        "onward": [
+          {
+            "at": "Dubai",
+            "leg": {
+              "mode": "air",
+              "cost": 4434.44,
+              "hours": 13.24,
+              "delay_probability": 0.1125,
+              "congestion": 0.625,
+              "geopolitical_risk": 0.1575
             }
           }
         ]
@@ -660,28 +616,28 @@
     "origin": "Singapore",
     "destination": "Rotterdam",
     "priority": "time-critical",
-    "deadline": 193.0,
+    "deadline": 356.0,
     "cargo_value": 1415444.0,
     "routes": [
       {
         "first": {
           "mode": "sea",
-          "cost": 806.61,
-          "hours": 333.09,
-          "delay_probability": 0.4,
-          "congestion": 0.55,
-          "geopolitical_risk": 0.15
+          "cost": 820.67,
+          "hours": 342.85,
+          "delay_probability": 0.43,
+          "congestion": 0.625,
+          "geopolitical_risk": 0.35
         },
         "onward": [
           {
-            "at": "Hamburg",
+            "at": "Port Said",
             "leg": {
               "mode": "sea",
-              "cost": 369.44,
-              "hours": 29.5,
-              "delay_probability": 0.35,
-              "congestion": 0.425,
-              "geopolitical_risk": 0.05
+              "cost": 701.64,
+              "hours": 260.19,
+              "delay_probability": 0.38,
+              "congestion": 0.5,
+              "geopolitical_risk": 0.35
             }
           }
         ]
@@ -711,23 +667,23 @@
       },
       {
         "first": {
-          "mode": "rail",
-          "cost": 1460.81,
-          "hours": 123.32,
-          "delay_probability": 0.2375,
-          "congestion": 0.625,
-          "geopolitical_risk": 0.24
+          "mode": "sea",
+          "cost": 737.55,
+          "hours": 285.14,
+          "delay_probability": 0.42,
+          "congestion": 0.6,
+          "geopolitical_risk": 0.45
         },
         "onward": [
           {
-            "at": "Istanbul",
+            "at": "Dubai",
             "leg": {
-              "mode": "rail",
-              "cost": 563.67,
-              "hours": 37.87,
-              "delay_probability": 0.21,
-              "congestion": 0.5,
-              "geopolitical_risk": 0.24
+              "mode": "air",
+              "cost": 3758.68,
+              "hours": 11.66,
+              "delay_probability": 0.0975,
+              "congestion": 0.475,
+              "geopolitical_risk": 0.1575
             }
           }
         ]
@@ -739,27 +695,27 @@
     "origin": "Shanghai",
     "destination": "Colombo",
     "priority": "risk-averse",
-    "deadline": 295.0,
+    "deadline": 250.0,
     "cargo_value": 293436.0,
     "routes": [
       {
         "first": {
           "mode": "sea",
-          "cost": 404.59,
-          "hours": 53.91,
-          "delay_probability": 0.45,
-          "congestion": 0.675,
-          "geopolitical_risk": 0.25
+          "cost": 554.9,
+          "hours": 158.29,
+          "delay_probability": 0.47,
+          "congestion": 0.725,
+          "geopolitical_risk": 0.2
         },
         "onward": [
           {
-            "at": "Shenzhen",
+            "at": "Singapore",
             "leg": {
               "mode": "sea",
-              "cost": 532.34,
-              "hours": 142.62,
-              "delay_probability": 0.41,
-              "congestion": 0.575,
+              "cost": 496.72,
+              "hours": 117.89,
+              "delay_probability": 0.43,
+              "congestion": 0.625,
               "geopolitical_risk": 0.3
             }
           }
@@ -790,56 +746,45 @@
       },
       {
         "first": {
-          "mode": "rail",
-          "cost": 783.41,
-          "hours": 58.8,
-          "delay_probability": 0.2595,
+          "mode": "sea",
+          "cost": 554.9,
+          "hours": 158.29,
+          "delay_probability": 0.47,
           "congestion": 0.725,
-          "geopolitical_risk": 0.12
+          "geopolitical_risk": 0.2
         },
         "onward": [
           {
             "at": "Singapore",
             "leg": {
-              "mode": "rail",
-              "cost": 632.69,
-              "hours": 44.45,
-              "delay_probability": 0.2375,
+              "mode": "air",
+              "cost": 2403.44,
+              "hours": 8.5,
+              "delay_probability": 0.1125,
               "congestion": 0.625,
-              "geopolitical_risk": 0.18
+              "geopolitical_risk": 0.105
             }
           }
         ]
       },
       {
         "first": {
-          "mode": "sea",
-          "cost": 404.59,
-          "hours": 53.91,
-          "delay_probability": 0.45,
-          "congestion": 0.675,
-          "geopolitical_risk": 0.25
+          "mode": "air",
+          "cost": 2995.55,
+          "hours": 9.88,
+          "delay_probability": 0.1225,
+          "congestion": 0.725,
+          "geopolitical_risk": 0.07
         },
         "onward": [
           {
-            "at": "Shenzhen",
+            "at": "Singapore",
             "leg": {
               "mode": "sea",
-              "cost": 1160.32,
-              "hours": 578.72,
-              "delay_probability": 0.39,
-              "congestion": 0.525,
-              "geopolitical_risk": 0.25
-            }
-          },
-          {
-            "at": "Santos",
-            "leg": {
-              "mode": "sea",
-              "cost": 979.32,
-              "hours": 453.03,
-              "delay_probability": 0.38,
-              "congestion": 0.5,
+              "cost": 496.72,
+              "hours": 117.89,
+              "delay_probability": 0.43,
+              "congestion": 0.625,
               "geopolitical_risk": 0.3
             }
           }
@@ -852,28 +797,28 @@
     "origin": "Busan",
     "destination": "New York",
     "priority": "cost-first",
-    "deadline": 414.0,
+    "deadline": 733.0,
     "cargo_value": 539009.0,
     "routes": [
       {
         "first": {
           "mode": "sea",
-          "cost": 387.14,
-          "hours": 41.79,
-          "delay_probability": 0.41,
-          "congestion": 0.575,
+          "cost": 894.23,
+          "hours": 393.93,
+          "delay_probability": 0.39,
+          "congestion": 0.525,
           "geopolitical_risk": 0.2
         },
         "onward": [
           {
-            "at": "Shanghai",
+            "at": "Los Angeles",
             "leg": {
               "mode": "sea",
-              "cost": 883.76,
-              "hours": 386.67,
-              "delay_probability": 0.43,
-              "congestion": 0.625,
-              "geopolitical_risk": 0.2
+              "cost": 773.17,
+              "hours": 309.87,
+              "delay_probability": 0.41,
+              "congestion": 0.575,
+              "geopolitical_risk": 0.1
             }
           }
         ]
@@ -903,57 +848,23 @@
       },
       {
         "first": {
-          "mode": "rail",
-          "cost": 1600.25,
-          "hours": 136.6,
-          "delay_probability": 0.2155,
+          "mode": "sea",
+          "cost": 894.23,
+          "hours": 393.93,
+          "delay_probability": 0.39,
           "congestion": 0.525,
-          "geopolitical_risk": 0.12
+          "geopolitical_risk": 0.2
         },
         "onward": [
           {
             "at": "Los Angeles",
             "leg": {
-              "mode": "rail",
-              "cost": 802.94,
-              "hours": 60.66,
-              "delay_probability": 0.2265,
+              "mode": "air",
+              "cost": 3072.27,
+              "hours": 10.06,
+              "delay_probability": 0.1075,
               "congestion": 0.575,
-              "geopolitical_risk": 0.06
-            }
-          }
-        ]
-      },
-      {
-        "first": {
-          "mode": "sea",
-          "cost": 387.14,
-          "hours": 41.79,
-          "delay_probability": 0.41,
-          "congestion": 0.575,
-          "geopolitical_risk": 0.2
-        },
-        "onward": [
-          {
-            "at": "Shanghai",
-            "leg": {
-              "mode": "sea",
-              "cost": 1185.56,
-              "hours": 596.25,
-              "delay_probability": 0.42,
-              "congestion": 0.6,
-              "geopolitical_risk": 0.2
-            }
-          },
-          {
-            "at": "Santos",
-            "leg": {
-              "mode": "sea",
-              "cost": 698.19,
-              "hours": 257.8,
-              "delay_probability": 0.37,
-              "congestion": 0.475,
-              "geopolitical_risk": 0.2
+              "geopolitical_risk": 0.035
             }
           }
         ]
@@ -961,22 +872,45 @@
       {
         "first": {
           "mode": "air",
-          "cost": 11184.09,
-          "hours": 28.97,
-          "delay_probability": 0.0925,
-          "congestion": 0.425,
+          "cost": 5448.09,
+          "hours": 15.6,
+          "delay_probability": 0.0975,
+          "congestion": 0.475,
+          "geopolitical_risk": 0.14
+        },
+        "onward": [
+          {
+            "at": "Istanbul",
+            "leg": {
+              "mode": "sea",
+              "cost": 807.42,
+              "hours": 333.65,
+              "delay_probability": 0.39,
+              "congestion": 0.525,
+              "geopolitical_risk": 0.4
+            }
+          }
+        ]
+      },
+      {
+        "first": {
+          "mode": "air",
+          "cost": 6204.55,
+          "hours": 17.36,
+          "delay_probability": 0.1025,
+          "congestion": 0.525,
           "geopolitical_risk": 0.07
         },
         "onward": [
           {
-            "at": "Santos",
+            "at": "Los Angeles",
             "leg": {
               "mode": "air",
-              "cost": 5155.6,
-              "hours": 14.92,
-              "delay_probability": 0.0975,
-              "congestion": 0.475,
-              "geopolitical_risk": 0.07
+              "cost": 3072.27,
+              "hours": 10.06,
+              "delay_probability": 0.1075,
+              "congestion": 0.575,
+              "geopolitical_risk": 0.035
             }
           }
         ]
@@ -994,21 +928,21 @@
       {
         "first": {
           "mode": "sea",
-          "cost": 784.01,
-          "hours": 317.39,
-          "delay_probability": 0.39,
-          "congestion": 0.525,
-          "geopolitical_risk": 0.2
+          "cost": 547.6,
+          "hours": 153.22,
+          "delay_probability": 0.37,
+          "congestion": 0.475,
+          "geopolitical_risk": 0.1
         },
         "onward": [
           {
-            "at": "Busan",
+            "at": "Honolulu",
             "leg": {
               "mode": "sea",
-              "cost": 440.69,
-              "hours": 78.98,
-              "delay_probability": 0.38,
-              "congestion": 0.5,
+              "cost": 814.26,
+              "hours": 338.41,
+              "delay_probability": 0.36,
+              "congestion": 0.45,
               "geopolitical_risk": 0.25
             }
           }
@@ -1039,23 +973,23 @@
       },
       {
         "first": {
-          "mode": "rail",
-          "cost": 1713.86,
-          "hours": 147.41,
-          "delay_probability": 0.254,
-          "congestion": 0.7,
-          "geopolitical_risk": 0.12
+          "mode": "sea",
+          "cost": 773.17,
+          "hours": 309.87,
+          "delay_probability": 0.41,
+          "congestion": 0.575,
+          "geopolitical_risk": 0.1
         },
         "onward": [
           {
-            "at": "Shanghai",
+            "at": "New York",
             "leg": {
-              "mode": "rail",
-              "cost": 419.84,
-              "hours": 24.18,
-              "delay_probability": 0.2485,
-              "congestion": 0.675,
-              "geopolitical_risk": 0.15
+              "mode": "air",
+              "cost": 8014.57,
+              "hours": 21.58,
+              "delay_probability": 0.105,
+              "congestion": 0.55,
+              "geopolitical_risk": 0.0875
             }
           }
         ]
@@ -1067,28 +1001,28 @@
     "origin": "Singapore",
     "destination": "Istanbul",
     "priority": "time-critical",
-    "deadline": 462.0,
+    "deadline": 349.0,
     "cargo_value": 131847.0,
     "routes": [
       {
         "first": {
           "mode": "sea",
-          "cost": 612.96,
-          "hours": 198.61,
-          "delay_probability": 0.42,
-          "congestion": 0.6,
-          "geopolitical_risk": 0.45
+          "cost": 644.78,
+          "hours": 220.71,
+          "delay_probability": 0.38,
+          "congestion": 0.5,
+          "geopolitical_risk": 0.2
         },
         "onward": [
           {
-            "at": "Dubai",
+            "at": "Salalah",
             "leg": {
               "mode": "sea",
-              "cost": 484.76,
-              "hours": 109.58,
-              "delay_probability": 0.39,
-              "congestion": 0.525,
-              "geopolitical_risk": 0.45
+              "cost": 592.59,
+              "hours": 184.47,
+              "delay_probability": 0.35,
+              "congestion": 0.425,
+              "geopolitical_risk": 0.4
             }
           }
         ]
@@ -1118,54 +1052,43 @@
       },
       {
         "first": {
-          "mode": "rail",
-          "cost": 632.69,
-          "hours": 44.45,
-          "delay_probability": 0.2375,
-          "congestion": 0.625,
-          "geopolitical_risk": 0.18
+          "mode": "sea",
+          "cost": 595.25,
+          "hours": 186.31,
+          "delay_probability": 0.4,
+          "congestion": 0.55,
+          "geopolitical_risk": 0.2
         },
         "onward": [
           {
-            "at": "Colombo",
+            "at": "Busan",
             "leg": {
-              "mode": "rail",
-              "cost": 1129.58,
-              "hours": 91.77,
-              "delay_probability": 0.221,
-              "congestion": 0.55,
-              "geopolitical_risk": 0.24
+              "mode": "air",
+              "cost": 5448.09,
+              "hours": 15.6,
+              "delay_probability": 0.0975,
+              "congestion": 0.475,
+              "geopolitical_risk": 0.14
             }
           }
         ]
       },
       {
         "first": {
-          "mode": "sea",
-          "cost": 612.96,
-          "hours": 198.61,
-          "delay_probability": 0.42,
-          "congestion": 0.6,
-          "geopolitical_risk": 0.45
+          "mode": "air",
+          "cost": 6706.57,
+          "hours": 18.54,
+          "delay_probability": 0.1075,
+          "congestion": 0.575,
+          "geopolitical_risk": 0.0525
         },
         "onward": [
           {
-            "at": "Dubai",
+            "at": "Rotterdam",
             "leg": {
               "mode": "sea",
-              "cost": 899.55,
-              "hours": 397.63,
-              "delay_probability": 0.37,
-              "congestion": 0.475,
-              "geopolitical_risk": 0.45
-            }
-          },
-          {
-            "at": "Santos",
-            "leg": {
-              "mode": "sea",
-              "cost": 826.64,
-              "hours": 347.0,
+              "cost": 634.94,
+              "hours": 213.87,
               "delay_probability": 0.38,
               "congestion": 0.5,
               "geopolitical_risk": 0.4
@@ -1180,28 +1103,28 @@
     "origin": "Shanghai",
     "destination": "Los Angeles",
     "priority": "risk-averse",
-    "deadline": 394.0,
+    "deadline": 598.0,
     "cargo_value": 955838.0,
     "routes": [
       {
         "first": {
           "mode": "sea",
-          "cost": 387.14,
-          "hours": 41.79,
-          "delay_probability": 0.41,
-          "congestion": 0.575,
+          "cost": 736.97,
+          "hours": 284.73,
+          "delay_probability": 0.39,
+          "congestion": 0.525,
           "geopolitical_risk": 0.2
         },
         "onward": [
           {
-            "at": "Busan",
+            "at": "Honolulu",
             "leg": {
               "mode": "sea",
-              "cost": 784.01,
-              "hours": 317.39,
-              "delay_probability": 0.39,
-              "congestion": 0.525,
-              "geopolitical_risk": 0.2
+              "cost": 547.6,
+              "hours": 153.22,
+              "delay_probability": 0.37,
+              "congestion": 0.475,
+              "geopolitical_risk": 0.1
             }
           }
         ]
@@ -1231,57 +1154,23 @@
       },
       {
         "first": {
-          "mode": "rail",
-          "cost": 419.84,
-          "hours": 24.18,
-          "delay_probability": 0.2485,
-          "congestion": 0.675,
-          "geopolitical_risk": 0.15
-        },
-        "onward": [
-          {
-            "at": "Shenzhen",
-            "leg": {
-              "mode": "rail",
-              "cost": 1882.38,
-              "hours": 163.46,
-              "delay_probability": 0.2375,
-              "congestion": 0.625,
-              "geopolitical_risk": 0.15
-            }
-          }
-        ]
-      },
-      {
-        "first": {
           "mode": "sea",
-          "cost": 387.14,
-          "hours": 41.79,
-          "delay_probability": 0.41,
-          "congestion": 0.575,
-          "geopolitical_risk": 0.2
+          "cost": 701.62,
+          "hours": 260.18,
+          "delay_probability": 0.44,
+          "congestion": 0.65,
+          "geopolitical_risk": 0.3
         },
         "onward": [
           {
-            "at": "Busan",
+            "at": "Colombo",
             "leg": {
-              "mode": "sea",
-              "cost": 1191.43,
-              "hours": 600.32,
-              "delay_probability": 0.35,
-              "congestion": 0.425,
-              "geopolitical_risk": 0.2
-            }
-          },
-          {
-            "at": "Santos",
-            "leg": {
-              "mode": "sea",
-              "cost": 797.47,
-              "hours": 326.74,
-              "delay_probability": 0.4,
-              "congestion": 0.55,
-              "geopolitical_risk": 0.2
+              "mode": "air",
+              "cost": 9208.3,
+              "hours": 24.37,
+              "delay_probability": 0.11,
+              "congestion": 0.6,
+              "geopolitical_risk": 0.105
             }
           }
         ]
@@ -1289,22 +1178,45 @@
       {
         "first": {
           "mode": "air",
-          "cost": 11112.37,
-          "hours": 28.81,
-          "delay_probability": 0.11,
-          "congestion": 0.6,
+          "cost": 7423.77,
+          "hours": 20.21,
+          "delay_probability": 0.1125,
+          "congestion": 0.625,
           "geopolitical_risk": 0.07
         },
         "onward": [
           {
-            "at": "Santos",
+            "at": "New York",
+            "leg": {
+              "mode": "sea",
+              "cost": 773.17,
+              "hours": 309.87,
+              "delay_probability": 0.41,
+              "congestion": 0.575,
+              "geopolitical_risk": 0.1
+            }
+          }
+        ]
+      },
+      {
+        "first": {
+          "mode": "air",
+          "cost": 1567.25,
+          "hours": 6.56,
+          "delay_probability": 0.1175,
+          "congestion": 0.675,
+          "geopolitical_risk": 0.0875
+        },
+        "onward": [
+          {
+            "at": "Shenzhen",
             "leg": {
               "mode": "air",
-              "cost": 6369.02,
-              "hours": 17.75,
-              "delay_probability": 0.105,
-              "congestion": 0.55,
-              "geopolitical_risk": 0.07
+              "cost": 7312.92,
+              "hours": 19.95,
+              "delay_probability": 0.1125,
+              "congestion": 0.625,
+              "geopolitical_risk": 0.0875
             }
           }
         ]
@@ -1316,28 +1228,28 @@
     "origin": "Dubai",
     "destination": "Shanghai",
     "priority": "cost-first",
-    "deadline": 145.0,
+    "deadline": 317.0,
     "cargo_value": 403243.0,
     "routes": [
       {
         "first": {
           "mode": "sea",
-          "cost": 617.19,
-          "hours": 201.55,
-          "delay_probability": 0.4,
-          "congestion": 0.55,
+          "cost": 590.84,
+          "hours": 183.25,
+          "delay_probability": 0.39,
+          "congestion": 0.525,
           "geopolitical_risk": 0.45
         },
         "onward": [
           {
-            "at": "Shenzhen",
+            "at": "Colombo",
             "leg": {
               "mode": "sea",
-              "cost": 404.59,
-              "hours": 53.91,
-              "delay_probability": 0.45,
-              "congestion": 0.675,
-              "geopolitical_risk": 0.25
+              "cost": 701.62,
+              "hours": 260.18,
+              "delay_probability": 0.44,
+              "congestion": 0.65,
+              "geopolitical_risk": 0.3
             }
           }
         ]
@@ -1367,23 +1279,23 @@
       },
       {
         "first": {
-          "mode": "rail",
-          "cost": 1233.0,
-          "hours": 101.62,
-          "delay_probability": 0.199,
-          "congestion": 0.45,
-          "geopolitical_risk": 0.27
+          "mode": "sea",
+          "cost": 685.37,
+          "hours": 248.9,
+          "delay_probability": 0.39,
+          "congestion": 0.525,
+          "geopolitical_risk": 0.45
         },
         "onward": [
           {
-            "at": "Busan",
+            "at": "Istanbul",
             "leg": {
-              "mode": "rail",
-              "cost": 365.53,
-              "hours": 19.0,
-              "delay_probability": 0.2265,
-              "congestion": 0.575,
-              "geopolitical_risk": 0.12
+              "mode": "air",
+              "cost": 5291.64,
+              "hours": 15.24,
+              "delay_probability": 0.115,
+              "congestion": 0.65,
+              "geopolitical_risk": 0.14
             }
           }
         ]
@@ -1395,14 +1307,14 @@
     "origin": "Dubai",
     "destination": "Hamburg",
     "priority": "balanced",
-    "deadline": 282.0,
+    "deadline": 385.0,
     "cargo_value": 1389071.0,
     "routes": [
       {
         "first": {
           "mode": "sea",
-          "cost": 484.76,
-          "hours": 109.58,
+          "cost": 685.37,
+          "hours": 248.9,
           "delay_probability": 0.39,
           "congestion": 0.525,
           "geopolitical_risk": 0.45
@@ -1412,8 +1324,8 @@
             "at": "Istanbul",
             "leg": {
               "mode": "sea",
-              "cost": 439.43,
-              "hours": 78.1,
+              "cost": 664.68,
+              "hours": 234.53,
               "delay_probability": 0.37,
               "congestion": 0.475,
               "geopolitical_risk": 0.4
@@ -1446,32 +1358,9 @@
       },
       {
         "first": {
-          "mode": "rail",
-          "cost": 977.66,
-          "hours": 77.3,
-          "delay_probability": 0.2045,
-          "congestion": 0.475,
-          "geopolitical_risk": 0.27
-        },
-        "onward": [
-          {
-            "at": "Rotterdam",
-            "leg": {
-              "mode": "rail",
-              "cost": 310.47,
-              "hours": 13.76,
-              "delay_probability": 0.1935,
-              "congestion": 0.425,
-              "geopolitical_risk": 0.03
-            }
-          }
-        ]
-      },
-      {
-        "first": {
           "mode": "sea",
-          "cost": 484.76,
-          "hours": 109.58,
+          "cost": 685.37,
+          "hours": 248.9,
           "delay_probability": 0.39,
           "congestion": 0.525,
           "geopolitical_risk": 0.45
@@ -1480,23 +1369,35 @@
           {
             "at": "Istanbul",
             "leg": {
-              "mode": "sea",
-              "cost": 847.36,
-              "hours": 361.39,
-              "delay_probability": 0.42,
-              "congestion": 0.6,
-              "geopolitical_risk": 0.4
+              "mode": "air",
+              "cost": 1993.0,
+              "hours": 7.55,
+              "delay_probability": 0.0975,
+              "congestion": 0.475,
+              "geopolitical_risk": 0.14
             }
-          },
+          }
+        ]
+      },
+      {
+        "first": {
+          "mode": "air",
+          "cost": 2547.07,
+          "hours": 8.84,
+          "delay_probability": 0.1025,
+          "congestion": 0.525,
+          "geopolitical_risk": 0.1575
+        },
+        "onward": [
           {
-            "at": "Los Angeles",
+            "at": "Istanbul",
             "leg": {
               "mode": "sea",
-              "cost": 759.83,
-              "hours": 300.6,
-              "delay_probability": 0.39,
-              "congestion": 0.525,
-              "geopolitical_risk": 0.1
+              "cost": 664.68,
+              "hours": 234.53,
+              "delay_probability": 0.37,
+              "congestion": 0.475,
+              "geopolitical_risk": 0.4
             }
           }
         ]
@@ -1508,27 +1409,27 @@
     "origin": "Colombo",
     "destination": "Los Angeles",
     "priority": "time-critical",
-    "deadline": 469.0,
+    "deadline": 642.0,
     "cargo_value": 735159.0,
     "routes": [
       {
         "first": {
           "mode": "sea",
-          "cost": 579.19,
-          "hours": 175.16,
-          "delay_probability": 0.44,
-          "congestion": 0.65,
+          "cost": 741.97,
+          "hours": 288.2,
+          "delay_probability": 0.37,
+          "congestion": 0.475,
           "geopolitical_risk": 0.3
         },
         "onward": [
           {
-            "at": "Shanghai",
+            "at": "Busan",
             "leg": {
               "mode": "sea",
-              "cost": 820.53,
-              "hours": 342.75,
-              "delay_probability": 0.46,
-              "congestion": 0.7,
+              "cost": 894.23,
+              "hours": 393.93,
+              "delay_probability": 0.39,
+              "congestion": 0.525,
               "geopolitical_risk": 0.2
             }
           }
@@ -1559,56 +1460,45 @@
       },
       {
         "first": {
-          "mode": "rail",
-          "cost": 1076.9,
-          "hours": 86.75,
-          "delay_probability": 0.2045,
+          "mode": "sea",
+          "cost": 741.97,
+          "hours": 288.2,
+          "delay_probability": 0.37,
           "congestion": 0.475,
-          "geopolitical_risk": 0.18
+          "geopolitical_risk": 0.3
         },
         "onward": [
           {
             "at": "Busan",
             "leg": {
-              "mode": "rail",
-              "cost": 1600.25,
-              "hours": 136.6,
-              "delay_probability": 0.2155,
+              "mode": "air",
+              "cost": 6204.55,
+              "hours": 17.36,
+              "delay_probability": 0.1025,
               "congestion": 0.525,
-              "geopolitical_risk": 0.12
+              "geopolitical_risk": 0.07
             }
           }
         ]
       },
       {
         "first": {
-          "mode": "sea",
-          "cost": 579.19,
-          "hours": 175.16,
-          "delay_probability": 0.44,
-          "congestion": 0.65,
-          "geopolitical_risk": 0.3
+          "mode": "air",
+          "cost": 4148.52,
+          "hours": 12.57,
+          "delay_probability": 0.0975,
+          "congestion": 0.475,
+          "geopolitical_risk": 0.105
         },
         "onward": [
           {
-            "at": "Shanghai",
+            "at": "Busan",
             "leg": {
               "mode": "sea",
-              "cost": 1185.56,
-              "hours": 596.25,
-              "delay_probability": 0.42,
-              "congestion": 0.6,
-              "geopolitical_risk": 0.2
-            }
-          },
-          {
-            "at": "Santos",
-            "leg": {
-              "mode": "sea",
-              "cost": 797.47,
-              "hours": 326.74,
-              "delay_probability": 0.4,
-              "congestion": 0.55,
+              "cost": 894.23,
+              "hours": 393.93,
+              "delay_probability": 0.39,
+              "congestion": 0.525,
               "geopolitical_risk": 0.2
             }
           }
@@ -1617,21 +1507,21 @@
       {
         "first": {
           "mode": "air",
-          "cost": 8591.65,
-          "hours": 22.93,
-          "delay_probability": 0.1,
-          "congestion": 0.5,
+          "cost": 4148.52,
+          "hours": 12.57,
+          "delay_probability": 0.0975,
+          "congestion": 0.475,
           "geopolitical_risk": 0.105
         },
         "onward": [
           {
-            "at": "Santos",
+            "at": "Busan",
             "leg": {
               "mode": "air",
-              "cost": 6369.02,
-              "hours": 17.75,
-              "delay_probability": 0.105,
-              "congestion": 0.55,
+              "cost": 6204.55,
+              "hours": 17.36,
+              "delay_probability": 0.1025,
+              "congestion": 0.525,
               "geopolitical_risk": 0.07
             }
           }
@@ -1644,27 +1534,27 @@
     "origin": "Singapore",
     "destination": "Shenzhen",
     "priority": "risk-averse",
-    "deadline": 125.0,
+    "deadline": 145.0,
     "cargo_value": 587505.0,
     "routes": [
       {
         "first": {
           "mode": "sea",
-          "cost": 521.45,
-          "hours": 135.07,
-          "delay_probability": 0.47,
-          "congestion": 0.725,
-          "geopolitical_risk": 0.2
+          "cost": 476.24,
+          "hours": 103.67,
+          "delay_probability": 0.42,
+          "congestion": 0.6,
+          "geopolitical_risk": 0.15
         },
         "onward": [
           {
-            "at": "Shanghai",
+            "at": "Hong Kong",
             "leg": {
               "mode": "sea",
-              "cost": 404.59,
-              "hours": 53.91,
-              "delay_probability": 0.45,
-              "congestion": 0.675,
+              "cost": 351.37,
+              "hours": 16.95,
+              "delay_probability": 0.4,
+              "congestion": 0.55,
               "geopolitical_risk": 0.25
             }
           }
@@ -1695,23 +1585,23 @@
       },
       {
         "first": {
-          "mode": "rail",
-          "cost": 890.44,
-          "hours": 68.99,
-          "delay_probability": 0.221,
-          "congestion": 0.55,
-          "geopolitical_risk": 0.12
+          "mode": "sea",
+          "cost": 496.72,
+          "hours": 117.89,
+          "delay_probability": 0.43,
+          "congestion": 0.625,
+          "geopolitical_risk": 0.3
         },
         "onward": [
           {
-            "at": "Busan",
+            "at": "Colombo",
             "leg": {
-              "mode": "rail",
-              "cost": 532.13,
-              "hours": 34.87,
-              "delay_probability": 0.21,
-              "congestion": 0.5,
-              "geopolitical_risk": 0.15
+              "mode": "air",
+              "cost": 3128.55,
+              "hours": 10.19,
+              "delay_probability": 0.1075,
+              "congestion": 0.575,
+              "geopolitical_risk": 0.105
             }
           }
         ]
@@ -1723,28 +1613,28 @@
     "origin": "Istanbul",
     "destination": "Singapore",
     "priority": "cost-first",
-    "deadline": 462.0,
+    "deadline": 349.0,
     "cargo_value": 458916.0,
     "routes": [
       {
         "first": {
           "mode": "sea",
-          "cost": 484.76,
-          "hours": 109.58,
-          "delay_probability": 0.39,
-          "congestion": 0.525,
-          "geopolitical_risk": 0.45
+          "cost": 592.59,
+          "hours": 184.47,
+          "delay_probability": 0.35,
+          "congestion": 0.425,
+          "geopolitical_risk": 0.4
         },
         "onward": [
           {
-            "at": "Dubai",
+            "at": "Salalah",
             "leg": {
               "mode": "sea",
-              "cost": 612.96,
-              "hours": 198.61,
-              "delay_probability": 0.42,
-              "congestion": 0.6,
-              "geopolitical_risk": 0.45
+              "cost": 644.78,
+              "hours": 220.71,
+              "delay_probability": 0.38,
+              "congestion": 0.5,
+              "geopolitical_risk": 0.2
             }
           }
         ]
@@ -1774,56 +1664,45 @@
       },
       {
         "first": {
-          "mode": "rail",
-          "cost": 1129.58,
-          "hours": 91.77,
-          "delay_probability": 0.221,
-          "congestion": 0.55,
-          "geopolitical_risk": 0.24
+          "mode": "sea",
+          "cost": 634.94,
+          "hours": 213.87,
+          "delay_probability": 0.38,
+          "congestion": 0.5,
+          "geopolitical_risk": 0.4
         },
         "onward": [
           {
-            "at": "Colombo",
+            "at": "Rotterdam",
             "leg": {
-              "mode": "rail",
-              "cost": 632.69,
-              "hours": 44.45,
-              "delay_probability": 0.2375,
-              "congestion": 0.625,
-              "geopolitical_risk": 0.18
+              "mode": "air",
+              "cost": 6706.57,
+              "hours": 18.54,
+              "delay_probability": 0.1075,
+              "congestion": 0.575,
+              "geopolitical_risk": 0.0525
             }
           }
         ]
       },
       {
         "first": {
-          "mode": "sea",
-          "cost": 484.76,
-          "hours": 109.58,
-          "delay_probability": 0.39,
-          "congestion": 0.525,
-          "geopolitical_risk": 0.45
+          "mode": "air",
+          "cost": 5448.09,
+          "hours": 15.6,
+          "delay_probability": 0.0975,
+          "congestion": 0.475,
+          "geopolitical_risk": 0.14
         },
         "onward": [
           {
-            "at": "Dubai",
+            "at": "Busan",
             "leg": {
               "mode": "sea",
-              "cost": 899.55,
-              "hours": 397.63,
-              "delay_probability": 0.37,
-              "congestion": 0.475,
-              "geopolitical_risk": 0.45
-            }
-          },
-          {
-            "at": "Santos",
-            "leg": {
-              "mode": "sea",
-              "cost": 1067.04,
-              "hours": 513.94,
-              "delay_probability": 0.41,
-              "congestion": 0.575,
+              "cost": 595.25,
+              "hours": 186.31,
+              "delay_probability": 0.4,
+              "congestion": 0.55,
               "geopolitical_risk": 0.2
             }
           }
@@ -1836,14 +1715,14 @@
     "origin": "Singapore",
     "destination": "Dubai",
     "priority": "balanced",
-    "deadline": 273.0,
+    "deadline": 360.0,
     "cargo_value": 87411.0,
     "routes": [
       {
         "first": {
           "mode": "sea",
-          "cost": 473.01,
-          "hours": 101.42,
+          "cost": 496.72,
+          "hours": 117.89,
           "delay_probability": 0.43,
           "congestion": 0.625,
           "geopolitical_risk": 0.3
@@ -1853,8 +1732,8 @@
             "at": "Colombo",
             "leg": {
               "mode": "sea",
-              "cost": 498.86,
-              "hours": 119.38,
+              "cost": 590.84,
+              "hours": 183.25,
               "delay_probability": 0.39,
               "congestion": 0.525,
               "geopolitical_risk": 0.45
@@ -1887,56 +1766,45 @@
       },
       {
         "first": {
-          "mode": "rail",
-          "cost": 615.1,
-          "hours": 42.77,
-          "delay_probability": 0.243,
-          "congestion": 0.65,
-          "geopolitical_risk": 0.15
+          "mode": "sea",
+          "cost": 554.9,
+          "hours": 158.29,
+          "delay_probability": 0.47,
+          "congestion": 0.725,
+          "geopolitical_risk": 0.2
         },
         "onward": [
           {
-            "at": "Shenzhen",
+            "at": "Shanghai",
             "leg": {
-              "mode": "rail",
-              "cost": 1081.26,
-              "hours": 87.17,
-              "delay_probability": 0.221,
-              "congestion": 0.55,
-              "geopolitical_risk": 0.27
+              "mode": "air",
+              "cost": 4434.44,
+              "hours": 13.24,
+              "delay_probability": 0.1125,
+              "congestion": 0.625,
+              "geopolitical_risk": 0.1575
             }
           }
         ]
       },
       {
         "first": {
-          "mode": "sea",
-          "cost": 473.01,
-          "hours": 101.42,
-          "delay_probability": 0.43,
+          "mode": "air",
+          "cost": 2403.44,
+          "hours": 8.5,
+          "delay_probability": 0.1125,
           "congestion": 0.625,
-          "geopolitical_risk": 0.3
+          "geopolitical_risk": 0.105
         },
         "onward": [
           {
             "at": "Colombo",
             "leg": {
               "mode": "sea",
-              "cost": 979.32,
-              "hours": 453.03,
-              "delay_probability": 0.38,
-              "congestion": 0.5,
-              "geopolitical_risk": 0.3
-            }
-          },
-          {
-            "at": "Santos",
-            "leg": {
-              "mode": "sea",
-              "cost": 899.55,
-              "hours": 397.63,
-              "delay_probability": 0.37,
-              "congestion": 0.475,
+              "cost": 590.84,
+              "hours": 183.25,
+              "delay_probability": 0.39,
+              "congestion": 0.525,
               "geopolitical_risk": 0.45
             }
           }
@@ -1945,21 +1813,21 @@
       {
         "first": {
           "mode": "air",
-          "cost": 9663.81,
-          "hours": 25.43,
-          "delay_probability": 0.1075,
-          "congestion": 0.575,
-          "geopolitical_risk": 0.07
+          "cost": 2334.33,
+          "hours": 8.34,
+          "delay_probability": 0.115,
+          "congestion": 0.65,
+          "geopolitical_risk": 0.0875
         },
         "onward": [
           {
-            "at": "Santos",
+            "at": "Shenzhen",
             "leg": {
               "mode": "air",
-              "cost": 7616.68,
-              "hours": 20.66,
-              "delay_probability": 0.0975,
-              "congestion": 0.475,
+              "cost": 4165.65,
+              "hours": 12.61,
+              "delay_probability": 0.105,
+              "congestion": 0.55,
               "geopolitical_risk": 0.1575
             }
           }
@@ -1972,27 +1840,27 @@
     "origin": "Colombo",
     "destination": "Dubai",
     "priority": "time-critical",
-    "deadline": 168.0,
+    "deadline": 156.0,
     "cargo_value": 233844.0,
     "routes": [
       {
         "first": {
           "mode": "sea",
-          "cost": 473.01,
-          "hours": 101.42,
-          "delay_probability": 0.43,
-          "congestion": 0.625,
+          "cost": 498.06,
+          "hours": 118.82,
+          "delay_probability": 0.35,
+          "congestion": 0.425,
           "geopolitical_risk": 0.3
         },
         "onward": [
           {
-            "at": "Singapore",
+            "at": "Salalah",
             "leg": {
               "mode": "sea",
-              "cost": 612.96,
-              "hours": 198.61,
-              "delay_probability": 0.42,
-              "congestion": 0.6,
+              "cost": 442.78,
+              "hours": 80.43,
+              "delay_probability": 0.34,
+              "congestion": 0.4,
               "geopolitical_risk": 0.45
             }
           }
@@ -2023,23 +1891,23 @@
       },
       {
         "first": {
-          "mode": "rail",
-          "cost": 1129.58,
-          "hours": 91.77,
-          "delay_probability": 0.221,
-          "congestion": 0.55,
-          "geopolitical_risk": 0.24
+          "mode": "sea",
+          "cost": 496.72,
+          "hours": 117.89,
+          "delay_probability": 0.43,
+          "congestion": 0.625,
+          "geopolitical_risk": 0.3
         },
         "onward": [
           {
-            "at": "Istanbul",
+            "at": "Singapore",
             "leg": {
-              "mode": "rail",
-              "cost": 669.25,
-              "hours": 47.93,
-              "delay_probability": 0.2155,
-              "congestion": 0.525,
-              "geopolitical_risk": 0.27
+              "mode": "air",
+              "cost": 4113.92,
+              "hours": 12.49,
+              "delay_probability": 0.11,
+              "congestion": 0.6,
+              "geopolitical_risk": 0.1575
             }
           }
         ]
@@ -2057,22 +1925,22 @@
       {
         "first": {
           "mode": "sea",
-          "cost": 617.19,
-          "hours": 201.55,
-          "delay_probability": 0.4,
-          "congestion": 0.55,
+          "cost": 590.84,
+          "hours": 183.25,
+          "delay_probability": 0.39,
+          "congestion": 0.525,
           "geopolitical_risk": 0.45
         },
         "onward": [
           {
-            "at": "Shenzhen",
+            "at": "Colombo",
             "leg": {
               "mode": "sea",
-              "cost": 404.59,
-              "hours": 53.91,
-              "delay_probability": 0.45,
-              "congestion": 0.675,
-              "geopolitical_risk": 0.25
+              "cost": 701.62,
+              "hours": 260.18,
+              "delay_probability": 0.44,
+              "congestion": 0.65,
+              "geopolitical_risk": 0.3
             }
           }
         ]
@@ -2102,57 +1970,46 @@
       },
       {
         "first": {
-          "mode": "rail",
-          "cost": 1233.0,
-          "hours": 101.62,
-          "delay_probability": 0.199,
-          "congestion": 0.45,
-          "geopolitical_risk": 0.27
+          "mode": "sea",
+          "cost": 685.37,
+          "hours": 248.9,
+          "delay_probability": 0.39,
+          "congestion": 0.525,
+          "geopolitical_risk": 0.45
         },
         "onward": [
           {
-            "at": "Busan",
+            "at": "Istanbul",
             "leg": {
-              "mode": "rail",
-              "cost": 365.53,
-              "hours": 19.0,
-              "delay_probability": 0.2265,
-              "congestion": 0.575,
-              "geopolitical_risk": 0.12
+              "mode": "air",
+              "cost": 5291.64,
+              "hours": 15.24,
+              "delay_probability": 0.115,
+              "congestion": 0.65,
+              "geopolitical_risk": 0.14
             }
           }
         ]
       },
       {
         "first": {
-          "mode": "sea",
-          "cost": 617.19,
-          "hours": 201.55,
-          "delay_probability": 0.4,
-          "congestion": 0.55,
-          "geopolitical_risk": 0.45
+          "mode": "air",
+          "cost": 2719.46,
+          "hours": 9.24,
+          "delay_probability": 0.1025,
+          "congestion": 0.525,
+          "geopolitical_risk": 0.1575
         },
         "onward": [
           {
-            "at": "Shenzhen",
+            "at": "Colombo",
             "leg": {
               "mode": "sea",
-              "cost": 1160.32,
-              "hours": 578.72,
-              "delay_probability": 0.39,
-              "congestion": 0.525,
-              "geopolitical_risk": 0.25
-            }
-          },
-          {
-            "at": "Santos",
-            "leg": {
-              "mode": "sea",
-              "cost": 1185.56,
-              "hours": 596.25,
-              "delay_probability": 0.42,
-              "congestion": 0.6,
-              "geopolitical_risk": 0.2
+              "cost": 701.62,
+              "hours": 260.18,
+              "delay_probability": 0.44,
+              "congestion": 0.65,
+              "geopolitical_risk": 0.3
             }
           }
         ]
@@ -2164,28 +2021,28 @@
     "origin": "Hamburg",
     "destination": "Singapore",
     "priority": "cost-first",
-    "deadline": 334.0,
+    "deadline": 622.0,
     "cargo_value": 228143.0,
     "routes": [
       {
         "first": {
           "mode": "sea",
-          "cost": 439.43,
-          "hours": 78.1,
+          "cost": 731.38,
+          "hours": 280.85,
           "delay_probability": 0.37,
           "congestion": 0.475,
-          "geopolitical_risk": 0.4
+          "geopolitical_risk": 0.35
         },
         "onward": [
           {
-            "at": "Istanbul",
+            "at": "Port Said",
             "leg": {
               "mode": "sea",
-              "cost": 739.19,
-              "hours": 286.27,
+              "cost": 820.67,
+              "hours": 342.85,
               "delay_probability": 0.43,
               "congestion": 0.625,
-              "geopolitical_risk": 0.4
+              "geopolitical_risk": 0.35
             }
           }
         ]
@@ -2215,57 +2072,23 @@
       },
       {
         "first": {
-          "mode": "rail",
-          "cost": 933.15,
-          "hours": 73.06,
-          "delay_probability": 0.199,
-          "congestion": 0.45,
-          "geopolitical_risk": 0.27
-        },
-        "onward": [
-          {
-            "at": "Dubai",
-            "leg": {
-              "mode": "rail",
-              "cost": 1068.09,
-              "hours": 85.91,
-              "delay_probability": 0.232,
-              "congestion": 0.6,
-              "geopolitical_risk": 0.27
-            }
-          }
-        ]
-      },
-      {
-        "first": {
           "mode": "sea",
-          "cost": 439.43,
-          "hours": 78.1,
-          "delay_probability": 0.37,
-          "congestion": 0.475,
-          "geopolitical_risk": 0.4
+          "cost": 799.1,
+          "hours": 327.87,
+          "delay_probability": 0.36,
+          "congestion": 0.45,
+          "geopolitical_risk": 0.08
         },
         "onward": [
           {
-            "at": "Istanbul",
+            "at": "New York",
             "leg": {
-              "mode": "sea",
-              "cost": 826.64,
-              "hours": 347.0,
-              "delay_probability": 0.38,
-              "congestion": 0.5,
-              "geopolitical_risk": 0.4
-            }
-          },
-          {
-            "at": "Santos",
-            "leg": {
-              "mode": "sea",
-              "cost": 1067.04,
-              "hours": 513.94,
-              "delay_probability": 0.41,
-              "congestion": 0.575,
-              "geopolitical_risk": 0.2
+              "mode": "air",
+              "cost": 9338.84,
+              "hours": 24.67,
+              "delay_probability": 0.11,
+              "congestion": 0.6,
+              "geopolitical_risk": 0.0525
             }
           }
         ]
@@ -2273,22 +2096,45 @@
       {
         "first": {
           "mode": "air",
-          "cost": 6493.77,
-          "hours": 18.04,
-          "delay_probability": 0.0925,
-          "congestion": 0.425,
-          "geopolitical_risk": 0.07
+          "cost": 3583.8,
+          "hours": 11.26,
+          "delay_probability": 0.095,
+          "congestion": 0.45,
+          "geopolitical_risk": 0.1575
         },
         "onward": [
           {
-            "at": "Santos",
+            "at": "Dubai",
+            "leg": {
+              "mode": "sea",
+              "cost": 737.55,
+              "hours": 285.14,
+              "delay_probability": 0.42,
+              "congestion": 0.6,
+              "geopolitical_risk": 0.45
+            }
+          }
+        ]
+      },
+      {
+        "first": {
+          "mode": "air",
+          "cost": 3583.8,
+          "hours": 11.26,
+          "delay_probability": 0.095,
+          "congestion": 0.45,
+          "geopolitical_risk": 0.1575
+        },
+        "onward": [
+          {
+            "at": "Dubai",
             "leg": {
               "mode": "air",
-              "cost": 9663.81,
-              "hours": 25.43,
-              "delay_probability": 0.1075,
-              "congestion": 0.575,
-              "geopolitical_risk": 0.07
+              "cost": 4113.92,
+              "hours": 12.49,
+              "delay_probability": 0.11,
+              "congestion": 0.6,
+              "geopolitical_risk": 0.1575
             }
           }
         ]
@@ -2300,27 +2146,27 @@
     "origin": "Busan",
     "destination": "Hamburg",
     "priority": "balanced",
-    "deadline": 169.0,
+    "deadline": 493.0,
     "cargo_value": 440666.0,
     "routes": [
       {
         "first": {
           "mode": "sea",
-          "cost": 387.14,
-          "hours": 41.79,
-          "delay_probability": 0.41,
-          "congestion": 0.575,
+          "cost": 890.03,
+          "hours": 391.02,
+          "delay_probability": 0.32,
+          "congestion": 0.35,
           "geopolitical_risk": 0.2
         },
         "onward": [
           {
-            "at": "Shanghai",
+            "at": "Salalah",
             "leg": {
               "mode": "sea",
-              "cost": 733.5,
-              "hours": 282.32,
-              "delay_probability": 0.41,
-              "congestion": 0.575,
+              "cost": 907.27,
+              "hours": 402.99,
+              "delay_probability": 0.32,
+              "congestion": 0.35,
               "geopolitical_risk": 0.2
             }
           }
@@ -2351,23 +2197,23 @@
       },
       {
         "first": {
-          "mode": "rail",
-          "cost": 1503.85,
-          "hours": 127.41,
-          "delay_probability": 0.1935,
-          "congestion": 0.425,
-          "geopolitical_risk": 0.12
+          "mode": "sea",
+          "cost": 894.23,
+          "hours": 393.93,
+          "delay_probability": 0.39,
+          "congestion": 0.525,
+          "geopolitical_risk": 0.2
         },
         "onward": [
           {
-            "at": "Rotterdam",
+            "at": "Los Angeles",
             "leg": {
-              "mode": "rail",
-              "cost": 310.47,
-              "hours": 13.76,
-              "delay_probability": 0.1935,
-              "congestion": 0.425,
-              "geopolitical_risk": 0.03
+              "mode": "air",
+              "cost": 5909.0,
+              "hours": 16.68,
+              "delay_probability": 0.1025,
+              "congestion": 0.525,
+              "geopolitical_risk": 0.035
             }
           }
         ]
@@ -2379,14 +2225,14 @@
     "origin": "Hamburg",
     "destination": "Dubai",
     "priority": "time-critical",
-    "deadline": 282.0,
+    "deadline": 385.0,
     "cargo_value": 103938.0,
     "routes": [
       {
         "first": {
           "mode": "sea",
-          "cost": 439.43,
-          "hours": 78.1,
+          "cost": 664.68,
+          "hours": 234.53,
           "delay_probability": 0.37,
           "congestion": 0.475,
           "geopolitical_risk": 0.4
@@ -2396,8 +2242,8 @@
             "at": "Istanbul",
             "leg": {
               "mode": "sea",
-              "cost": 484.76,
-              "hours": 109.58,
+              "cost": 685.37,
+              "hours": 248.9,
               "delay_probability": 0.39,
               "congestion": 0.525,
               "geopolitical_risk": 0.45
@@ -2430,32 +2276,9 @@
       },
       {
         "first": {
-          "mode": "rail",
-          "cost": 310.47,
-          "hours": 13.76,
-          "delay_probability": 0.1935,
-          "congestion": 0.425,
-          "geopolitical_risk": 0.03
-        },
-        "onward": [
-          {
-            "at": "Rotterdam",
-            "leg": {
-              "mode": "rail",
-              "cost": 977.66,
-              "hours": 77.3,
-              "delay_probability": 0.2045,
-              "congestion": 0.475,
-              "geopolitical_risk": 0.27
-            }
-          }
-        ]
-      },
-      {
-        "first": {
           "mode": "sea",
-          "cost": 439.43,
-          "hours": 78.1,
+          "cost": 664.68,
+          "hours": 234.53,
           "delay_probability": 0.37,
           "congestion": 0.475,
           "geopolitical_risk": 0.4
@@ -2464,22 +2287,34 @@
           {
             "at": "Istanbul",
             "leg": {
-              "mode": "sea",
-              "cost": 847.36,
-              "hours": 361.39,
-              "delay_probability": 0.42,
-              "congestion": 0.6,
-              "geopolitical_risk": 0.4
+              "mode": "air",
+              "cost": 2547.07,
+              "hours": 8.84,
+              "delay_probability": 0.1025,
+              "congestion": 0.525,
+              "geopolitical_risk": 0.1575
             }
-          },
+          }
+        ]
+      },
+      {
+        "first": {
+          "mode": "air",
+          "cost": 1993.0,
+          "hours": 7.55,
+          "delay_probability": 0.0975,
+          "congestion": 0.475,
+          "geopolitical_risk": 0.14
+        },
+        "onward": [
           {
-            "at": "Los Angeles",
+            "at": "Istanbul",
             "leg": {
               "mode": "sea",
-              "cost": 954.16,
-              "hours": 435.56,
-              "delay_probability": 0.41,
-              "congestion": 0.575,
+              "cost": 685.37,
+              "hours": 248.9,
+              "delay_probability": 0.39,
+              "congestion": 0.525,
               "geopolitical_risk": 0.45
             }
           }
@@ -2492,27 +2327,27 @@
     "origin": "Rotterdam",
     "destination": "Shanghai",
     "priority": "risk-averse",
-    "deadline": 307.0,
+    "deadline": 849.0,
     "cargo_value": 677323.0,
     "routes": [
       {
         "first": {
           "mode": "sea",
-          "cost": 369.44,
-          "hours": 29.5,
-          "delay_probability": 0.35,
-          "congestion": 0.425,
-          "geopolitical_risk": 0.05
+          "cost": 877.53,
+          "hours": 382.34,
+          "delay_probability": 0.33,
+          "congestion": 0.375,
+          "geopolitical_risk": 0.2
         },
         "onward": [
           {
-            "at": "Hamburg",
+            "at": "Salalah",
             "leg": {
               "mode": "sea",
-              "cost": 733.5,
-              "hours": 282.32,
-              "delay_probability": 0.41,
-              "congestion": 0.575,
+              "cost": 849.68,
+              "hours": 363.0,
+              "delay_probability": 0.39,
+              "congestion": 0.525,
               "geopolitical_risk": 0.2
             }
           }
@@ -2543,69 +2378,12 @@
       },
       {
         "first": {
-          "mode": "rail",
-          "cost": 1503.85,
-          "hours": 127.41,
-          "delay_probability": 0.1935,
-          "congestion": 0.425,
-          "geopolitical_risk": 0.12
-        },
-        "onward": [
-          {
-            "at": "Busan",
-            "leg": {
-              "mode": "rail",
-              "cost": 365.53,
-              "hours": 19.0,
-              "delay_probability": 0.2265,
-              "congestion": 0.575,
-              "geopolitical_risk": 0.12
-            }
-          }
-        ]
-      },
-      {
-        "first": {
           "mode": "sea",
-          "cost": 369.44,
-          "hours": 29.5,
-          "delay_probability": 0.35,
-          "congestion": 0.425,
-          "geopolitical_risk": 0.05
-        },
-        "onward": [
-          {
-            "at": "Hamburg",
-            "leg": {
-              "mode": "sea",
-              "cost": 807.67,
-              "hours": 333.83,
-              "delay_probability": 0.35,
-              "congestion": 0.425,
-              "geopolitical_risk": 0.2
-            }
-          },
-          {
-            "at": "Santos",
-            "leg": {
-              "mode": "sea",
-              "cost": 1185.56,
-              "hours": 596.25,
-              "delay_probability": 0.42,
-              "congestion": 0.6,
-              "geopolitical_risk": 0.2
-            }
-          }
-        ]
-      },
-      {
-        "first": {
-          "mode": "air",
-          "cost": 6268.51,
-          "hours": 17.51,
-          "delay_probability": 0.095,
+          "cost": 867.74,
+          "hours": 375.54,
+          "delay_probability": 0.36,
           "congestion": 0.45,
-          "geopolitical_risk": 0.07
+          "geopolitical_risk": 0.2
         },
         "onward": [
           {
@@ -2620,6 +2398,52 @@
             }
           }
         ]
+      },
+      {
+        "first": {
+          "mode": "air",
+          "cost": 3758.68,
+          "hours": 11.66,
+          "delay_probability": 0.0975,
+          "congestion": 0.475,
+          "geopolitical_risk": 0.1575
+        },
+        "onward": [
+          {
+            "at": "Dubai",
+            "leg": {
+              "mode": "sea",
+              "cost": 942.46,
+              "hours": 427.43,
+              "delay_probability": 0.43,
+              "congestion": 0.625,
+              "geopolitical_risk": 0.45
+            }
+          }
+        ]
+      },
+      {
+        "first": {
+          "mode": "air",
+          "cost": 5825.86,
+          "hours": 16.48,
+          "delay_probability": 0.0925,
+          "congestion": 0.425,
+          "geopolitical_risk": 0.07
+        },
+        "onward": [
+          {
+            "at": "Busan",
+            "leg": {
+              "mode": "air",
+              "cost": 1353.88,
+              "hours": 6.06,
+              "delay_probability": 0.1075,
+              "congestion": 0.575,
+              "geopolitical_risk": 0.07
+            }
+          }
+        ]
       }
     ]
   },
@@ -2628,14 +2452,14 @@
     "origin": "Hamburg",
     "destination": "Dubai",
     "priority": "cost-first",
-    "deadline": 109.0,
+    "deadline": 292.0,
     "cargo_value": 983536.0,
     "routes": [
       {
         "first": {
           "mode": "sea",
-          "cost": 439.43,
-          "hours": 78.1,
+          "cost": 664.68,
+          "hours": 234.53,
           "delay_probability": 0.37,
           "congestion": 0.475,
           "geopolitical_risk": 0.4
@@ -2645,8 +2469,8 @@
             "at": "Istanbul",
             "leg": {
               "mode": "sea",
-              "cost": 484.76,
-              "hours": 109.58,
+              "cost": 685.37,
+              "hours": 248.9,
               "delay_probability": 0.39,
               "congestion": 0.525,
               "geopolitical_risk": 0.45
@@ -2679,23 +2503,23 @@
       },
       {
         "first": {
-          "mode": "rail",
-          "cost": 310.47,
-          "hours": 13.76,
-          "delay_probability": 0.1935,
-          "congestion": 0.425,
-          "geopolitical_risk": 0.03
+          "mode": "sea",
+          "cost": 664.68,
+          "hours": 234.53,
+          "delay_probability": 0.37,
+          "congestion": 0.475,
+          "geopolitical_risk": 0.4
         },
         "onward": [
           {
-            "at": "Rotterdam",
+            "at": "Istanbul",
             "leg": {
-              "mode": "rail",
-              "cost": 977.66,
-              "hours": 77.3,
-              "delay_probability": 0.2045,
-              "congestion": 0.475,
-              "geopolitical_risk": 0.27
+              "mode": "air",
+              "cost": 2547.07,
+              "hours": 8.84,
+              "delay_probability": 0.1025,
+              "congestion": 0.525,
+              "geopolitical_risk": 0.1575
             }
           }
         ]
@@ -2707,28 +2531,28 @@
     "origin": "Santos",
     "destination": "Rotterdam",
     "priority": "balanced",
-    "deadline": 545.0,
+    "deadline": 505.0,
     "cargo_value": 892055.0,
     "routes": [
       {
         "first": {
           "mode": "sea",
-          "cost": 807.67,
-          "hours": 333.83,
-          "delay_probability": 0.35,
-          "congestion": 0.425,
+          "cost": 744.3,
+          "hours": 289.82,
+          "delay_probability": 0.34,
+          "congestion": 0.4,
           "geopolitical_risk": 0.2
         },
         "onward": [
           {
-            "at": "Hamburg",
+            "at": "Algeciras",
             "leg": {
               "mode": "sea",
-              "cost": 369.44,
-              "hours": 29.5,
-              "delay_probability": 0.35,
-              "congestion": 0.425,
-              "geopolitical_risk": 0.05
+              "cost": 473.43,
+              "hours": 101.72,
+              "delay_probability": 0.34,
+              "congestion": 0.4,
+              "geopolitical_risk": 0.1
             }
           }
         ]
@@ -2758,57 +2582,46 @@
       },
       {
         "first": {
-          "mode": "rail",
-          "cost": 1732.88,
-          "hours": 149.23,
-          "delay_probability": 0.21,
-          "congestion": 0.5,
-          "geopolitical_risk": 0.24
+          "mode": "sea",
+          "cost": 794.02,
+          "hours": 324.35,
+          "delay_probability": 0.37,
+          "congestion": 0.475,
+          "geopolitical_risk": 0.2
         },
         "onward": [
           {
-            "at": "Istanbul",
+            "at": "New York",
             "leg": {
-              "mode": "rail",
-              "cost": 563.67,
-              "hours": 37.87,
-              "delay_probability": 0.21,
-              "congestion": 0.5,
-              "geopolitical_risk": 0.24
+              "mode": "air",
+              "cost": 4109.5,
+              "hours": 12.48,
+              "delay_probability": 0.0975,
+              "congestion": 0.475,
+              "geopolitical_risk": 0.028
             }
           }
         ]
       },
       {
         "first": {
-          "mode": "sea",
-          "cost": 807.67,
-          "hours": 333.83,
-          "delay_probability": 0.35,
-          "congestion": 0.425,
-          "geopolitical_risk": 0.2
+          "mode": "air",
+          "cost": 6725.61,
+          "hours": 18.58,
+          "delay_probability": 0.1,
+          "congestion": 0.5,
+          "geopolitical_risk": 0.14
         },
         "onward": [
           {
-            "at": "Hamburg",
+            "at": "Istanbul",
             "leg": {
               "mode": "sea",
-              "cost": 734.84,
-              "hours": 283.25,
-              "delay_probability": 0.34,
-              "congestion": 0.4,
-              "geopolitical_risk": 0.2
-            }
-          },
-          {
-            "at": "Busan",
-            "leg": {
-              "mode": "sea",
-              "cost": 753.02,
-              "hours": 295.88,
-              "delay_probability": 0.35,
-              "congestion": 0.425,
-              "geopolitical_risk": 0.2
+              "cost": 634.94,
+              "hours": 213.87,
+              "delay_probability": 0.38,
+              "congestion": 0.5,
+              "geopolitical_risk": 0.4
             }
           }
         ]
@@ -2820,14 +2633,14 @@
     "origin": "Shenzhen",
     "destination": "Dubai",
     "priority": "time-critical",
-    "deadline": 248.0,
+    "deadline": 406.0,
     "cargo_value": 1493615.0,
     "routes": [
       {
         "first": {
           "mode": "sea",
-          "cost": 532.34,
-          "hours": 142.62,
+          "cost": 624.33,
+          "hours": 206.51,
           "delay_probability": 0.41,
           "congestion": 0.575,
           "geopolitical_risk": 0.3
@@ -2837,8 +2650,8 @@
             "at": "Colombo",
             "leg": {
               "mode": "sea",
-              "cost": 498.86,
-              "hours": 119.38,
+              "cost": 590.84,
+              "hours": 183.25,
               "delay_probability": 0.39,
               "congestion": 0.525,
               "geopolitical_risk": 0.45
@@ -2871,32 +2684,9 @@
       },
       {
         "first": {
-          "mode": "rail",
-          "cost": 419.84,
-          "hours": 24.18,
-          "delay_probability": 0.2485,
-          "congestion": 0.675,
-          "geopolitical_risk": 0.15
-        },
-        "onward": [
-          {
-            "at": "Shanghai",
-            "leg": {
-              "mode": "rail",
-              "cost": 1149.68,
-              "hours": 93.68,
-              "delay_probability": 0.2375,
-              "congestion": 0.625,
-              "geopolitical_risk": 0.27
-            }
-          }
-        ]
-      },
-      {
-        "first": {
           "mode": "sea",
-          "cost": 532.34,
-          "hours": 142.62,
+          "cost": 624.33,
+          "hours": 206.51,
           "delay_probability": 0.41,
           "congestion": 0.575,
           "geopolitical_risk": 0.3
@@ -2905,22 +2695,34 @@
           {
             "at": "Colombo",
             "leg": {
-              "mode": "sea",
-              "cost": 979.32,
-              "hours": 453.03,
-              "delay_probability": 0.38,
-              "congestion": 0.5,
-              "geopolitical_risk": 0.3
+              "mode": "air",
+              "cost": 2719.46,
+              "hours": 9.24,
+              "delay_probability": 0.1025,
+              "congestion": 0.525,
+              "geopolitical_risk": 0.1575
             }
-          },
+          }
+        ]
+      },
+      {
+        "first": {
+          "mode": "air",
+          "cost": 3128.55,
+          "hours": 10.19,
+          "delay_probability": 0.1075,
+          "congestion": 0.575,
+          "geopolitical_risk": 0.105
+        },
+        "onward": [
           {
-            "at": "Santos",
+            "at": "Colombo",
             "leg": {
               "mode": "sea",
-              "cost": 899.55,
-              "hours": 397.63,
-              "delay_probability": 0.37,
-              "congestion": 0.475,
+              "cost": 590.84,
+              "hours": 183.25,
+              "delay_probability": 0.39,
+              "congestion": 0.525,
               "geopolitical_risk": 0.45
             }
           }
@@ -2929,21 +2731,21 @@
       {
         "first": {
           "mode": "air",
-          "cost": 10803.87,
-          "hours": 28.09,
-          "delay_probability": 0.1025,
-          "congestion": 0.525,
+          "cost": 1567.25,
+          "hours": 6.56,
+          "delay_probability": 0.1175,
+          "congestion": 0.675,
           "geopolitical_risk": 0.0875
         },
         "onward": [
           {
-            "at": "Santos",
+            "at": "Shanghai",
             "leg": {
               "mode": "air",
-              "cost": 7616.68,
-              "hours": 20.66,
-              "delay_probability": 0.0975,
-              "congestion": 0.475,
+              "cost": 4434.44,
+              "hours": 13.24,
+              "delay_probability": 0.1125,
+              "congestion": 0.625,
               "geopolitical_risk": 0.1575
             }
           }
@@ -2956,27 +2758,27 @@
     "origin": "Singapore",
     "destination": "Shenzhen",
     "priority": "risk-averse",
-    "deadline": 125.0,
+    "deadline": 145.0,
     "cargo_value": 765364.0,
     "routes": [
       {
         "first": {
           "mode": "sea",
-          "cost": 521.45,
-          "hours": 135.07,
-          "delay_probability": 0.47,
-          "congestion": 0.725,
-          "geopolitical_risk": 0.2
+          "cost": 476.24,
+          "hours": 103.67,
+          "delay_probability": 0.42,
+          "congestion": 0.6,
+          "geopolitical_risk": 0.15
         },
         "onward": [
           {
-            "at": "Shanghai",
+            "at": "Hong Kong",
             "leg": {
               "mode": "sea",
-              "cost": 404.59,
-              "hours": 53.91,
-              "delay_probability": 0.45,
-              "congestion": 0.675,
+              "cost": 351.37,
+              "hours": 16.95,
+              "delay_probability": 0.4,
+              "congestion": 0.55,
               "geopolitical_risk": 0.25
             }
           }
@@ -3007,23 +2809,23 @@
       },
       {
         "first": {
-          "mode": "rail",
-          "cost": 890.44,
-          "hours": 68.99,
-          "delay_probability": 0.221,
-          "congestion": 0.55,
-          "geopolitical_risk": 0.12
+          "mode": "sea",
+          "cost": 496.72,
+          "hours": 117.89,
+          "delay_probability": 0.43,
+          "congestion": 0.625,
+          "geopolitical_risk": 0.3
         },
         "onward": [
           {
-            "at": "Busan",
+            "at": "Colombo",
             "leg": {
-              "mode": "rail",
-              "cost": 532.13,
-              "hours": 34.87,
-              "delay_probability": 0.21,
-              "congestion": 0.5,
-              "geopolitical_risk": 0.15
+              "mode": "air",
+              "cost": 3128.55,
+              "hours": 10.19,
+              "delay_probability": 0.1075,
+              "congestion": 0.575,
+              "geopolitical_risk": 0.105
             }
           }
         ]
@@ -3035,28 +2837,28 @@
     "origin": "New York",
     "destination": "Colombo",
     "priority": "cost-first",
-    "deadline": 714.0,
+    "deadline": 485.0,
     "cargo_value": 196954.0,
     "routes": [
       {
         "first": {
           "mode": "sea",
-          "cost": 626.05,
-          "hours": 207.7,
-          "delay_probability": 0.36,
-          "congestion": 0.45,
-          "geopolitical_risk": 0.08
+          "cost": 807.42,
+          "hours": 333.65,
+          "delay_probability": 0.39,
+          "congestion": 0.525,
+          "geopolitical_risk": 0.4
         },
         "onward": [
           {
-            "at": "Hamburg",
+            "at": "Istanbul",
             "leg": {
               "mode": "sea",
-              "cost": 712.95,
-              "hours": 268.05,
-              "delay_probability": 0.37,
-              "congestion": 0.475,
-              "geopolitical_risk": 0.3
+              "cost": 740.65,
+              "hours": 287.28,
+              "delay_probability": 0.4,
+              "congestion": 0.55,
+              "geopolitical_risk": 0.4
             }
           }
         ]
@@ -3086,57 +2888,46 @@
       },
       {
         "first": {
-          "mode": "rail",
-          "cost": 1066.96,
-          "hours": 85.81,
-          "delay_probability": 0.2045,
+          "mode": "sea",
+          "cost": 769.35,
+          "hours": 307.22,
+          "delay_probability": 0.37,
           "congestion": 0.475,
-          "geopolitical_risk": 0.048
+          "geopolitical_risk": 0.08
         },
         "onward": [
           {
             "at": "Rotterdam",
             "leg": {
-              "mode": "rail",
-              "cost": 1429.33,
-              "hours": 120.32,
-              "delay_probability": 0.21,
+              "mode": "air",
+              "cost": 5533.08,
+              "hours": 15.8,
+              "delay_probability": 0.1,
               "congestion": 0.5,
-              "geopolitical_risk": 0.18
+              "geopolitical_risk": 0.105
             }
           }
         ]
       },
       {
         "first": {
-          "mode": "sea",
-          "cost": 626.05,
-          "hours": 207.7,
-          "delay_probability": 0.36,
-          "congestion": 0.45,
-          "geopolitical_risk": 0.08
+          "mode": "air",
+          "cost": 5340.89,
+          "hours": 15.35,
+          "delay_probability": 0.1025,
+          "congestion": 0.525,
+          "geopolitical_risk": 0.14
         },
         "onward": [
           {
-            "at": "Hamburg",
+            "at": "Istanbul",
             "leg": {
               "mode": "sea",
-              "cost": 807.67,
-              "hours": 333.83,
-              "delay_probability": 0.35,
-              "congestion": 0.425,
-              "geopolitical_risk": 0.2
-            }
-          },
-          {
-            "at": "Santos",
-            "leg": {
-              "mode": "sea",
-              "cost": 979.32,
-              "hours": 453.03,
-              "delay_probability": 0.38,
-              "congestion": 0.5,
-              "geopolitical_risk": 0.3
+              "cost": 740.65,
+              "hours": 287.28,
+              "delay_probability": 0.4,
+              "congestion": 0.55,
+              "geopolitical_risk": 0.4
             }
           }
         ]
@@ -3154,22 +2945,22 @@
       {
         "first": {
           "mode": "sea",
-          "cost": 473.01,
-          "hours": 101.42,
-          "delay_probability": 0.43,
-          "congestion": 0.625,
-          "geopolitical_risk": 0.3
+          "cost": 911.54,
+          "hours": 405.96,
+          "delay_probability": 0.39,
+          "congestion": 0.525,
+          "geopolitical_risk": 0.15
         },
         "onward": [
           {
-            "at": "Colombo",
+            "at": "Cape Town",
             "leg": {
               "mode": "sea",
-              "cost": 979.32,
-              "hours": 453.03,
-              "delay_probability": 0.38,
-              "congestion": 0.5,
-              "geopolitical_risk": 0.3
+              "cost": 679.12,
+              "hours": 244.56,
+              "delay_probability": 0.34,
+              "congestion": 0.4,
+              "geopolitical_risk": 0.2
             }
           }
         ]
@@ -3199,56 +2990,45 @@
       },
       {
         "first": {
-          "mode": "rail",
-          "cost": 1068.09,
-          "hours": 85.91,
-          "delay_probability": 0.232,
+          "mode": "sea",
+          "cost": 737.55,
+          "hours": 285.14,
+          "delay_probability": 0.42,
           "congestion": 0.6,
-          "geopolitical_risk": 0.27
+          "geopolitical_risk": 0.45
         },
         "onward": [
           {
             "at": "Dubai",
             "leg": {
-              "mode": "rail",
-              "cost": 1959.7,
-              "hours": 170.83,
-              "delay_probability": 0.2045,
+              "mode": "air",
+              "cost": 7616.68,
+              "hours": 20.66,
+              "delay_probability": 0.0975,
               "congestion": 0.475,
-              "geopolitical_risk": 0.27
+              "geopolitical_risk": 0.1575
             }
           }
         ]
       },
       {
         "first": {
-          "mode": "sea",
-          "cost": 473.01,
-          "hours": 101.42,
-          "delay_probability": 0.43,
-          "congestion": 0.625,
-          "geopolitical_risk": 0.3
+          "mode": "air",
+          "cost": 9338.84,
+          "hours": 24.67,
+          "delay_probability": 0.11,
+          "congestion": 0.6,
+          "geopolitical_risk": 0.0525
         },
         "onward": [
           {
-            "at": "Colombo",
+            "at": "New York",
             "leg": {
               "mode": "sea",
-              "cost": 1029.77,
-              "hours": 488.06,
-              "delay_probability": 0.42,
-              "congestion": 0.6,
-              "geopolitical_risk": 0.3
-            }
-          },
-          {
-            "at": "Los Angeles",
-            "leg": {
-              "mode": "sea",
-              "cost": 797.47,
-              "hours": 326.74,
-              "delay_probability": 0.4,
-              "congestion": 0.55,
+              "cost": 794.02,
+              "hours": 324.35,
+              "delay_probability": 0.37,
+              "congestion": 0.475,
               "geopolitical_risk": 0.2
             }
           }
@@ -3257,22 +3037,22 @@
       {
         "first": {
           "mode": "air",
-          "cost": 8677.21,
-          "hours": 23.13,
-          "delay_probability": 0.1175,
-          "congestion": 0.675,
-          "geopolitical_risk": 0.0525
+          "cost": 4113.92,
+          "hours": 12.49,
+          "delay_probability": 0.11,
+          "congestion": 0.6,
+          "geopolitical_risk": 0.1575
         },
         "onward": [
           {
-            "at": "Los Angeles",
+            "at": "Dubai",
             "leg": {
               "mode": "air",
-              "cost": 6369.02,
-              "hours": 17.75,
-              "delay_probability": 0.105,
-              "congestion": 0.55,
-              "geopolitical_risk": 0.07
+              "cost": 7616.68,
+              "hours": 20.66,
+              "delay_probability": 0.0975,
+              "congestion": 0.475,
+              "geopolitical_risk": 0.1575
             }
           }
         ]

@@ -203,6 +203,10 @@ class Criteria:
     cost: float
     hours: float
     late: float
+    on_time_interval95: tuple[float, float] = (0.0, 1.0)
+    p90_hours: float = 0.0
+    expected_late_hours: float = 0.0
+    samples: int = 0
 
 
 @dataclass(frozen=True, slots=True)

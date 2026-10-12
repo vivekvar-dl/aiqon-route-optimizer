@@ -61,6 +61,10 @@ def test_balanced_picks_the_faster_route_and_says_why() -> None:
         "The pick holds under 17 of 18 single-price changes. "
         "It switches to A if holding is priced at 0.5x the balanced rate.",
         "Cost-first would ship A. Time-critical would also ship B. Risk-averse would also ship B.",
+        "The quoted schedule has 300 hours of deadline slack. Estimated on-time arrivals: 100.0% "
+        "(95% sampling interval 89.3% to 100.0%, 32 scenarios). "
+        "The 90th-percentile arrival is 100 hours. "
+        "This interval covers simulation sampling, not model error or a delivery guarantee.",
     )
 
 
@@ -203,16 +207,16 @@ def test_capped_tail_probes_are_counted_once() -> None:
     assert abs(max(probe.factor for probe in tail) - (1 / 0.9)) < 1e-12
 
 
-def test_catalog_seed_ships_a_dominated_route_when_the_tail_is_cheaper() -> None:
-    shipment = next(item for item in generate(42, 30) if item.id == "SHP-015")
+def test_schedule_feasibility_does_not_guarantee_on_time_arrival() -> None:
+    route = Route(Leg(Mode.SEA, 1_000, 100, 1.0, 0.5, 0.0))
+    shipment = Shipment("SHP-DEADLINE", "Rotterdam", "Shanghai", Priority.BALANCED, 100, 10_000, (route,))
     rec = recommend(shipment, scenarios=2_000, seed=42)
     assert isinstance(rec, Chosen)
-    assert rec.pick.label == "E"
-    assert (
-        "E is dominated by B on expected cost, expected hours, and delay risk. "
-        "Its risk-adjusted cost is $546 lower, so it ships. "
-        "The gap is under 5% of the score, so another sample of the same routes can flip the pick."
-    ) in rec.explanation.details
+    assert rec.pick.route.hours == shipment.deadline
+    assert rec.pick.criteria.late == 1.0
+    assert rec.pick.criteria.p90_hours > shipment.deadline
+    assert rec.pick.criteria.expected_late_hours > 0
+    assert "Estimated on-time arrivals: 0.0%" in rec.explanation.details[-1]
 
 
 def test_tail_weight_avoids_the_rare_cargo_loss() -> None:

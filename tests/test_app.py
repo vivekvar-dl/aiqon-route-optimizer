@@ -25,3 +25,11 @@ def test_new_shipment_uses_its_own_default_priority() -> None:
     assert not app.exception
     assert app.selectbox[1].value == "time-critical"
     assert "Deadline" in app.caption[1].value
+
+
+def test_demo_runs_the_sampling_and_disruption_audit() -> None:
+    app = AppTest.from_file(str(APP), default_timeout=90).run()
+    app.button[0].click().run()
+    assert not app.exception
+    assert len(app.dataframe) == 2
+    assert any("independent planning runs" in item.value for item in app.markdown)

@@ -76,3 +76,17 @@ def test_all_infeasible_evaluation_explains_missing_feasible_results(tmp_path, c
     assert code == 0
     assert "fallback" in output
     assert "No feasible shipments to evaluate." in output
+
+
+def test_audit_json_exposes_sampling_and_stresses(tmp_path, capsys) -> None:
+    path = tmp_path / "catalog.json"
+    path.write_text(to_json((_priced(),)))
+    code = main([
+        "audit", str(path), "SHP-1", "--json", "--runs", "2",
+        "--scenarios", "16", "--realizations", "32",
+    ])
+    payload = json.loads(capsys.readouterr().out)
+    assert code == 0
+    assert payload["reference_pick"] == "B"
+    assert payload["sampling"]["seeds"] == [8, 9]
+    assert len(payload["stresses"]) == 5

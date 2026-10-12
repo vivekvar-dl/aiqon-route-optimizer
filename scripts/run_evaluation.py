@@ -44,6 +44,8 @@ def _seed_row(seed: int) -> dict[str, object]:
             "feasible_rate": round(stats.feasible_rate, 4),
             "pareto_rate": round(stats.pareto_rate, 4),
             "mean_regret": round(stats.mean_regret, 2),
+            "total_risk_adjusted_cost": round(stats.total_risk_adjusted_cost, 2),
+            "mean_risk_regret": round(stats.mean_risk_regret, 2),
             "freight_quote": round(freight[policy], 2),
         }
     return {
@@ -56,6 +58,7 @@ def _seed_row(seed: int) -> dict[str, object]:
         "fallback_is": "fastest scheduled route for the recommended and feasible policies on infeasible shipments; not a recommendation",
         "all_shipment_regret_reference": "unconstrained held-out mean-cost oracle",
         "feasible_only_regret_reference": "deadline-constrained held-out mean-cost oracle",
+        "risk_regret_reference": "held-out minimum mean-CVaR score, with matching schedule constraints for feasible_only",
         "feasible_only": {
             policy.value: {
                 "total_cost": round(stats.total_cost, 2),
@@ -64,6 +67,8 @@ def _seed_row(seed: int) -> dict[str, object]:
                 "feasible_rate": round(stats.feasible_rate, 4),
                 "pareto_rate": round(stats.pareto_rate, 4),
                 "mean_regret": round(stats.mean_regret, 2),
+                "total_risk_adjusted_cost": round(stats.total_risk_adjusted_cost, 2),
+                "mean_risk_regret": round(stats.mean_risk_regret, 2),
             }
             for policy, stats in report.feasible_stats.items()
         },
