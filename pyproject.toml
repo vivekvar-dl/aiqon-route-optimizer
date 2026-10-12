@@ -1,0 +1,25 @@
+[project]
+name = "routeplan"
+version = "1.0.0"
+description = "Explainable shipment route recommendations under cost, time, and risk."
+requires-python = ">=3.12"
+dependencies = ["numpy>=1.26"]
+
+[project.optional-dependencies]
+demo = ["streamlit>=1.33"]
+test = ["pytest>=8"]
+report = ["fpdf2>=2.7"]
+
+[project.scripts]
+routeplan = "routeplan.cli:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
