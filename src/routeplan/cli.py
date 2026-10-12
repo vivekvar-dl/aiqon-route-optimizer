@@ -7,6 +7,7 @@ import sys
 from collections.abc import Sequence
 
 from routeplan._decide import recommend
+from routeplan._audit import audit
 from routeplan._evaluate import DEFAULT_REALIZATIONS, evaluate
 from routeplan._generate import generate
 from routeplan._io import parse_shipments, to_json
@@ -36,12 +37,24 @@ def main(argv: Sequence[str] | None = None) -> int:
     evaluate_cmd.add_argument("--realizations", type=int, default=DEFAULT_REALIZATIONS)
     evaluate_cmd.add_argument("--seed", type=int, default=0)
 
+    audit_cmd = sub.add_parser("audit", help="check sampling stability and model-error stresses")
+    audit_cmd.add_argument("file")
+    audit_cmd.add_argument("shipment_id")
+    audit_cmd.add_argument("--priority")
+    audit_cmd.add_argument("--seed", type=int, default=7)
+    audit_cmd.add_argument("--runs", type=int, default=20)
+    audit_cmd.add_argument("--scenarios", type=int, default=2_000)
+    audit_cmd.add_argument("--realizations", type=int, default=5_000)
+    audit_cmd.add_argument("--json", action="store_true")
+
     args = parser.parse_args(list(argv) if argv is not None else None)
     try:
         if args.command == "generate":
             return _generate(args.seed, args.shipments)
         if args.command == "recommend":
             return _recommend(args)
+        if args.command == "audit":
+            return _audit(args)
         return _evaluate(args)
     except (DatasetError, ValueError, OSError) as err:
         problems = getattr(err, "problems", None)
@@ -106,17 +119,63 @@ def _evaluate(args: argparse.Namespace) -> int:
         f"{len(report.rows)} shipments, {report.infeasible} with no feasible route."
     )
     print(
-        f"{'policy':<14}{'realized $':>14}{'mean ratio':>16}"
+        "All shipments: recommended and feasible baselines use "
+        "fastest-schedule fallback when no route qualifies."
+    )
+    print(
+        f"{'policy':<20}{'realized $':>14}{'mean ratio':>16}"
         f"{'on time':>10}{'feasible':>12}{'Pareto':>10}{'regret $':>12}"
     )
     for policy, stats in report.stats.items():
         print(
-            f"{policy.value:<14}{stats.total_cost:14,.0f}{stats.cost_ratio:16.2f}"
+            f"{policy.value:<20}{stats.total_cost:14,.0f}{stats.cost_ratio:16.2f}"
             f"{stats.on_time_rate:10.0%}{stats.feasible_rate:12.0%}"
             f"{stats.pareto_rate:10.0%}{stats.mean_regret:12,.0f}"
         )
     print(f"Recommended picks hold under {report.stability:.0%} of single-price changes.")
+    print(
+        f"\nFeasible shipments only: {len(report.rows) - report.infeasible}; "
+        "regret versus the deadline-constrained mean-cost oracle."
+    )
+    if not report.feasible_stats:
+        print("No feasible shipments to evaluate.")
+    for policy, stats in report.feasible_stats.items():
+        print(
+            f"{policy.value:<20} cost ${stats.total_cost:,.0f}, "
+            f"on time {stats.on_time_rate:.1%}, mean regret ${stats.mean_regret:,.0f}, "
+            f"risk-score regret ${stats.mean_risk_regret:,.0f}"
+        )
     return 0
+
+
+def _audit(args: argparse.Namespace) -> int:
+    shipments = _load(args.file)
+    shipment = next((item for item in shipments if item.id == args.shipment_id), None)
+    if shipment is None:
+        raise ValueError(f"unknown shipment {args.shipment_id}")
+    weights = Priority.from_slug(args.priority).weights if args.priority else None
+    result = audit(
+        shipment, weights, seed=args.seed, runs=args.runs,
+        scenarios=args.scenarios, realizations=args.realizations,
+    )
+    if args.json:
+        print(to_json(result), end="")
+    elif result.reference_pick is None:
+        print("No schedule-feasible recommendation to audit.")
+    else:
+        print(f"{shipment.id}: frozen route {result.reference_pick}.")
+        print(
+            f"Independent planning runs agree with it {result.sampling.reference_agreement:.1%} "
+            f"of the time: {result.sampling.picks}."
+        )
+        print("Stresses change the assumed environment; the original pick stays fixed.")
+        for case in result.stresses:
+            print(
+                f"{case.name:<24} on time {case.on_time:.1%}, mean cost ${case.mean_cost:,.0f}, "
+                f"risk-score regret ${case.risk_regret:,.0f} (hindsight best {case.best_risk_route})"
+            )
+        print("Sampling intervals and seed agreement do not measure real-world model accuracy.")
+    return 0 if result.reference_pick is not None else 3
 
 
 def _load(path: str) -> tuple[Shipment, ...]:

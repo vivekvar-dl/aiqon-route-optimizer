@@ -1,0 +1,4362 @@
+{
+  "catalog_seed": 7,
+  "planning_seed": 7,
+  "planning_scenarios": 2000,
+  "audit_runs": 20,
+  "realizations": 5000,
+  "method": "fixed catalog; planning seeds 8-27; frozen seed-7 picks in paired held-out stress scenarios",
+  "interval_is": "95% Wilson sampling interval under each assumed simulator, not model-error coverage",
+  "sampling_agreement": 0.868519,
+  "review_shipments": [
+    "SHP-003",
+    "SHP-006",
+    "SHP-009",
+    "SHP-012",
+    "SHP-015",
+    "SHP-018",
+    "SHP-027"
+  ],
+  "audits": [
+    {
+      "shipment_id": "SHP-001",
+      "reference_pick": "B",
+      "planning_scenarios": 2000,
+      "realizations": 5000,
+      "sampling": {
+        "seeds": [
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27
+        ],
+        "picks": {
+          "B": 20
+        },
+        "reference_agreement": 1.0,
+        "modal_pick": "B",
+        "modal_share": 1.0,
+        "median_score_gap": 3418.719669
+      },
+      "stresses": [
+        {
+          "name": "nominal",
+          "environment": {
+            "delay_probability_scale": 1.0,
+            "delay_length_scale": 1.0,
+            "disruption_scale": 1.0,
+            "regional_shock_probability": 0.0,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 1.0,
+          "on_time_interval95": [
+            0.999232,
+            1.0
+          ],
+          "p90_hours": 21.677083,
+          "mean_cost": 6036.794981,
+          "risk_adjusted_cost": 6772.184421,
+          "best_mean_route": "B",
+          "mean_regret": 0.0,
+          "best_risk_route": "B",
+          "risk_regret": 0.0
+        },
+        {
+          "name": "longer-delays",
+          "environment": {
+            "delay_probability_scale": 1.0,
+            "delay_length_scale": 1.5,
+            "disruption_scale": 1.0,
+            "regional_shock_probability": 0.0,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 1.0,
+          "on_time_interval95": [
+            0.999232,
+            1.0
+          ],
+          "p90_hours": 23.645624,
+          "mean_cost": 6039.197585,
+          "risk_adjusted_cost": 6776.197864,
+          "best_mean_route": "B",
+          "mean_regret": 0.0,
+          "best_risk_route": "B",
+          "risk_regret": 0.0
+        },
+        {
+          "name": "underestimated-events",
+          "environment": {
+            "delay_probability_scale": 1.5,
+            "delay_length_scale": 1.0,
+            "disruption_scale": 2.0,
+            "regional_shock_probability": 0.0,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 0.9998,
+          "on_time_interval95": [
+            0.998868,
+            0.999965
+          ],
+          "p90_hours": 25.268739,
+          "mean_cost": 6722.828709,
+          "risk_adjusted_cost": 8073.323409,
+          "best_mean_route": "B",
+          "mean_regret": 0.0,
+          "best_risk_route": "B",
+          "risk_regret": 0.0
+        },
+        {
+          "name": "regional-shocks",
+          "environment": {
+            "delay_probability_scale": 1.0,
+            "delay_length_scale": 1.0,
+            "disruption_scale": 1.0,
+            "regional_shock_probability": 0.1,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 0.9994,
+          "on_time_interval95": [
+            0.998237,
+            0.999796
+          ],
+          "p90_hours": 89.74,
+          "mean_cost": 6120.840053,
+          "risk_adjusted_cost": 6882.508771,
+          "best_mean_route": "B",
+          "mean_regret": 0.0,
+          "best_risk_route": "B",
+          "risk_regret": 0.0
+        },
+        {
+          "name": "combined",
+          "environment": {
+            "delay_probability_scale": 1.5,
+            "delay_length_scale": 1.5,
+            "disruption_scale": 2.0,
+            "regional_shock_probability": 0.1,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 0.9988,
+          "on_time_interval95": [
+            0.997384,
+            0.99945
+          ],
+          "p90_hours": 90.190834,
+          "mean_cost": 6811.285084,
+          "risk_adjusted_cost": 8183.103347,
+          "best_mean_route": "B",
+          "mean_regret": 0.0,
+          "best_risk_route": "B",
+          "risk_regret": 0.0
+        }
+      ]
+    },
+    {
+      "shipment_id": "SHP-002",
+      "reference_pick": "B",
+      "planning_scenarios": 2000,
+      "realizations": 5000,
+      "sampling": {
+        "seeds": [
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27
+        ],
+        "picks": {
+          "B": 20
+        },
+        "reference_agreement": 1.0,
+        "modal_pick": "B",
+        "modal_share": 1.0,
+        "median_score_gap": 8784.168311
+      },
+      "stresses": [
+        {
+          "name": "nominal",
+          "environment": {
+            "delay_probability_scale": 1.0,
+            "delay_length_scale": 1.0,
+            "disruption_scale": 1.0,
+            "regional_shock_probability": 0.0,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 1.0,
+          "on_time_interval95": [
+            0.999232,
+            1.0
+          ],
+          "p90_hours": 23.351111,
+          "mean_cost": 6476.957256,
+          "risk_adjusted_cost": 7752.831812,
+          "best_mean_route": "B",
+          "mean_regret": 0.0,
+          "best_risk_route": "B",
+          "risk_regret": 0.0
+        },
+        {
+          "name": "longer-delays",
+          "environment": {
+            "delay_probability_scale": 1.0,
+            "delay_length_scale": 1.5,
+            "disruption_scale": 1.0,
+            "regional_shock_probability": 0.0,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 1.0,
+          "on_time_interval95": [
+            0.999232,
+            1.0
+          ],
+          "p90_hours": 25.376667,
+          "mean_cost": 6482.927766,
+          "risk_adjusted_cost": 7771.500428,
+          "best_mean_route": "B",
+          "mean_regret": 0.0,
+          "best_risk_route": "B",
+          "risk_regret": 0.0
+        },
+        {
+          "name": "underestimated-events",
+          "environment": {
+            "delay_probability_scale": 1.5,
+            "delay_length_scale": 1.0,
+            "disruption_scale": 2.0,
+            "regional_shock_probability": 0.0,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 1.0,
+          "on_time_interval95": [
+            0.999232,
+            1.0
+          ],
+          "p90_hours": 26.83933,
+          "mean_cost": 6722.532886,
+          "risk_adjusted_cost": 8648.467455,
+          "best_mean_route": "B",
+          "mean_regret": 0.0,
+          "best_risk_route": "B",
+          "risk_regret": 0.0
+        },
+        {
+          "name": "regional-shocks",
+          "environment": {
+            "delay_probability_scale": 1.0,
+            "delay_length_scale": 1.0,
+            "disruption_scale": 1.0,
+            "regional_shock_probability": 0.1,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 1.0,
+          "on_time_interval95": [
+            0.999232,
+            1.0
+          ],
+          "p90_hours": 91.3,
+          "mean_cost": 6643.305293,
+          "risk_adjusted_cost": 8088.569354,
+          "best_mean_route": "B",
+          "mean_regret": 0.0,
+          "best_risk_route": "B",
+          "risk_regret": 0.0
+        },
+        {
+          "name": "combined",
+          "environment": {
+            "delay_probability_scale": 1.5,
+            "delay_length_scale": 1.5,
+            "disruption_scale": 2.0,
+            "regional_shock_probability": 0.1,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 1.0,
+          "on_time_interval95": [
+            0.999232,
+            1.0
+          ],
+          "p90_hours": 91.3,
+          "mean_cost": 6897.817674,
+          "risk_adjusted_cost": 8966.47552,
+          "best_mean_route": "B",
+          "mean_regret": 0.0,
+          "best_risk_route": "B",
+          "risk_regret": 0.0
+        }
+      ]
+    },
+    {
+      "shipment_id": "SHP-003",
+      "reference_pick": "E",
+      "planning_scenarios": 2000,
+      "realizations": 5000,
+      "sampling": {
+        "seeds": [
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27
+        ],
+        "picks": {
+          "B": 8,
+          "E": 12
+        },
+        "reference_agreement": 0.6,
+        "modal_pick": "E",
+        "modal_share": 0.6,
+        "median_score_gap": 230.870332
+      },
+      "stresses": [
+        {
+          "name": "nominal",
+          "environment": {
+            "delay_probability_scale": 1.0,
+            "delay_length_scale": 1.0,
+            "disruption_scale": 1.0,
+            "regional_shock_probability": 0.0,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 1.0,
+          "on_time_interval95": [
+            0.999232,
+            1.0
+          ],
+          "p90_hours": 24.56246,
+          "mean_cost": 6839.134832,
+          "risk_adjusted_cost": 7424.890785,
+          "best_mean_route": "E",
+          "mean_regret": 0.0,
+          "best_risk_route": "E",
+          "risk_regret": 0.0
+        },
+        {
+          "name": "longer-delays",
+          "environment": {
+            "delay_probability_scale": 1.0,
+            "delay_length_scale": 1.5,
+            "disruption_scale": 1.0,
+            "regional_shock_probability": 0.0,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 1.0,
+          "on_time_interval95": [
+            0.999232,
+            1.0
+          ],
+          "p90_hours": 26.54369,
+          "mean_cost": 6845.619934,
+          "risk_adjusted_cost": 7445.302383,
+          "best_mean_route": "E",
+          "mean_regret": 0.0,
+          "best_risk_route": "E",
+          "risk_regret": 0.0
+        },
+        {
+          "name": "underestimated-events",
+          "environment": {
+            "delay_probability_scale": 1.5,
+            "delay_length_scale": 1.0,
+            "disruption_scale": 2.0,
+            "regional_shock_probability": 0.0,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 1.0,
+          "on_time_interval95": [
+            0.999232,
+            1.0
+          ],
+          "p90_hours": 28.585171,
+          "mean_cost": 7053.217554,
+          "risk_adjusted_cost": 8200.401513,
+          "best_mean_route": "E",
+          "mean_regret": 0.0,
+          "best_risk_route": "E",
+          "risk_regret": 0.0
+        },
+        {
+          "name": "regional-shocks",
+          "environment": {
+            "delay_probability_scale": 1.0,
+            "delay_length_scale": 1.0,
+            "disruption_scale": 1.0,
+            "regional_shock_probability": 0.1,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 1.0,
+          "on_time_interval95": [
+            0.999232,
+            1.0
+          ],
+          "p90_hours": 92.6,
+          "mean_cost": 7034.082586,
+          "risk_adjusted_cost": 7813.821126,
+          "best_mean_route": "E",
+          "mean_regret": 0.0,
+          "best_risk_route": "E",
+          "risk_regret": 0.0
+        },
+        {
+          "name": "combined",
+          "environment": {
+            "delay_probability_scale": 1.5,
+            "delay_length_scale": 1.5,
+            "disruption_scale": 2.0,
+            "regional_shock_probability": 0.1,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 1.0,
+          "on_time_interval95": [
+            0.999232,
+            1.0
+          ],
+          "p90_hours": 93.244595,
+          "mean_cost": 7257.744898,
+          "risk_adjusted_cost": 8549.537899,
+          "best_mean_route": "E",
+          "mean_regret": 0.0,
+          "best_risk_route": "E",
+          "risk_regret": 0.0
+        }
+      ]
+    },
+    {
+      "shipment_id": "SHP-004",
+      "reference_pick": "B",
+      "planning_scenarios": 2000,
+      "realizations": 5000,
+      "sampling": {
+        "seeds": [
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27
+        ],
+        "picks": {
+          "B": 20
+        },
+        "reference_agreement": 1.0,
+        "modal_pick": "B",
+        "modal_share": 1.0,
+        "median_score_gap": 114065.554566
+      },
+      "stresses": [
+        {
+          "name": "nominal",
+          "environment": {
+            "delay_probability_scale": 1.0,
+            "delay_length_scale": 1.0,
+            "disruption_scale": 1.0,
+            "regional_shock_probability": 0.0,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 1.0,
+          "on_time_interval95": [
+            0.999232,
+            1.0
+          ],
+          "p90_hours": 41.918635,
+          "mean_cost": 13252.990988,
+          "risk_adjusted_cost": 20103.021081,
+          "best_mean_route": "B",
+          "mean_regret": 0.0,
+          "best_risk_route": "B",
+          "risk_regret": 0.0
+        },
+        {
+          "name": "longer-delays",
+          "environment": {
+            "delay_probability_scale": 1.0,
+            "delay_length_scale": 1.5,
+            "disruption_scale": 1.0,
+            "regional_shock_probability": 0.0,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 1.0,
+          "on_time_interval95": [
+            0.999232,
+            1.0
+          ],
+          "p90_hours": 45.967952,
+          "mean_cost": 13262.817199,
+          "risk_adjusted_cost": 20171.22817,
+          "best_mean_route": "B",
+          "mean_regret": 0.0,
+          "best_risk_route": "B",
+          "risk_regret": 0.0
+        },
+        {
+          "name": "underestimated-events",
+          "environment": {
+            "delay_probability_scale": 1.5,
+            "delay_length_scale": 1.0,
+            "disruption_scale": 2.0,
+            "regional_shock_probability": 0.0,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 1.0,
+          "on_time_interval95": [
+            0.999232,
+            1.0
+          ],
+          "p90_hours": 48.532972,
+          "mean_cost": 13696.940627,
+          "risk_adjusted_cost": 24058.384286,
+          "best_mean_route": "B",
+          "mean_regret": 0.0,
+          "best_risk_route": "B",
+          "risk_regret": 0.0
+        },
+        {
+          "name": "regional-shocks",
+          "environment": {
+            "delay_probability_scale": 1.0,
+            "delay_length_scale": 1.0,
+            "disruption_scale": 1.0,
+            "regional_shock_probability": 0.1,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 1.0,
+          "on_time_interval95": [
+            0.999232,
+            1.0
+          ],
+          "p90_hours": 105.82,
+          "mean_cost": 13491.39332,
+          "risk_adjusted_cost": 20795.375482,
+          "best_mean_route": "B",
+          "mean_regret": 0.0,
+          "best_risk_route": "B",
+          "risk_regret": 0.0
+        },
+        {
+          "name": "combined",
+          "environment": {
+            "delay_probability_scale": 1.5,
+            "delay_length_scale": 1.5,
+            "disruption_scale": 2.0,
+            "regional_shock_probability": 0.1,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 1.0,
+          "on_time_interval95": [
+            0.999232,
+            1.0
+          ],
+          "p90_hours": 116.13421,
+          "mean_cost": 13950.315294,
+          "risk_adjusted_cost": 24687.454715,
+          "best_mean_route": "B",
+          "mean_regret": 0.0,
+          "best_risk_route": "B",
+          "risk_regret": 0.0
+        }
+      ]
+    },
+    {
+      "shipment_id": "SHP-005",
+      "reference_pick": "D",
+      "planning_scenarios": 2000,
+      "realizations": 5000,
+      "sampling": {
+        "seeds": [
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27
+        ],
+        "picks": {
+          "D": 20
+        },
+        "reference_agreement": 1.0,
+        "modal_pick": "D",
+        "modal_share": 1.0,
+        "median_score_gap": 2292.610882
+      },
+      "stresses": [
+        {
+          "name": "nominal",
+          "environment": {
+            "delay_probability_scale": 1.0,
+            "delay_length_scale": 1.0,
+            "disruption_scale": 1.0,
+            "regional_shock_probability": 0.0,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 0.8186,
+          "on_time_interval95": [
+            0.807676,
+            0.829035
+          ],
+          "p90_hours": 804.070848,
+          "mean_cost": 6455.269722,
+          "risk_adjusted_cost": 6901.248041,
+          "best_mean_route": "D",
+          "mean_regret": 0.0,
+          "best_risk_route": "D",
+          "risk_regret": 0.0
+        },
+        {
+          "name": "longer-delays",
+          "environment": {
+            "delay_probability_scale": 1.0,
+            "delay_length_scale": 1.5,
+            "disruption_scale": 1.0,
+            "regional_shock_probability": 0.0,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 0.7496,
+          "on_time_interval95": [
+            0.737403,
+            0.761414
+          ],
+          "p90_hours": 987.457344,
+          "mean_cost": 6855.678112,
+          "risk_adjusted_cost": 7510.878549,
+          "best_mean_route": "D",
+          "mean_regret": 0.0,
+          "best_risk_route": "D",
+          "risk_regret": 0.0
+        },
+        {
+          "name": "underestimated-events",
+          "environment": {
+            "delay_probability_scale": 1.5,
+            "delay_length_scale": 1.0,
+            "disruption_scale": 2.0,
+            "regional_shock_probability": 0.0,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 0.7274,
+          "on_time_interval95": [
+            0.714886,
+            0.739565
+          ],
+          "p90_hours": 904.594488,
+          "mean_cost": 6903.086004,
+          "risk_adjusted_cost": 7592.552437,
+          "best_mean_route": "D",
+          "mean_regret": 0.0,
+          "best_risk_route": "D",
+          "risk_regret": 0.0
+        },
+        {
+          "name": "regional-shocks",
+          "environment": {
+            "delay_probability_scale": 1.0,
+            "delay_length_scale": 1.0,
+            "disruption_scale": 1.0,
+            "regional_shock_probability": 0.1,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 0.7974,
+          "on_time_interval95": [
+            0.786033,
+            0.808311
+          ],
+          "p90_hours": 839.48972,
+          "mean_cost": 6515.02212,
+          "risk_adjusted_cost": 6975.867967,
+          "best_mean_route": "D",
+          "mean_regret": 0.0,
+          "best_risk_route": "D",
+          "risk_regret": 0.0
+        },
+        {
+          "name": "combined",
+          "environment": {
+            "delay_probability_scale": 1.5,
+            "delay_length_scale": 1.5,
+            "disruption_scale": 2.0,
+            "regional_shock_probability": 0.1,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 0.6028,
+          "on_time_interval95": [
+            0.589163,
+            0.616279
+          ],
+          "p90_hours": 1161.49772,
+          "mean_cost": 7587.304453,
+          "risk_adjusted_cost": 8502.700421,
+          "best_mean_route": "D",
+          "mean_regret": 0.0,
+          "best_risk_route": "D",
+          "risk_regret": 0.0
+        }
+      ]
+    },
+    {
+      "shipment_id": "SHP-006",
+      "reference_pick": "B",
+      "planning_scenarios": 2000,
+      "realizations": 5000,
+      "sampling": {
+        "seeds": [
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27
+        ],
+        "picks": {
+          "B": 12,
+          "E": 8
+        },
+        "reference_agreement": 0.6,
+        "modal_pick": "B",
+        "modal_share": 0.6,
+        "median_score_gap": 1712.423307
+      },
+      "stresses": [
+        {
+          "name": "nominal",
+          "environment": {
+            "delay_probability_scale": 1.0,
+            "delay_length_scale": 1.0,
+            "disruption_scale": 1.0,
+            "regional_shock_probability": 0.0,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 1.0,
+          "on_time_interval95": [
+            0.999232,
+            1.0
+          ],
+          "p90_hours": 42.561088,
+          "mean_cost": 15930.061435,
+          "risk_adjusted_cost": 22702.034136,
+          "best_mean_route": "E",
+          "mean_regret": 449.768646,
+          "best_risk_route": "E",
+          "risk_regret": 1747.092698
+        },
+        {
+          "name": "longer-delays",
+          "environment": {
+            "delay_probability_scale": 1.0,
+            "delay_length_scale": 1.5,
+            "disruption_scale": 1.0,
+            "regional_shock_probability": 0.0,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 1.0,
+          "on_time_interval95": [
+            0.999232,
+            1.0
+          ],
+          "p90_hours": 46.931632,
+          "mean_cost": 15967.646983,
+          "risk_adjusted_cost": 22813.505957,
+          "best_mean_route": "E",
+          "mean_regret": 455.507094,
+          "best_risk_route": "E",
+          "risk_regret": 1759.654432
+        },
+        {
+          "name": "underestimated-events",
+          "environment": {
+            "delay_probability_scale": 1.5,
+            "delay_length_scale": 1.0,
+            "disruption_scale": 2.0,
+            "regional_shock_probability": 0.0,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 1.0,
+          "on_time_interval95": [
+            0.999232,
+            1.0
+          ],
+          "p90_hours": 49.288025,
+          "mean_cost": 17474.031037,
+          "risk_adjusted_cost": 28313.376548,
+          "best_mean_route": "B",
+          "mean_regret": 0.0,
+          "best_risk_route": "B",
+          "risk_regret": 0.0
+        },
+        {
+          "name": "regional-shocks",
+          "environment": {
+            "delay_probability_scale": 1.0,
+            "delay_length_scale": 1.0,
+            "disruption_scale": 1.0,
+            "regional_shock_probability": 0.1,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 1.0,
+          "on_time_interval95": [
+            0.999232,
+            1.0
+          ],
+          "p90_hours": 105.82,
+          "mean_cost": 16787.614573,
+          "risk_adjusted_cost": 24119.889026,
+          "best_mean_route": "E",
+          "mean_regret": 426.782686,
+          "best_risk_route": "E",
+          "risk_regret": 1665.585318
+        },
+        {
+          "name": "combined",
+          "environment": {
+            "delay_probability_scale": 1.5,
+            "delay_length_scale": 1.5,
+            "disruption_scale": 2.0,
+            "regional_shock_probability": 0.1,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 1.0,
+          "on_time_interval95": [
+            0.999232,
+            1.0
+          ],
+          "p90_hours": 116.236901,
+          "mean_cost": 18386.350594,
+          "risk_adjusted_cost": 29679.917943,
+          "best_mean_route": "B",
+          "mean_regret": 0.0,
+          "best_risk_route": "B",
+          "risk_regret": 0.0
+        }
+      ]
+    },
+    {
+      "shipment_id": "SHP-007",
+      "reference_pick": "B",
+      "planning_scenarios": 2000,
+      "realizations": 5000,
+      "sampling": {
+        "seeds": [
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27
+        ],
+        "picks": {
+          "B": 20
+        },
+        "reference_agreement": 1.0,
+        "modal_pick": "B",
+        "modal_share": 1.0,
+        "median_score_gap": 435304.885467
+      },
+      "stresses": [
+        {
+          "name": "nominal",
+          "environment": {
+            "delay_probability_scale": 1.0,
+            "delay_length_scale": 1.0,
+            "disruption_scale": 1.0,
+            "regional_shock_probability": 0.0,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 1.0,
+          "on_time_interval95": [
+            0.999232,
+            1.0
+          ],
+          "p90_hours": 26.693173,
+          "mean_cost": 12683.12516,
+          "risk_adjusted_cost": 15038.246926,
+          "best_mean_route": "B",
+          "mean_regret": 0.0,
+          "best_risk_route": "B",
+          "risk_regret": 0.0
+        },
+        {
+          "name": "longer-delays",
+          "environment": {
+            "delay_probability_scale": 1.0,
+            "delay_length_scale": 1.5,
+            "disruption_scale": 1.0,
+            "regional_shock_probability": 0.0,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 1.0,
+          "on_time_interval95": [
+            0.999232,
+            1.0
+          ],
+          "p90_hours": 28.259759,
+          "mean_cost": 12788.167824,
+          "risk_adjusted_cost": 15394.470685,
+          "best_mean_route": "B",
+          "mean_regret": 0.0,
+          "best_risk_route": "B",
+          "risk_regret": 0.0
+        },
+        {
+          "name": "underestimated-events",
+          "environment": {
+            "delay_probability_scale": 1.5,
+            "delay_length_scale": 1.0,
+            "disruption_scale": 2.0,
+            "regional_shock_probability": 0.0,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 1.0,
+          "on_time_interval95": [
+            0.999232,
+            1.0
+          ],
+          "p90_hours": 29.594226,
+          "mean_cost": 13406.863167,
+          "risk_adjusted_cost": 17569.902525,
+          "best_mean_route": "B",
+          "mean_regret": 0.0,
+          "best_risk_route": "B",
+          "risk_regret": 0.0
+        },
+        {
+          "name": "regional-shocks",
+          "environment": {
+            "delay_probability_scale": 1.0,
+            "delay_length_scale": 1.0,
+            "disruption_scale": 1.0,
+            "regional_shock_probability": 0.1,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 1.0,
+          "on_time_interval95": [
+            0.999232,
+            1.0
+          ],
+          "p90_hours": 95.56,
+          "mean_cost": 15304.810536,
+          "risk_adjusted_cost": 20522.718837,
+          "best_mean_route": "B",
+          "mean_regret": 0.0,
+          "best_risk_route": "B",
+          "risk_regret": 0.0
+        },
+        {
+          "name": "combined",
+          "environment": {
+            "delay_probability_scale": 1.5,
+            "delay_length_scale": 1.5,
+            "disruption_scale": 2.0,
+            "regional_shock_probability": 0.1,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 1.0,
+          "on_time_interval95": [
+            0.999232,
+            1.0
+          ],
+          "p90_hours": 95.56,
+          "mean_cost": 16182.930176,
+          "risk_adjusted_cost": 22967.670295,
+          "best_mean_route": "B",
+          "mean_regret": 0.0,
+          "best_risk_route": "B",
+          "risk_regret": 0.0
+        }
+      ]
+    },
+    {
+      "shipment_id": "SHP-008",
+      "reference_pick": "B",
+      "planning_scenarios": 2000,
+      "realizations": 5000,
+      "sampling": {
+        "seeds": [
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27
+        ],
+        "picks": {
+          "B": 20
+        },
+        "reference_agreement": 1.0,
+        "modal_pick": "B",
+        "modal_share": 1.0,
+        "median_score_gap": 14935.895863
+      },
+      "stresses": [
+        {
+          "name": "nominal",
+          "environment": {
+            "delay_probability_scale": 1.0,
+            "delay_length_scale": 1.0,
+            "disruption_scale": 1.0,
+            "regional_shock_probability": 0.0,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 1.0,
+          "on_time_interval95": [
+            0.999232,
+            1.0
+          ],
+          "p90_hours": 20.852022,
+          "mean_cost": 5245.574829,
+          "risk_adjusted_cost": 8015.200817,
+          "best_mean_route": "B",
+          "mean_regret": 0.0,
+          "best_risk_route": "B",
+          "risk_regret": 0.0
+        },
+        {
+          "name": "longer-delays",
+          "environment": {
+            "delay_probability_scale": 1.0,
+            "delay_length_scale": 1.5,
+            "disruption_scale": 1.0,
+            "regional_shock_probability": 0.0,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 1.0,
+          "on_time_interval95": [
+            0.999232,
+            1.0
+          ],
+          "p90_hours": 22.903034,
+          "mean_cost": 5251.393658,
+          "risk_adjusted_cost": 8055.792291,
+          "best_mean_route": "B",
+          "mean_regret": 0.0,
+          "best_risk_route": "B",
+          "risk_regret": 0.0
+        },
+        {
+          "name": "underestimated-events",
+          "environment": {
+            "delay_probability_scale": 1.5,
+            "delay_length_scale": 1.0,
+            "disruption_scale": 2.0,
+            "regional_shock_probability": 0.0,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 1.0,
+          "on_time_interval95": [
+            0.999232,
+            1.0
+          ],
+          "p90_hours": 23.403667,
+          "mean_cost": 5655.85891,
+          "risk_adjusted_cost": 11709.718985,
+          "best_mean_route": "B",
+          "mean_regret": 0.0,
+          "best_risk_route": "B",
+          "risk_regret": 0.0
+        },
+        {
+          "name": "regional-shocks",
+          "environment": {
+            "delay_probability_scale": 1.0,
+            "delay_length_scale": 1.0,
+            "disruption_scale": 1.0,
+            "regional_shock_probability": 0.1,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 1.0,
+          "on_time_interval95": [
+            0.999232,
+            1.0
+          ],
+          "p90_hours": 88.75,
+          "mean_cost": 5428.32677,
+          "risk_adjusted_cost": 8771.303748,
+          "best_mean_route": "B",
+          "mean_regret": 0.0,
+          "best_risk_route": "B",
+          "risk_regret": 0.0
+        },
+        {
+          "name": "combined",
+          "environment": {
+            "delay_probability_scale": 1.5,
+            "delay_length_scale": 1.5,
+            "disruption_scale": 2.0,
+            "regional_shock_probability": 0.1,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 1.0,
+          "on_time_interval95": [
+            0.999232,
+            1.0
+          ],
+          "p90_hours": 88.75,
+          "mean_cost": 5847.218255,
+          "risk_adjusted_cost": 12390.368735,
+          "best_mean_route": "B",
+          "mean_regret": 0.0,
+          "best_risk_route": "B",
+          "risk_regret": 0.0
+        }
+      ]
+    },
+    {
+      "shipment_id": "SHP-009",
+      "reference_pick": "C",
+      "planning_scenarios": 2000,
+      "realizations": 5000,
+      "sampling": {
+        "seeds": [
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27
+        ],
+        "picks": {
+          "B": 9,
+          "C": 9,
+          "E": 2
+        },
+        "reference_agreement": 0.45,
+        "modal_pick": "B",
+        "modal_share": 0.45,
+        "median_score_gap": 337.28639
+      },
+      "stresses": [
+        {
+          "name": "nominal",
+          "environment": {
+            "delay_probability_scale": 1.0,
+            "delay_length_scale": 1.0,
+            "disruption_scale": 1.0,
+            "regional_shock_probability": 0.0,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 0.9346,
+          "on_time_interval95": [
+            0.927408,
+            0.941125
+          ],
+          "p90_hours": 650.902747,
+          "mean_cost": 8816.05893,
+          "risk_adjusted_cost": 10528.97861,
+          "best_mean_route": "C",
+          "mean_regret": 0.0,
+          "best_risk_route": "B",
+          "risk_regret": 745.008843
+        },
+        {
+          "name": "longer-delays",
+          "environment": {
+            "delay_probability_scale": 1.0,
+            "delay_length_scale": 1.5,
+            "disruption_scale": 1.0,
+            "regional_shock_probability": 0.0,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 0.886,
+          "on_time_interval95": [
+            0.876893,
+            0.894514
+          ],
+          "p90_hours": 771.396057,
+          "mean_cost": 9995.517277,
+          "risk_adjusted_cost": 12648.936202,
+          "best_mean_route": "B",
+          "mean_regret": 598.264131,
+          "best_risk_route": "B",
+          "risk_regret": 2855.855463
+        },
+        {
+          "name": "underestimated-events",
+          "environment": {
+            "delay_probability_scale": 1.5,
+            "delay_length_scale": 1.0,
+            "disruption_scale": 2.0,
+            "regional_shock_probability": 0.0,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 0.9018,
+          "on_time_interval95": [
+            0.89324,
+            0.909743
+          ],
+          "p90_hours": 730.641491,
+          "mean_cost": 9759.832071,
+          "risk_adjusted_cost": 12113.198839,
+          "best_mean_route": "C",
+          "mean_regret": 0.0,
+          "best_risk_route": "B",
+          "risk_regret": 1142.238531
+        },
+        {
+          "name": "regional-shocks",
+          "environment": {
+            "delay_probability_scale": 1.0,
+            "delay_length_scale": 1.0,
+            "disruption_scale": 1.0,
+            "regional_shock_probability": 0.1,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 0.9306,
+          "on_time_interval95": [
+            0.92322,
+            0.937319
+          ],
+          "p90_hours": 670.159484,
+          "mean_cost": 8956.937398,
+          "risk_adjusted_cost": 10713.994555,
+          "best_mean_route": "C",
+          "mean_regret": 0.0,
+          "best_risk_route": "B",
+          "risk_regret": 805.870621
+        },
+        {
+          "name": "combined",
+          "environment": {
+            "delay_probability_scale": 1.5,
+            "delay_length_scale": 1.5,
+            "disruption_scale": 2.0,
+            "regional_shock_probability": 0.1,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 0.8142,
+          "on_time_interval95": [
+            0.803179,
+            0.824738
+          ],
+          "p90_hours": 901.499319,
+          "mean_cost": 11743.117827,
+          "risk_adjusted_cost": 15249.489356,
+          "best_mean_route": "B",
+          "mean_regret": 1624.501148,
+          "best_risk_route": "B",
+          "risk_regret": 4150.722778
+        }
+      ]
+    },
+    {
+      "shipment_id": "SHP-010",
+      "reference_pick": null,
+      "planning_scenarios": 2000,
+      "realizations": 5000,
+      "sampling": {
+        "seeds": [],
+        "picks": {},
+        "reference_agreement": null,
+        "modal_pick": null,
+        "modal_share": null,
+        "median_score_gap": null
+      },
+      "stresses": []
+    },
+    {
+      "shipment_id": "SHP-011",
+      "reference_pick": "B",
+      "planning_scenarios": 2000,
+      "realizations": 5000,
+      "sampling": {
+        "seeds": [
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27
+        ],
+        "picks": {
+          "B": 20
+        },
+        "reference_agreement": 1.0,
+        "modal_pick": "B",
+        "modal_share": 1.0,
+        "median_score_gap": 10962.292832
+      },
+      "stresses": [
+        {
+          "name": "nominal",
+          "environment": {
+            "delay_probability_scale": 1.0,
+            "delay_length_scale": 1.0,
+            "disruption_scale": 1.0,
+            "regional_shock_probability": 0.0,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 1.0,
+          "on_time_interval95": [
+            0.999232,
+            1.0
+          ],
+          "p90_hours": 27.026193,
+          "mean_cost": 7275.552107,
+          "risk_adjusted_cost": 7971.840612,
+          "best_mean_route": "B",
+          "mean_regret": 0.0,
+          "best_risk_route": "B",
+          "risk_regret": 0.0
+        },
+        {
+          "name": "longer-delays",
+          "environment": {
+            "delay_probability_scale": 1.0,
+            "delay_length_scale": 1.5,
+            "disruption_scale": 1.0,
+            "regional_shock_probability": 0.0,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 1.0,
+          "on_time_interval95": [
+            0.999232,
+            1.0
+          ],
+          "p90_hours": 29.87429,
+          "mean_cost": 7285.238001,
+          "risk_adjusted_cost": 8000.738863,
+          "best_mean_route": "B",
+          "mean_regret": 0.0,
+          "best_risk_route": "B",
+          "risk_regret": 0.0
+        },
+        {
+          "name": "underestimated-events",
+          "environment": {
+            "delay_probability_scale": 1.5,
+            "delay_length_scale": 1.0,
+            "disruption_scale": 2.0,
+            "regional_shock_probability": 0.0,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 1.0,
+          "on_time_interval95": [
+            0.999232,
+            1.0
+          ],
+          "p90_hours": 31.396202,
+          "mean_cost": 7578.485783,
+          "risk_adjusted_cost": 9063.982977,
+          "best_mean_route": "B",
+          "mean_regret": 0.0,
+          "best_risk_route": "B",
+          "risk_regret": 0.0
+        },
+        {
+          "name": "regional-shocks",
+          "environment": {
+            "delay_probability_scale": 1.0,
+            "delay_length_scale": 1.0,
+            "disruption_scale": 1.0,
+            "regional_shock_probability": 0.1,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 1.0,
+          "on_time_interval95": [
+            0.999232,
+            1.0
+          ],
+          "p90_hours": 93.647584,
+          "mean_cost": 7647.202431,
+          "risk_adjusted_cost": 8615.600349,
+          "best_mean_route": "B",
+          "mean_regret": 0.0,
+          "best_risk_route": "B",
+          "risk_regret": 0.0
+        },
+        {
+          "name": "combined",
+          "environment": {
+            "delay_probability_scale": 1.5,
+            "delay_length_scale": 1.5,
+            "disruption_scale": 2.0,
+            "regional_shock_probability": 0.1,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 1.0,
+          "on_time_interval95": [
+            0.999232,
+            1.0
+          ],
+          "p90_hours": 104.576619,
+          "mean_cost": 7964.46402,
+          "risk_adjusted_cost": 9666.154714,
+          "best_mean_route": "B",
+          "mean_regret": 0.0,
+          "best_risk_route": "B",
+          "risk_regret": 0.0
+        }
+      ]
+    },
+    {
+      "shipment_id": "SHP-012",
+      "reference_pick": "B",
+      "planning_scenarios": 2000,
+      "realizations": 5000,
+      "sampling": {
+        "seeds": [
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27
+        ],
+        "picks": {
+          "B": 15,
+          "E": 5
+        },
+        "reference_agreement": 0.75,
+        "modal_pick": "B",
+        "modal_share": 0.75,
+        "median_score_gap": 5564.338597
+      },
+      "stresses": [
+        {
+          "name": "nominal",
+          "environment": {
+            "delay_probability_scale": 1.0,
+            "delay_length_scale": 1.0,
+            "disruption_scale": 1.0,
+            "regional_shock_probability": 0.0,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 1.0,
+          "on_time_interval95": [
+            0.999232,
+            1.0
+          ],
+          "p90_hours": 27.323414,
+          "mean_cost": 9617.733353,
+          "risk_adjusted_cost": 18682.361222,
+          "best_mean_route": "B",
+          "mean_regret": 0.0,
+          "best_risk_route": "B",
+          "risk_regret": 0.0
+        },
+        {
+          "name": "longer-delays",
+          "environment": {
+            "delay_probability_scale": 1.0,
+            "delay_length_scale": 1.5,
+            "disruption_scale": 1.0,
+            "regional_shock_probability": 0.0,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 1.0,
+          "on_time_interval95": [
+            0.999232,
+            1.0
+          ],
+          "p90_hours": 29.27512,
+          "mean_cost": 9640.393766,
+          "risk_adjusted_cost": 18858.29759,
+          "best_mean_route": "B",
+          "mean_regret": 0.0,
+          "best_risk_route": "B",
+          "risk_regret": 0.0
+        },
+        {
+          "name": "underestimated-events",
+          "environment": {
+            "delay_probability_scale": 1.5,
+            "delay_length_scale": 1.0,
+            "disruption_scale": 2.0,
+            "regional_shock_probability": 0.0,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 1.0,
+          "on_time_interval95": [
+            0.999232,
+            1.0
+          ],
+          "p90_hours": 31.265579,
+          "mean_cost": 10380.853018,
+          "risk_adjusted_cost": 25483.41429,
+          "best_mean_route": "B",
+          "mean_regret": 0.0,
+          "best_risk_route": "B",
+          "risk_regret": 0.0
+        },
+        {
+          "name": "regional-shocks",
+          "environment": {
+            "delay_probability_scale": 1.0,
+            "delay_length_scale": 1.0,
+            "disruption_scale": 1.0,
+            "regional_shock_probability": 0.1,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 1.0,
+          "on_time_interval95": [
+            0.999232,
+            1.0
+          ],
+          "p90_hours": 95.42,
+          "mean_cost": 10166.575533,
+          "risk_adjusted_cost": 20945.564525,
+          "best_mean_route": "B",
+          "mean_regret": 0.0,
+          "best_risk_route": "B",
+          "risk_regret": 0.0
+        },
+        {
+          "name": "combined",
+          "environment": {
+            "delay_probability_scale": 1.5,
+            "delay_length_scale": 1.5,
+            "disruption_scale": 2.0,
+            "regional_shock_probability": 0.1,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 1.0,
+          "on_time_interval95": [
+            0.999232,
+            1.0
+          ],
+          "p90_hours": 95.42,
+          "mean_cost": 10964.197305,
+          "risk_adjusted_cost": 27511.992536,
+          "best_mean_route": "B",
+          "mean_regret": 0.0,
+          "best_risk_route": "B",
+          "risk_regret": 0.0
+        }
+      ]
+    },
+    {
+      "shipment_id": "SHP-013",
+      "reference_pick": "B",
+      "planning_scenarios": 2000,
+      "realizations": 5000,
+      "sampling": {
+        "seeds": [
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27
+        ],
+        "picks": {
+          "B": 20
+        },
+        "reference_agreement": 1.0,
+        "modal_pick": "B",
+        "modal_share": 1.0,
+        "median_score_gap": 5519.447493
+      },
+      "stresses": [
+        {
+          "name": "nominal",
+          "environment": {
+            "delay_probability_scale": 1.0,
+            "delay_length_scale": 1.0,
+            "disruption_scale": 1.0,
+            "regional_shock_probability": 0.0,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 1.0,
+          "on_time_interval95": [
+            0.999232,
+            1.0
+          ],
+          "p90_hours": 23.828097,
+          "mean_cost": 6377.272798,
+          "risk_adjusted_cost": 6869.009643,
+          "best_mean_route": "B",
+          "mean_regret": 0.0,
+          "best_risk_route": "B",
+          "risk_regret": 0.0
+        },
+        {
+          "name": "longer-delays",
+          "environment": {
+            "delay_probability_scale": 1.0,
+            "delay_length_scale": 1.5,
+            "disruption_scale": 1.0,
+            "regional_shock_probability": 0.0,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 1.0,
+          "on_time_interval95": [
+            0.999232,
+            1.0
+          ],
+          "p90_hours": 26.157145,
+          "mean_cost": 6379.972793,
+          "risk_adjusted_cost": 6873.522493,
+          "best_mean_route": "B",
+          "mean_regret": 0.0,
+          "best_risk_route": "B",
+          "risk_regret": 0.0
+        },
+        {
+          "name": "underestimated-events",
+          "environment": {
+            "delay_probability_scale": 1.5,
+            "delay_length_scale": 1.0,
+            "disruption_scale": 2.0,
+            "regional_shock_probability": 0.0,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 1.0,
+          "on_time_interval95": [
+            0.999232,
+            1.0
+          ],
+          "p90_hours": 27.180504,
+          "mean_cost": 6775.184459,
+          "risk_adjusted_cost": 7622.853376,
+          "best_mean_route": "B",
+          "mean_regret": 0.0,
+          "best_risk_route": "B",
+          "risk_regret": 0.0
+        },
+        {
+          "name": "regional-shocks",
+          "environment": {
+            "delay_probability_scale": 1.0,
+            "delay_length_scale": 1.0,
+            "disruption_scale": 1.0,
+            "regional_shock_probability": 0.1,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 1.0,
+          "on_time_interval95": [
+            0.999232,
+            1.0
+          ],
+          "p90_hours": 91.17,
+          "mean_cost": 6453.050223,
+          "risk_adjusted_cost": 6969.587974,
+          "best_mean_route": "B",
+          "mean_regret": 0.0,
+          "best_risk_route": "B",
+          "risk_regret": 0.0
+        },
+        {
+          "name": "combined",
+          "environment": {
+            "delay_probability_scale": 1.5,
+            "delay_length_scale": 1.5,
+            "disruption_scale": 2.0,
+            "regional_shock_probability": 0.1,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 0.9998,
+          "on_time_interval95": [
+            0.998868,
+            0.999965
+          ],
+          "p90_hours": 91.924488,
+          "mean_cost": 6855.40577,
+          "risk_adjusted_cost": 7724.126941,
+          "best_mean_route": "B",
+          "mean_regret": 0.0,
+          "best_risk_route": "B",
+          "risk_regret": 0.0
+        }
+      ]
+    },
+    {
+      "shipment_id": "SHP-014",
+      "reference_pick": "B",
+      "planning_scenarios": 2000,
+      "realizations": 5000,
+      "sampling": {
+        "seeds": [
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27
+        ],
+        "picks": {
+          "B": 20
+        },
+        "reference_agreement": 1.0,
+        "modal_pick": "B",
+        "modal_share": 1.0,
+        "median_score_gap": 46706.124956
+      },
+      "stresses": [
+        {
+          "name": "nominal",
+          "environment": {
+            "delay_probability_scale": 1.0,
+            "delay_length_scale": 1.0,
+            "disruption_scale": 1.0,
+            "regional_shock_probability": 0.0,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 1.0,
+          "on_time_interval95": [
+            0.999232,
+            1.0
+          ],
+          "p90_hours": 19.655347,
+          "mean_cost": 7835.183041,
+          "risk_adjusted_cost": 14144.255448,
+          "best_mean_route": "B",
+          "mean_regret": 0.0,
+          "best_risk_route": "B",
+          "risk_regret": 0.0
+        },
+        {
+          "name": "longer-delays",
+          "environment": {
+            "delay_probability_scale": 1.0,
+            "delay_length_scale": 1.5,
+            "disruption_scale": 1.0,
+            "regional_shock_probability": 0.0,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 1.0,
+          "on_time_interval95": [
+            0.999232,
+            1.0
+          ],
+          "p90_hours": 21.28802,
+          "mean_cost": 7855.500762,
+          "risk_adjusted_cost": 14206.201262,
+          "best_mean_route": "B",
+          "mean_regret": 0.0,
+          "best_risk_route": "B",
+          "risk_regret": 0.0
+        },
+        {
+          "name": "underestimated-events",
+          "environment": {
+            "delay_probability_scale": 1.5,
+            "delay_length_scale": 1.0,
+            "disruption_scale": 2.0,
+            "regional_shock_probability": 0.0,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 1.0,
+          "on_time_interval95": [
+            0.999232,
+            1.0
+          ],
+          "p90_hours": 22.75554,
+          "mean_cost": 11410.571929,
+          "risk_adjusted_cost": 27316.103458,
+          "best_mean_route": "B",
+          "mean_regret": 0.0,
+          "best_risk_route": "B",
+          "risk_regret": 0.0
+        },
+        {
+          "name": "regional-shocks",
+          "environment": {
+            "delay_probability_scale": 1.0,
+            "delay_length_scale": 1.0,
+            "disruption_scale": 1.0,
+            "regional_shock_probability": 0.1,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 1.0,
+          "on_time_interval95": [
+            0.999232,
+            1.0
+          ],
+          "p90_hours": 88.39,
+          "mean_cost": 8697.796132,
+          "risk_adjusted_cost": 15823.44324,
+          "best_mean_route": "B",
+          "mean_regret": 0.0,
+          "best_risk_route": "B",
+          "risk_regret": 0.0
+        },
+        {
+          "name": "combined",
+          "environment": {
+            "delay_probability_scale": 1.5,
+            "delay_length_scale": 1.5,
+            "disruption_scale": 2.0,
+            "regional_shock_probability": 0.1,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 1.0,
+          "on_time_interval95": [
+            0.999232,
+            1.0
+          ],
+          "p90_hours": 89.225777,
+          "mean_cost": 12303.741934,
+          "risk_adjusted_cost": 28819.005019,
+          "best_mean_route": "B",
+          "mean_regret": 0.0,
+          "best_risk_route": "B",
+          "risk_regret": 0.0
+        }
+      ]
+    },
+    {
+      "shipment_id": "SHP-015",
+      "reference_pick": "B",
+      "planning_scenarios": 2000,
+      "realizations": 5000,
+      "sampling": {
+        "seeds": [
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27
+        ],
+        "picks": {
+          "B": 9,
+          "E": 11
+        },
+        "reference_agreement": 0.45,
+        "modal_pick": "E",
+        "modal_share": 0.55,
+        "median_score_gap": 612.369298
+      },
+      "stresses": [
+        {
+          "name": "nominal",
+          "environment": {
+            "delay_probability_scale": 1.0,
+            "delay_length_scale": 1.0,
+            "disruption_scale": 1.0,
+            "regional_shock_probability": 0.0,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 1.0,
+          "on_time_interval95": [
+            0.999232,
+            1.0
+          ],
+          "p90_hours": 37.447988,
+          "mean_cost": 13920.26643,
+          "risk_adjusted_cost": 16008.446871,
+          "best_mean_route": "B",
+          "mean_regret": 0.0,
+          "best_risk_route": "B",
+          "risk_regret": 0.0
+        },
+        {
+          "name": "longer-delays",
+          "environment": {
+            "delay_probability_scale": 1.0,
+            "delay_length_scale": 1.5,
+            "disruption_scale": 1.0,
+            "regional_shock_probability": 0.0,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 1.0,
+          "on_time_interval95": [
+            0.999232,
+            1.0
+          ],
+          "p90_hours": 41.201982,
+          "mean_cost": 14010.237488,
+          "risk_adjusted_cost": 16282.636777,
+          "best_mean_route": "B",
+          "mean_regret": 0.0,
+          "best_risk_route": "B",
+          "risk_regret": 0.0
+        },
+        {
+          "name": "underestimated-events",
+          "environment": {
+            "delay_probability_scale": 1.5,
+            "delay_length_scale": 1.0,
+            "disruption_scale": 2.0,
+            "regional_shock_probability": 0.0,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 1.0,
+          "on_time_interval95": [
+            0.999232,
+            1.0
+          ],
+          "p90_hours": 43.510587,
+          "mean_cost": 14809.113775,
+          "risk_adjusted_cost": 19077.1663,
+          "best_mean_route": "B",
+          "mean_regret": 0.0,
+          "best_risk_route": "B",
+          "risk_regret": 0.0
+        },
+        {
+          "name": "regional-shocks",
+          "environment": {
+            "delay_probability_scale": 1.0,
+            "delay_length_scale": 1.0,
+            "disruption_scale": 1.0,
+            "regional_shock_probability": 0.1,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 1.0,
+          "on_time_interval95": [
+            0.999232,
+            1.0
+          ],
+          "p90_hours": 101.94,
+          "mean_cost": 15889.316296,
+          "risk_adjusted_cost": 19423.534582,
+          "best_mean_route": "B",
+          "mean_regret": 0.0,
+          "best_risk_route": "B",
+          "risk_regret": 0.0
+        },
+        {
+          "name": "combined",
+          "environment": {
+            "delay_probability_scale": 1.5,
+            "delay_length_scale": 1.5,
+            "disruption_scale": 2.0,
+            "regional_shock_probability": 0.1,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 1.0,
+          "on_time_interval95": [
+            0.999232,
+            1.0
+          ],
+          "p90_hours": 108.036721,
+          "mean_cost": 16918.219083,
+          "risk_adjusted_cost": 22513.284323,
+          "best_mean_route": "B",
+          "mean_regret": 0.0,
+          "best_risk_route": "B",
+          "risk_regret": 0.0
+        }
+      ]
+    },
+    {
+      "shipment_id": "SHP-016",
+      "reference_pick": "B",
+      "planning_scenarios": 2000,
+      "realizations": 5000,
+      "sampling": {
+        "seeds": [
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27
+        ],
+        "picks": {
+          "B": 20
+        },
+        "reference_agreement": 1.0,
+        "modal_pick": "B",
+        "modal_share": 1.0,
+        "median_score_gap": 60260.334756
+      },
+      "stresses": [
+        {
+          "name": "nominal",
+          "environment": {
+            "delay_probability_scale": 1.0,
+            "delay_length_scale": 1.0,
+            "disruption_scale": 1.0,
+            "regional_shock_probability": 0.0,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 0.9998,
+          "on_time_interval95": [
+            0.998868,
+            0.999965
+          ],
+          "p90_hours": 21.005978,
+          "mean_cost": 5599.823784,
+          "risk_adjusted_cost": 10685.45763,
+          "best_mean_route": "B",
+          "mean_regret": 0.0,
+          "best_risk_route": "B",
+          "risk_regret": 0.0
+        },
+        {
+          "name": "longer-delays",
+          "environment": {
+            "delay_probability_scale": 1.0,
+            "delay_length_scale": 1.5,
+            "disruption_scale": 1.0,
+            "regional_shock_probability": 0.0,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 0.9996,
+          "on_time_interval95": [
+            0.998543,
+            0.99989
+          ],
+          "p90_hours": 23.288967,
+          "mean_cost": 5613.887103,
+          "risk_adjusted_cost": 10786.190177,
+          "best_mean_route": "B",
+          "mean_regret": 0.0,
+          "best_risk_route": "B",
+          "risk_regret": 0.0
+        },
+        {
+          "name": "underestimated-events",
+          "environment": {
+            "delay_probability_scale": 1.5,
+            "delay_length_scale": 1.0,
+            "disruption_scale": 2.0,
+            "regional_shock_probability": 0.0,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 0.9992,
+          "on_time_interval95": [
+            0.997945,
+            0.999689
+          ],
+          "p90_hours": 23.947947,
+          "mean_cost": 6441.969834,
+          "risk_adjusted_cost": 18249.949146,
+          "best_mean_route": "B",
+          "mean_regret": 0.0,
+          "best_risk_route": "B",
+          "risk_regret": 0.0
+        },
+        {
+          "name": "regional-shocks",
+          "environment": {
+            "delay_probability_scale": 1.0,
+            "delay_length_scale": 1.0,
+            "disruption_scale": 1.0,
+            "regional_shock_probability": 0.1,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 0.9858,
+          "on_time_interval95": [
+            0.982128,
+            0.988726
+          ],
+          "p90_hours": 88.44,
+          "mean_cost": 6110.781989,
+          "risk_adjusted_cost": 13459.096832,
+          "best_mean_route": "B",
+          "mean_regret": 0.0,
+          "best_risk_route": "B",
+          "risk_regret": 0.0
+        },
+        {
+          "name": "combined",
+          "environment": {
+            "delay_probability_scale": 1.5,
+            "delay_length_scale": 1.5,
+            "disruption_scale": 2.0,
+            "regional_shock_probability": 0.1,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 0.981,
+          "on_time_interval95": [
+            0.97683,
+            0.984431
+          ],
+          "p90_hours": 88.44,
+          "mean_cost": 7067.076134,
+          "risk_adjusted_cost": 21763.413932,
+          "best_mean_route": "B",
+          "mean_regret": 0.0,
+          "best_risk_route": "B",
+          "risk_regret": 0.0
+        }
+      ]
+    },
+    {
+      "shipment_id": "SHP-017",
+      "reference_pick": "B",
+      "planning_scenarios": 2000,
+      "realizations": 5000,
+      "sampling": {
+        "seeds": [
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27
+        ],
+        "picks": {
+          "B": 19,
+          "D": 1
+        },
+        "reference_agreement": 0.95,
+        "modal_pick": "B",
+        "modal_share": 0.95,
+        "median_score_gap": 1191.737951
+      },
+      "stresses": [
+        {
+          "name": "nominal",
+          "environment": {
+            "delay_probability_scale": 1.0,
+            "delay_length_scale": 1.0,
+            "disruption_scale": 1.0,
+            "regional_shock_probability": 0.0,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 1.0,
+          "on_time_interval95": [
+            0.999232,
+            1.0
+          ],
+          "p90_hours": 27.141057,
+          "mean_cost": 7907.774579,
+          "risk_adjusted_cost": 8917.942648,
+          "best_mean_route": "B",
+          "mean_regret": 0.0,
+          "best_risk_route": "B",
+          "risk_regret": 0.0
+        },
+        {
+          "name": "longer-delays",
+          "environment": {
+            "delay_probability_scale": 1.0,
+            "delay_length_scale": 1.5,
+            "disruption_scale": 1.0,
+            "regional_shock_probability": 0.0,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 1.0,
+          "on_time_interval95": [
+            0.999232,
+            1.0
+          ],
+          "p90_hours": 30.046586,
+          "mean_cost": 7911.19315,
+          "risk_adjusted_cost": 8923.530224,
+          "best_mean_route": "B",
+          "mean_regret": 0.0,
+          "best_risk_route": "B",
+          "risk_regret": 0.0
+        },
+        {
+          "name": "underestimated-events",
+          "environment": {
+            "delay_probability_scale": 1.5,
+            "delay_length_scale": 1.0,
+            "disruption_scale": 2.0,
+            "regional_shock_probability": 0.0,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 1.0,
+          "on_time_interval95": [
+            0.999232,
+            1.0
+          ],
+          "p90_hours": 31.988161,
+          "mean_cost": 8667.173508,
+          "risk_adjusted_cost": 10357.472084,
+          "best_mean_route": "B",
+          "mean_regret": 0.0,
+          "best_risk_route": "B",
+          "risk_regret": 0.0
+        },
+        {
+          "name": "regional-shocks",
+          "environment": {
+            "delay_probability_scale": 1.0,
+            "delay_length_scale": 1.0,
+            "disruption_scale": 1.0,
+            "regional_shock_probability": 0.1,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 1.0,
+          "on_time_interval95": [
+            0.999232,
+            1.0
+          ],
+          "p90_hours": 94.133609,
+          "mean_cost": 8037.133821,
+          "risk_adjusted_cost": 9077.332834,
+          "best_mean_route": "B",
+          "mean_regret": 0.0,
+          "best_risk_route": "B",
+          "risk_regret": 0.0
+        },
+        {
+          "name": "combined",
+          "environment": {
+            "delay_probability_scale": 1.5,
+            "delay_length_scale": 1.5,
+            "disruption_scale": 2.0,
+            "regional_shock_probability": 0.1,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 1.0,
+          "on_time_interval95": [
+            0.999232,
+            1.0
+          ],
+          "p90_hours": 103.666029,
+          "mean_cost": 8801.595786,
+          "risk_adjusted_cost": 10515.961836,
+          "best_mean_route": "B",
+          "mean_regret": 0.0,
+          "best_risk_route": "B",
+          "risk_regret": 0.0
+        }
+      ]
+    },
+    {
+      "shipment_id": "SHP-018",
+      "reference_pick": "D",
+      "planning_scenarios": 2000,
+      "realizations": 5000,
+      "sampling": {
+        "seeds": [
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27
+        ],
+        "picks": {
+          "B": 14,
+          "D": 6
+        },
+        "reference_agreement": 0.3,
+        "modal_pick": "B",
+        "modal_share": 0.7,
+        "median_score_gap": 149.435622
+      },
+      "stresses": [
+        {
+          "name": "nominal",
+          "environment": {
+            "delay_probability_scale": 1.0,
+            "delay_length_scale": 1.0,
+            "disruption_scale": 1.0,
+            "regional_shock_probability": 0.0,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 0.9384,
+          "on_time_interval95": [
+            0.931393,
+            0.944734
+          ],
+          "p90_hours": 319.963342,
+          "mean_cost": 4291.093085,
+          "risk_adjusted_cost": 5717.614913,
+          "best_mean_route": "A",
+          "mean_regret": 142.828,
+          "best_risk_route": "D",
+          "risk_regret": 0.0
+        },
+        {
+          "name": "longer-delays",
+          "environment": {
+            "delay_probability_scale": 1.0,
+            "delay_length_scale": 1.5,
+            "disruption_scale": 1.0,
+            "regional_shock_probability": 0.0,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 0.8844,
+          "on_time_interval95": [
+            0.875241,
+            0.892969
+          ],
+          "p90_hours": 380.398507,
+          "mean_cost": 4708.156718,
+          "risk_adjusted_cost": 7141.735054,
+          "best_mean_route": "D",
+          "mean_regret": 0.0,
+          "best_risk_route": "B",
+          "risk_regret": 1365.476629
+        },
+        {
+          "name": "underestimated-events",
+          "environment": {
+            "delay_probability_scale": 1.5,
+            "delay_length_scale": 1.0,
+            "disruption_scale": 2.0,
+            "regional_shock_probability": 0.0,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 0.9032,
+          "on_time_interval95": [
+            0.894692,
+            0.911089
+          ],
+          "p90_hours": 357.641863,
+          "mean_cost": 4735.174814,
+          "risk_adjusted_cost": 7161.679599,
+          "best_mean_route": "D",
+          "mean_regret": 0.0,
+          "best_risk_route": "B",
+          "risk_regret": 920.478912
+        },
+        {
+          "name": "regional-shocks",
+          "environment": {
+            "delay_probability_scale": 1.0,
+            "delay_length_scale": 1.0,
+            "disruption_scale": 1.0,
+            "regional_shock_probability": 0.1,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 0.9204,
+          "on_time_interval95": [
+            0.912571,
+            0.927584
+          ],
+          "p90_hours": 344.710484,
+          "mean_cost": 4404.064114,
+          "risk_adjusted_cost": 5990.559044,
+          "best_mean_route": "D",
+          "mean_regret": 0.0,
+          "best_risk_route": "B",
+          "risk_regret": 113.678965
+        },
+        {
+          "name": "combined",
+          "environment": {
+            "delay_probability_scale": 1.5,
+            "delay_length_scale": 1.5,
+            "disruption_scale": 2.0,
+            "regional_shock_probability": 0.1,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 0.7928,
+          "on_time_interval95": [
+            0.781343,
+            0.803807
+          ],
+          "p90_hours": 451.56545,
+          "mean_cost": 5545.824665,
+          "risk_adjusted_cost": 9226.026346,
+          "best_mean_route": "B",
+          "mean_regret": 13.12625,
+          "best_risk_route": "B",
+          "risk_regret": 2886.730913
+        }
+      ]
+    },
+    {
+      "shipment_id": "SHP-019",
+      "reference_pick": "B",
+      "planning_scenarios": 2000,
+      "realizations": 5000,
+      "sampling": {
+        "seeds": [
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27
+        ],
+        "picks": {
+          "B": 20
+        },
+        "reference_agreement": 1.0,
+        "modal_pick": "B",
+        "modal_share": 1.0,
+        "median_score_gap": 30559.304497
+      },
+      "stresses": [
+        {
+          "name": "nominal",
+          "environment": {
+            "delay_probability_scale": 1.0,
+            "delay_length_scale": 1.0,
+            "disruption_scale": 1.0,
+            "regional_shock_probability": 0.0,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 1.0,
+          "on_time_interval95": [
+            0.999232,
+            1.0
+          ],
+          "p90_hours": 26.706677,
+          "mean_cost": 7713.397071,
+          "risk_adjusted_cost": 9259.563624,
+          "best_mean_route": "B",
+          "mean_regret": 0.0,
+          "best_risk_route": "B",
+          "risk_regret": 0.0
+        },
+        {
+          "name": "longer-delays",
+          "environment": {
+            "delay_probability_scale": 1.0,
+            "delay_length_scale": 1.5,
+            "disruption_scale": 1.0,
+            "regional_shock_probability": 0.0,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 0.9998,
+          "on_time_interval95": [
+            0.998868,
+            0.999965
+          ],
+          "p90_hours": 29.565015,
+          "mean_cost": 7732.225012,
+          "risk_adjusted_cost": 9315.9503,
+          "best_mean_route": "B",
+          "mean_regret": 0.0,
+          "best_risk_route": "B",
+          "risk_regret": 0.0
+        },
+        {
+          "name": "underestimated-events",
+          "environment": {
+            "delay_probability_scale": 1.5,
+            "delay_length_scale": 1.0,
+            "disruption_scale": 2.0,
+            "regional_shock_probability": 0.0,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 0.9996,
+          "on_time_interval95": [
+            0.998543,
+            0.99989
+          ],
+          "p90_hours": 30.878067,
+          "mean_cost": 8061.10439,
+          "risk_adjusted_cost": 10496.082331,
+          "best_mean_route": "B",
+          "mean_regret": 0.0,
+          "best_risk_route": "B",
+          "risk_regret": 0.0
+        },
+        {
+          "name": "regional-shocks",
+          "environment": {
+            "delay_probability_scale": 1.0,
+            "delay_length_scale": 1.0,
+            "disruption_scale": 1.0,
+            "regional_shock_probability": 0.1,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 0.9848,
+          "on_time_interval95": [
+            0.981018,
+            0.987838
+          ],
+          "p90_hours": 92.99,
+          "mean_cost": 8279.983308,
+          "risk_adjusted_cost": 10521.814018,
+          "best_mean_route": "B",
+          "mean_regret": 0.0,
+          "best_risk_route": "B",
+          "risk_regret": 0.0
+        },
+        {
+          "name": "combined",
+          "environment": {
+            "delay_probability_scale": 1.5,
+            "delay_length_scale": 1.5,
+            "disruption_scale": 2.0,
+            "regional_shock_probability": 0.1,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 0.9812,
+          "on_time_interval95": [
+            0.977049,
+            0.984612
+          ],
+          "p90_hours": 94.996474,
+          "mean_cost": 8727.373446,
+          "risk_adjusted_cost": 11968.159782,
+          "best_mean_route": "B",
+          "mean_regret": 0.0,
+          "best_risk_route": "B",
+          "risk_regret": 0.0
+        }
+      ]
+    },
+    {
+      "shipment_id": "SHP-020",
+      "reference_pick": null,
+      "planning_scenarios": 2000,
+      "realizations": 5000,
+      "sampling": {
+        "seeds": [],
+        "picks": {},
+        "reference_agreement": null,
+        "modal_pick": null,
+        "modal_share": null,
+        "median_score_gap": null
+      },
+      "stresses": []
+    },
+    {
+      "shipment_id": "SHP-021",
+      "reference_pick": "D",
+      "planning_scenarios": 2000,
+      "realizations": 5000,
+      "sampling": {
+        "seeds": [
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27
+        ],
+        "picks": {
+          "D": 20
+        },
+        "reference_agreement": 1.0,
+        "modal_pick": "D",
+        "modal_share": 1.0,
+        "median_score_gap": 1059.92974
+      },
+      "stresses": [
+        {
+          "name": "nominal",
+          "environment": {
+            "delay_probability_scale": 1.0,
+            "delay_length_scale": 1.0,
+            "disruption_scale": 1.0,
+            "regional_shock_probability": 0.0,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 0.9544,
+          "on_time_interval95": [
+            0.94826,
+            0.959842
+          ],
+          "p90_hours": 505.384952,
+          "mean_cost": 6216.369373,
+          "risk_adjusted_cost": 7073.376142,
+          "best_mean_route": "D",
+          "mean_regret": 0.0,
+          "best_risk_route": "D",
+          "risk_regret": 0.0
+        },
+        {
+          "name": "longer-delays",
+          "environment": {
+            "delay_probability_scale": 1.0,
+            "delay_length_scale": 1.5,
+            "disruption_scale": 1.0,
+            "regional_shock_probability": 0.0,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 0.9076,
+          "on_time_interval95": [
+            0.899257,
+            0.915317
+          ],
+          "p90_hours": 605.654422,
+          "mean_cost": 6581.676562,
+          "risk_adjusted_cost": 7727.857449,
+          "best_mean_route": "D",
+          "mean_regret": 0.0,
+          "best_risk_route": "D",
+          "risk_regret": 0.0
+        },
+        {
+          "name": "underestimated-events",
+          "environment": {
+            "delay_probability_scale": 1.5,
+            "delay_length_scale": 1.0,
+            "disruption_scale": 2.0,
+            "regional_shock_probability": 0.0,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 0.9278,
+          "on_time_interval95": [
+            0.920293,
+            0.93465
+          ],
+          "p90_hours": 574.900929,
+          "mean_cost": 7115.733127,
+          "risk_adjusted_cost": 8696.129249,
+          "best_mean_route": "D",
+          "mean_regret": 0.0,
+          "best_risk_route": "D",
+          "risk_regret": 0.0
+        },
+        {
+          "name": "regional-shocks",
+          "environment": {
+            "delay_probability_scale": 1.0,
+            "delay_length_scale": 1.0,
+            "disruption_scale": 1.0,
+            "regional_shock_probability": 0.1,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 0.9434,
+          "on_time_interval95": [
+            0.936648,
+            0.949471
+          ],
+          "p90_hours": 537.352883,
+          "mean_cost": 6301.541153,
+          "risk_adjusted_cost": 7177.952447,
+          "best_mean_route": "D",
+          "mean_regret": 0.0,
+          "best_risk_route": "D",
+          "risk_regret": 0.0
+        },
+        {
+          "name": "combined",
+          "environment": {
+            "delay_probability_scale": 1.5,
+            "delay_length_scale": 1.5,
+            "disruption_scale": 2.0,
+            "regional_shock_probability": 0.1,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 0.8358,
+          "on_time_interval95": [
+            0.825275,
+            0.84581
+          ],
+          "p90_hours": 731.058195,
+          "mean_cost": 7808.392794,
+          "risk_adjusted_cost": 9771.084991,
+          "best_mean_route": "D",
+          "mean_regret": 0.0,
+          "best_risk_route": "E",
+          "risk_regret": 517.052277
+        }
+      ]
+    },
+    {
+      "shipment_id": "SHP-022",
+      "reference_pick": "B",
+      "planning_scenarios": 2000,
+      "realizations": 5000,
+      "sampling": {
+        "seeds": [
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27
+        ],
+        "picks": {
+          "B": 20
+        },
+        "reference_agreement": 1.0,
+        "modal_pick": "B",
+        "modal_share": 1.0,
+        "median_score_gap": 35396.042732
+      },
+      "stresses": [
+        {
+          "name": "nominal",
+          "environment": {
+            "delay_probability_scale": 1.0,
+            "delay_length_scale": 1.0,
+            "disruption_scale": 1.0,
+            "regional_shock_probability": 0.0,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 1.0,
+          "on_time_interval95": [
+            0.999232,
+            1.0
+          ],
+          "p90_hours": 26.048528,
+          "mean_cost": 7646.969748,
+          "risk_adjusted_cost": 8452.18037,
+          "best_mean_route": "B",
+          "mean_regret": 0.0,
+          "best_risk_route": "B",
+          "risk_regret": 0.0
+        },
+        {
+          "name": "longer-delays",
+          "environment": {
+            "delay_probability_scale": 1.0,
+            "delay_length_scale": 1.5,
+            "disruption_scale": 1.0,
+            "regional_shock_probability": 0.0,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 1.0,
+          "on_time_interval95": [
+            0.999232,
+            1.0
+          ],
+          "p90_hours": 28.077791,
+          "mean_cost": 7658.048989,
+          "risk_adjusted_cost": 8487.985014,
+          "best_mean_route": "B",
+          "mean_regret": 0.0,
+          "best_risk_route": "B",
+          "risk_regret": 0.0
+        },
+        {
+          "name": "underestimated-events",
+          "environment": {
+            "delay_probability_scale": 1.5,
+            "delay_length_scale": 1.0,
+            "disruption_scale": 2.0,
+            "regional_shock_probability": 0.0,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 1.0,
+          "on_time_interval95": [
+            0.999232,
+            1.0
+          ],
+          "p90_hours": 29.241537,
+          "mean_cost": 7887.365682,
+          "risk_adjusted_cost": 9321.322512,
+          "best_mean_route": "B",
+          "mean_regret": 0.0,
+          "best_risk_route": "B",
+          "risk_regret": 0.0
+        },
+        {
+          "name": "regional-shocks",
+          "environment": {
+            "delay_probability_scale": 1.0,
+            "delay_length_scale": 1.0,
+            "disruption_scale": 1.0,
+            "regional_shock_probability": 0.1,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 1.0,
+          "on_time_interval95": [
+            0.999232,
+            1.0
+          ],
+          "p90_hours": 93.99,
+          "mean_cost": 7912.691346,
+          "risk_adjusted_cost": 8991.975843,
+          "best_mean_route": "B",
+          "mean_regret": 0.0,
+          "best_risk_route": "B",
+          "risk_regret": 0.0
+        },
+        {
+          "name": "combined",
+          "environment": {
+            "delay_probability_scale": 1.5,
+            "delay_length_scale": 1.5,
+            "disruption_scale": 2.0,
+            "regional_shock_probability": 0.1,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 1.0,
+          "on_time_interval95": [
+            0.999232,
+            1.0
+          ],
+          "p90_hours": 93.99,
+          "mean_cost": 8169.438795,
+          "risk_adjusted_cost": 9846.105072,
+          "best_mean_route": "B",
+          "mean_regret": 0.0,
+          "best_risk_route": "B",
+          "risk_regret": 0.0
+        }
+      ]
+    },
+    {
+      "shipment_id": "SHP-023",
+      "reference_pick": "B",
+      "planning_scenarios": 2000,
+      "realizations": 5000,
+      "sampling": {
+        "seeds": [
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27
+        ],
+        "picks": {
+          "B": 20
+        },
+        "reference_agreement": 1.0,
+        "modal_pick": "B",
+        "modal_share": 1.0,
+        "median_score_gap": 12070.364446
+      },
+      "stresses": [
+        {
+          "name": "nominal",
+          "environment": {
+            "delay_probability_scale": 1.0,
+            "delay_length_scale": 1.0,
+            "disruption_scale": 1.0,
+            "regional_shock_probability": 0.0,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 1.0,
+          "on_time_interval95": [
+            0.999232,
+            1.0
+          ],
+          "p90_hours": 20.059525,
+          "mean_cost": 4948.927794,
+          "risk_adjusted_cost": 5471.179031,
+          "best_mean_route": "B",
+          "mean_regret": 0.0,
+          "best_risk_route": "B",
+          "risk_regret": 0.0
+        },
+        {
+          "name": "longer-delays",
+          "environment": {
+            "delay_probability_scale": 1.0,
+            "delay_length_scale": 1.5,
+            "disruption_scale": 1.0,
+            "regional_shock_probability": 0.0,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 1.0,
+          "on_time_interval95": [
+            0.999232,
+            1.0
+          ],
+          "p90_hours": 21.894288,
+          "mean_cost": 4953.839904,
+          "risk_adjusted_cost": 5485.994456,
+          "best_mean_route": "B",
+          "mean_regret": 0.0,
+          "best_risk_route": "B",
+          "risk_regret": 0.0
+        },
+        {
+          "name": "underestimated-events",
+          "environment": {
+            "delay_probability_scale": 1.5,
+            "delay_length_scale": 1.0,
+            "disruption_scale": 2.0,
+            "regional_shock_probability": 0.0,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 1.0,
+          "on_time_interval95": [
+            0.999232,
+            1.0
+          ],
+          "p90_hours": 22.393352,
+          "mean_cost": 5122.482716,
+          "risk_adjusted_cost": 6100.815109,
+          "best_mean_route": "B",
+          "mean_regret": 0.0,
+          "best_risk_route": "B",
+          "risk_regret": 0.0
+        },
+        {
+          "name": "regional-shocks",
+          "environment": {
+            "delay_probability_scale": 1.0,
+            "delay_length_scale": 1.0,
+            "disruption_scale": 1.0,
+            "regional_shock_probability": 0.1,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 1.0,
+          "on_time_interval95": [
+            0.999232,
+            1.0
+          ],
+          "p90_hours": 88.39,
+          "mean_cost": 5142.564288,
+          "risk_adjusted_cost": 5850.293446,
+          "best_mean_route": "B",
+          "mean_regret": 0.0,
+          "best_risk_route": "B",
+          "risk_regret": 0.0
+        },
+        {
+          "name": "combined",
+          "environment": {
+            "delay_probability_scale": 1.5,
+            "delay_length_scale": 1.5,
+            "disruption_scale": 2.0,
+            "regional_shock_probability": 0.1,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 1.0,
+          "on_time_interval95": [
+            0.999232,
+            1.0
+          ],
+          "p90_hours": 89.426376,
+          "mean_cost": 5323.369551,
+          "risk_adjusted_cost": 6446.746678,
+          "best_mean_route": "B",
+          "mean_regret": 0.0,
+          "best_risk_route": "B",
+          "risk_regret": 0.0
+        }
+      ]
+    },
+    {
+      "shipment_id": "SHP-024",
+      "reference_pick": "B",
+      "planning_scenarios": 2000,
+      "realizations": 5000,
+      "sampling": {
+        "seeds": [
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27
+        ],
+        "picks": {
+          "B": 19,
+          "E": 1
+        },
+        "reference_agreement": 0.95,
+        "modal_pick": "B",
+        "modal_share": 0.95,
+        "median_score_gap": 3812.761218
+      },
+      "stresses": [
+        {
+          "name": "nominal",
+          "environment": {
+            "delay_probability_scale": 1.0,
+            "delay_length_scale": 1.0,
+            "disruption_scale": 1.0,
+            "regional_shock_probability": 0.0,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 1.0,
+          "on_time_interval95": [
+            0.999232,
+            1.0
+          ],
+          "p90_hours": 24.565952,
+          "mean_cost": 7828.403465,
+          "risk_adjusted_cost": 11823.782531,
+          "best_mean_route": "B",
+          "mean_regret": 0.0,
+          "best_risk_route": "B",
+          "risk_regret": 0.0
+        },
+        {
+          "name": "longer-delays",
+          "environment": {
+            "delay_probability_scale": 1.0,
+            "delay_length_scale": 1.5,
+            "disruption_scale": 1.0,
+            "regional_shock_probability": 0.0,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 1.0,
+          "on_time_interval95": [
+            0.999232,
+            1.0
+          ],
+          "p90_hours": 26.108927,
+          "mean_cost": 7843.020327,
+          "risk_adjusted_cost": 11940.018012,
+          "best_mean_route": "B",
+          "mean_regret": 0.0,
+          "best_risk_route": "B",
+          "risk_regret": 0.0
+        },
+        {
+          "name": "underestimated-events",
+          "environment": {
+            "delay_probability_scale": 1.5,
+            "delay_length_scale": 1.0,
+            "disruption_scale": 2.0,
+            "regional_shock_probability": 0.0,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 1.0,
+          "on_time_interval95": [
+            0.999232,
+            1.0
+          ],
+          "p90_hours": 27.681225,
+          "mean_cost": 8185.084459,
+          "risk_adjusted_cost": 14992.494343,
+          "best_mean_route": "B",
+          "mean_regret": 0.0,
+          "best_risk_route": "B",
+          "risk_regret": 0.0
+        },
+        {
+          "name": "regional-shocks",
+          "environment": {
+            "delay_probability_scale": 1.0,
+            "delay_length_scale": 1.0,
+            "disruption_scale": 1.0,
+            "regional_shock_probability": 0.1,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 1.0,
+          "on_time_interval95": [
+            0.999232,
+            1.0
+          ],
+          "p90_hours": 93.48,
+          "mean_cost": 8236.829234,
+          "risk_adjusted_cost": 13563.168172,
+          "best_mean_route": "B",
+          "mean_regret": 0.0,
+          "best_risk_route": "B",
+          "risk_regret": 0.0
+        },
+        {
+          "name": "combined",
+          "environment": {
+            "delay_probability_scale": 1.5,
+            "delay_length_scale": 1.5,
+            "disruption_scale": 2.0,
+            "regional_shock_probability": 0.1,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 1.0,
+          "on_time_interval95": [
+            0.999232,
+            1.0
+          ],
+          "p90_hours": 93.48,
+          "mean_cost": 8616.324048,
+          "risk_adjusted_cost": 16663.209099,
+          "best_mean_route": "B",
+          "mean_regret": 0.0,
+          "best_risk_route": "B",
+          "risk_regret": 0.0
+        }
+      ]
+    },
+    {
+      "shipment_id": "SHP-025",
+      "reference_pick": "B",
+      "planning_scenarios": 2000,
+      "realizations": 5000,
+      "sampling": {
+        "seeds": [
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27
+        ],
+        "picks": {
+          "B": 20
+        },
+        "reference_agreement": 1.0,
+        "modal_pick": "B",
+        "modal_share": 1.0,
+        "median_score_gap": 8508.257311
+      },
+      "stresses": [
+        {
+          "name": "nominal",
+          "environment": {
+            "delay_probability_scale": 1.0,
+            "delay_length_scale": 1.0,
+            "disruption_scale": 1.0,
+            "regional_shock_probability": 0.0,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 1.0,
+          "on_time_interval95": [
+            0.999232,
+            1.0
+          ],
+          "p90_hours": 19.72794,
+          "mean_cost": 6191.119358,
+          "risk_adjusted_cost": 7493.858384,
+          "best_mean_route": "B",
+          "mean_regret": 0.0,
+          "best_risk_route": "B",
+          "risk_regret": 0.0
+        },
+        {
+          "name": "longer-delays",
+          "environment": {
+            "delay_probability_scale": 1.0,
+            "delay_length_scale": 1.5,
+            "disruption_scale": 1.0,
+            "regional_shock_probability": 0.0,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 1.0,
+          "on_time_interval95": [
+            0.999232,
+            1.0
+          ],
+          "p90_hours": 21.396909,
+          "mean_cost": 6195.708667,
+          "risk_adjusted_cost": 7501.651245,
+          "best_mean_route": "B",
+          "mean_regret": 0.0,
+          "best_risk_route": "B",
+          "risk_regret": 0.0
+        },
+        {
+          "name": "underestimated-events",
+          "environment": {
+            "delay_probability_scale": 1.5,
+            "delay_length_scale": 1.0,
+            "disruption_scale": 2.0,
+            "regional_shock_probability": 0.0,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 1.0,
+          "on_time_interval95": [
+            0.999232,
+            1.0
+          ],
+          "p90_hours": 22.425932,
+          "mean_cost": 7758.163087,
+          "risk_adjusted_cost": 10467.246189,
+          "best_mean_route": "B",
+          "mean_regret": 0.0,
+          "best_risk_route": "B",
+          "risk_regret": 0.0
+        },
+        {
+          "name": "regional-shocks",
+          "environment": {
+            "delay_probability_scale": 1.0,
+            "delay_length_scale": 1.0,
+            "disruption_scale": 1.0,
+            "regional_shock_probability": 0.1,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 1.0,
+          "on_time_interval95": [
+            0.999232,
+            1.0
+          ],
+          "p90_hours": 88.39,
+          "mean_cost": 6374.352115,
+          "risk_adjusted_cost": 7736.471013,
+          "best_mean_route": "B",
+          "mean_regret": 0.0,
+          "best_risk_route": "B",
+          "risk_regret": 0.0
+        },
+        {
+          "name": "combined",
+          "environment": {
+            "delay_probability_scale": 1.5,
+            "delay_length_scale": 1.5,
+            "disruption_scale": 2.0,
+            "regional_shock_probability": 0.1,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 1.0,
+          "on_time_interval95": [
+            0.999232,
+            1.0
+          ],
+          "p90_hours": 88.640736,
+          "mean_cost": 7948.067995,
+          "risk_adjusted_cost": 10700.35906,
+          "best_mean_route": "B",
+          "mean_regret": 0.0,
+          "best_risk_route": "B",
+          "risk_regret": 0.0
+        }
+      ]
+    },
+    {
+      "shipment_id": "SHP-026",
+      "reference_pick": "B",
+      "planning_scenarios": 2000,
+      "realizations": 5000,
+      "sampling": {
+        "seeds": [
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27
+        ],
+        "picks": {
+          "B": 20
+        },
+        "reference_agreement": 1.0,
+        "modal_pick": "B",
+        "modal_share": 1.0,
+        "median_score_gap": 22043.281089
+      },
+      "stresses": [
+        {
+          "name": "nominal",
+          "environment": {
+            "delay_probability_scale": 1.0,
+            "delay_length_scale": 1.0,
+            "disruption_scale": 1.0,
+            "regional_shock_probability": 0.0,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 1.0,
+          "on_time_interval95": [
+            0.999232,
+            1.0
+          ],
+          "p90_hours": 26.014678,
+          "mean_cost": 8993.259489,
+          "risk_adjusted_cost": 10294.004968,
+          "best_mean_route": "B",
+          "mean_regret": 0.0,
+          "best_risk_route": "B",
+          "risk_regret": 0.0
+        },
+        {
+          "name": "longer-delays",
+          "environment": {
+            "delay_probability_scale": 1.0,
+            "delay_length_scale": 1.5,
+            "disruption_scale": 1.0,
+            "regional_shock_probability": 0.0,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 1.0,
+          "on_time_interval95": [
+            0.999232,
+            1.0
+          ],
+          "p90_hours": 27.227016,
+          "mean_cost": 9009.601221,
+          "risk_adjusted_cost": 10349.91154,
+          "best_mean_route": "B",
+          "mean_regret": 0.0,
+          "best_risk_route": "B",
+          "risk_regret": 0.0
+        },
+        {
+          "name": "underestimated-events",
+          "environment": {
+            "delay_probability_scale": 1.5,
+            "delay_length_scale": 1.0,
+            "disruption_scale": 2.0,
+            "regional_shock_probability": 0.0,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 1.0,
+          "on_time_interval95": [
+            0.999232,
+            1.0
+          ],
+          "p90_hours": 28.191717,
+          "mean_cost": 9506.73575,
+          "risk_adjusted_cost": 12170.265415,
+          "best_mean_route": "B",
+          "mean_regret": 0.0,
+          "best_risk_route": "B",
+          "risk_regret": 0.0
+        },
+        {
+          "name": "regional-shocks",
+          "environment": {
+            "delay_probability_scale": 1.0,
+            "delay_length_scale": 1.0,
+            "disruption_scale": 1.0,
+            "regional_shock_probability": 0.1,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 1.0,
+          "on_time_interval95": [
+            0.999232,
+            1.0
+          ],
+          "p90_hours": 95.59,
+          "mean_cost": 9500.660373,
+          "risk_adjusted_cost": 11407.919168,
+          "best_mean_route": "B",
+          "mean_regret": 0.0,
+          "best_risk_route": "B",
+          "risk_regret": 0.0
+        },
+        {
+          "name": "combined",
+          "environment": {
+            "delay_probability_scale": 1.5,
+            "delay_length_scale": 1.5,
+            "disruption_scale": 2.0,
+            "regional_shock_probability": 0.1,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 1.0,
+          "on_time_interval95": [
+            0.999232,
+            1.0
+          ],
+          "p90_hours": 95.59,
+          "mean_cost": 10038.511564,
+          "risk_adjusted_cost": 13271.530163,
+          "best_mean_route": "B",
+          "mean_regret": 0.0,
+          "best_risk_route": "B",
+          "risk_regret": 0.0
+        }
+      ]
+    },
+    {
+      "shipment_id": "SHP-027",
+      "reference_pick": "B",
+      "planning_scenarios": 2000,
+      "realizations": 5000,
+      "sampling": {
+        "seeds": [
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27
+        ],
+        "picks": {
+          "B": 9,
+          "E": 11
+        },
+        "reference_agreement": 0.45,
+        "modal_pick": "E",
+        "modal_share": 0.55,
+        "median_score_gap": 2257.980013
+      },
+      "stresses": [
+        {
+          "name": "nominal",
+          "environment": {
+            "delay_probability_scale": 1.0,
+            "delay_length_scale": 1.0,
+            "disruption_scale": 1.0,
+            "regional_shock_probability": 0.0,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 1.0,
+          "on_time_interval95": [
+            0.999232,
+            1.0
+          ],
+          "p90_hours": 23.988467,
+          "mean_cost": 12274.807964,
+          "risk_adjusted_cost": 19706.277858,
+          "best_mean_route": "E",
+          "mean_regret": 225.245898,
+          "best_risk_route": "E",
+          "risk_regret": 1443.219892
+        },
+        {
+          "name": "longer-delays",
+          "environment": {
+            "delay_probability_scale": 1.0,
+            "delay_length_scale": 1.5,
+            "disruption_scale": 1.0,
+            "regional_shock_probability": 0.0,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 1.0,
+          "on_time_interval95": [
+            0.999232,
+            1.0
+          ],
+          "p90_hours": 26.267701,
+          "mean_cost": 12365.99149,
+          "risk_adjusted_cost": 19980.498133,
+          "best_mean_route": "E",
+          "mean_regret": 209.075401,
+          "best_risk_route": "E",
+          "risk_regret": 1387.568505
+        },
+        {
+          "name": "underestimated-events",
+          "environment": {
+            "delay_probability_scale": 1.5,
+            "delay_length_scale": 1.0,
+            "disruption_scale": 2.0,
+            "regional_shock_probability": 0.0,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 1.0,
+          "on_time_interval95": [
+            0.999232,
+            1.0
+          ],
+          "p90_hours": 27.76918,
+          "mean_cost": 15163.322239,
+          "risk_adjusted_cost": 30116.40215,
+          "best_mean_route": "E",
+          "mean_regret": 378.745608,
+          "best_risk_route": "E",
+          "risk_regret": 2016.633267
+        },
+        {
+          "name": "regional-shocks",
+          "environment": {
+            "delay_probability_scale": 1.0,
+            "delay_length_scale": 1.0,
+            "disruption_scale": 1.0,
+            "regional_shock_probability": 0.1,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 1.0,
+          "on_time_interval95": [
+            0.999232,
+            1.0
+          ],
+          "p90_hours": 91.552776,
+          "mean_cost": 16509.206489,
+          "risk_adjusted_cost": 27232.759185,
+          "best_mean_route": "E",
+          "mean_regret": 1652.843115,
+          "best_risk_route": "E",
+          "risk_regret": 3288.124444
+        },
+        {
+          "name": "combined",
+          "environment": {
+            "delay_probability_scale": 1.5,
+            "delay_length_scale": 1.5,
+            "disruption_scale": 2.0,
+            "regional_shock_probability": 0.1,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 1.0,
+          "on_time_interval95": [
+            0.999232,
+            1.0
+          ],
+          "p90_hours": 98.568577,
+          "mean_cost": 19542.307139,
+          "risk_adjusted_cost": 37271.102776,
+          "best_mean_route": "E",
+          "mean_regret": 1784.474636,
+          "best_risk_route": "E",
+          "risk_regret": 3924.022367
+        }
+      ]
+    },
+    {
+      "shipment_id": "SHP-028",
+      "reference_pick": "B",
+      "planning_scenarios": 2000,
+      "realizations": 5000,
+      "sampling": {
+        "seeds": [
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27
+        ],
+        "picks": {
+          "B": 20
+        },
+        "reference_agreement": 1.0,
+        "modal_pick": "B",
+        "modal_share": 1.0,
+        "median_score_gap": 80022.697992
+      },
+      "stresses": [
+        {
+          "name": "nominal",
+          "environment": {
+            "delay_probability_scale": 1.0,
+            "delay_length_scale": 1.0,
+            "disruption_scale": 1.0,
+            "regional_shock_probability": 0.0,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 1.0,
+          "on_time_interval95": [
+            0.999232,
+            1.0
+          ],
+          "p90_hours": 20.819597,
+          "mean_cost": 5940.438565,
+          "risk_adjusted_cost": 12783.252306,
+          "best_mean_route": "B",
+          "mean_regret": 0.0,
+          "best_risk_route": "B",
+          "risk_regret": 0.0
+        },
+        {
+          "name": "longer-delays",
+          "environment": {
+            "delay_probability_scale": 1.0,
+            "delay_length_scale": 1.5,
+            "disruption_scale": 1.0,
+            "regional_shock_probability": 0.0,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 1.0,
+          "on_time_interval95": [
+            0.999232,
+            1.0
+          ],
+          "p90_hours": 23.009396,
+          "mean_cost": 5957.191719,
+          "risk_adjusted_cost": 12900.987768,
+          "best_mean_route": "B",
+          "mean_regret": 0.0,
+          "best_risk_route": "B",
+          "risk_regret": 0.0
+        },
+        {
+          "name": "underestimated-events",
+          "environment": {
+            "delay_probability_scale": 1.5,
+            "delay_length_scale": 1.0,
+            "disruption_scale": 2.0,
+            "regional_shock_probability": 0.0,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 1.0,
+          "on_time_interval95": [
+            0.999232,
+            1.0
+          ],
+          "p90_hours": 23.942603,
+          "mean_cost": 6592.222731,
+          "risk_adjusted_cost": 18587.163192,
+          "best_mean_route": "B",
+          "mean_regret": 0.0,
+          "best_risk_route": "B",
+          "risk_regret": 0.0
+        },
+        {
+          "name": "regional-shocks",
+          "environment": {
+            "delay_probability_scale": 1.0,
+            "delay_length_scale": 1.0,
+            "disruption_scale": 1.0,
+            "regional_shock_probability": 0.1,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 0.9858,
+          "on_time_interval95": [
+            0.982128,
+            0.988726
+          ],
+          "p90_hours": 88.44,
+          "mean_cost": 6606.188856,
+          "risk_adjusted_cost": 16473.26405,
+          "best_mean_route": "B",
+          "mean_regret": 0.0,
+          "best_risk_route": "B",
+          "risk_regret": 0.0
+        },
+        {
+          "name": "combined",
+          "environment": {
+            "delay_probability_scale": 1.5,
+            "delay_length_scale": 1.5,
+            "disruption_scale": 2.0,
+            "regional_shock_probability": 0.1,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 0.984,
+          "on_time_interval95": [
+            0.980132,
+            0.987125
+          ],
+          "p90_hours": 88.44,
+          "mean_cost": 7356.27043,
+          "risk_adjusted_cost": 22786.042962,
+          "best_mean_route": "B",
+          "mean_regret": 0.0,
+          "best_risk_route": "B",
+          "risk_regret": 0.0
+        }
+      ]
+    },
+    {
+      "shipment_id": "SHP-029",
+      "reference_pick": "C",
+      "planning_scenarios": 2000,
+      "realizations": 5000,
+      "sampling": {
+        "seeds": [
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27
+        ],
+        "picks": {
+          "C": 19,
+          "D": 1
+        },
+        "reference_agreement": 0.95,
+        "modal_pick": "C",
+        "modal_share": 0.95,
+        "median_score_gap": 609.311743
+      },
+      "stresses": [
+        {
+          "name": "nominal",
+          "environment": {
+            "delay_probability_scale": 1.0,
+            "delay_length_scale": 1.0,
+            "disruption_scale": 1.0,
+            "regional_shock_probability": 0.0,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 0.8878,
+          "on_time_interval95": [
+            0.878752,
+            0.896252
+          ],
+          "p90_hours": 501.409729,
+          "mean_cost": 7737.52071,
+          "risk_adjusted_cost": 8258.445663,
+          "best_mean_route": "C",
+          "mean_regret": 0.0,
+          "best_risk_route": "C",
+          "risk_regret": 0.0
+        },
+        {
+          "name": "longer-delays",
+          "environment": {
+            "delay_probability_scale": 1.0,
+            "delay_length_scale": 1.5,
+            "disruption_scale": 1.0,
+            "regional_shock_probability": 0.0,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 0.8304,
+          "on_time_interval95": [
+            0.819745,
+            0.840548
+          ],
+          "p90_hours": 587.41232,
+          "mean_cost": 8094.018702,
+          "risk_adjusted_cost": 8853.762396,
+          "best_mean_route": "C",
+          "mean_regret": 0.0,
+          "best_risk_route": "C",
+          "risk_regret": 0.0
+        },
+        {
+          "name": "underestimated-events",
+          "environment": {
+            "delay_probability_scale": 1.5,
+            "delay_length_scale": 1.0,
+            "disruption_scale": 2.0,
+            "regional_shock_probability": 0.0,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 0.8292,
+          "on_time_interval95": [
+            0.818517,
+            0.839378
+          ],
+          "p90_hours": 557.062903,
+          "mean_cost": 8151.431828,
+          "risk_adjusted_cost": 8948.418438,
+          "best_mean_route": "C",
+          "mean_regret": 0.0,
+          "best_risk_route": "C",
+          "risk_regret": 0.0
+        },
+        {
+          "name": "regional-shocks",
+          "environment": {
+            "delay_probability_scale": 1.0,
+            "delay_length_scale": 1.0,
+            "disruption_scale": 1.0,
+            "regional_shock_probability": 0.1,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 0.8588,
+          "on_time_interval95": [
+            0.848872,
+            0.868177
+          ],
+          "p90_hours": 531.985197,
+          "mean_cost": 7845.784643,
+          "risk_adjusted_cost": 8404.213917,
+          "best_mean_route": "C",
+          "mean_regret": 0.0,
+          "best_risk_route": "C",
+          "risk_regret": 0.0
+        },
+        {
+          "name": "combined",
+          "environment": {
+            "delay_probability_scale": 1.5,
+            "delay_length_scale": 1.5,
+            "disruption_scale": 2.0,
+            "regional_shock_probability": 0.1,
+            "regional_shock_hours": 72.0
+          },
+          "on_time": 0.705,
+          "on_time_interval95": [
+            0.692206,
+            0.717479
+          ],
+          "p90_hours": 693.28029,
+          "mean_cost": 8856.170962,
+          "risk_adjusted_cost": 9942.63106,
+          "best_mean_route": "C",
+          "mean_regret": 0.0,
+          "best_risk_route": "C",
+          "risk_regret": 0.0
+        }
+      ]
+    },
+    {
+      "shipment_id": "SHP-030",
+      "reference_pick": null,
+      "planning_scenarios": 2000,
+      "realizations": 5000,
+      "sampling": {
+        "seeds": [],
+        "picks": {},
+        "reference_agreement": null,
+        "modal_pick": null,
+        "modal_share": null,
+        "median_score_gap": null
+      },
+      "stresses": []
+    }
+  ],
+  "stress_scorecards": {
+    "nominal": {
+      "environment": {
+        "delay_probability_scale": 1.0,
+        "delay_length_scale": 1.0,
+        "disruption_scale": 1.0,
+        "regional_shock_probability": 0.0,
+        "regional_shock_hours": 72.0
+      },
+      "feasible_shipment_count": 27,
+      "feasible_stats": {
+        "recommended": {
+          "total_cost": 220051.880844,
+          "cost_ratio": 1.0,
+          "on_time_rate": 0.982726,
+          "feasible_rate": 1.0,
+          "pareto_rate": 1.0,
+          "mean_regret": 30.290465,
+          "total_risk_adjusted_cost": 294851.486493,
+          "mean_risk_regret": 145.752646
+        },
+        "cheapest-feasible": {
+          "total_cost": 1102592.766474,
+          "cost_ratio": 3.983593,
+          "on_time_rate": 0.760437,
+          "feasible_rate": 1.0,
+          "pareto_rate": 0.814815,
+          "mean_regret": 32716.989932,
+          "total_risk_adjusted_cost": 2533165.711613,
+          "mean_risk_regret": 83046.279502
+        },
+        "fastest-feasible": {
+          "total_cost": 228943.85035,
+          "cost_ratio": 1.051388,
+          "on_time_rate": 0.999993,
+          "feasible_rate": 1.0,
+          "pareto_rate": 1.0,
+          "mean_regret": 359.622668,
+          "total_risk_adjusted_cost": 300608.289584,
+          "mean_risk_regret": 358.967575
+        },
+        "oracle-feasible": {
+          "total_cost": 219234.0383,
+          "cost_ratio": 0.997042,
+          "on_time_rate": 0.970889,
+          "feasible_rate": 1.0,
+          "pareto_rate": 0.962963,
+          "mean_regret": 0.0,
+          "total_risk_adjusted_cost": 293333.099496,
+          "mean_risk_regret": 89.51609
+        }
+      }
+    },
+    "longer-delays": {
+      "environment": {
+        "delay_probability_scale": 1.0,
+        "delay_length_scale": 1.5,
+        "disruption_scale": 1.0,
+        "regional_shock_probability": 0.0,
+        "regional_shock_hours": 72.0
+      },
+      "feasible_shipment_count": 27,
+      "feasible_stats": {
+        "recommended": {
+          "total_cost": 223284.868712,
+          "cost_ratio": 1.0,
+          "on_time_rate": 0.972496,
+          "feasible_rate": 1.0,
+          "pareto_rate": 1.0,
+          "mean_regret": 46.772097,
+          "total_risk_adjusted_cost": 302205.281281,
+          "mean_risk_regret": 272.909445
+        },
+        "cheapest-feasible": {
+          "total_cost": 1538219.008117,
+          "cost_ratio": 5.453787,
+          "on_time_rate": 0.708348,
+          "feasible_rate": 1.0,
+          "pareto_rate": 0.814815,
+          "mean_regret": 48748.03652,
+          "total_risk_adjusted_cost": 3781490.220872,
+          "mean_risk_regret": 129135.314616
+        },
+        "fastest-feasible": {
+          "total_cost": 229437.428616,
+          "cost_ratio": 1.034623,
+          "on_time_rate": 0.999978,
+          "feasible_rate": 1.0,
+          "pareto_rate": 1.0,
+          "mean_regret": 274.644686,
+          "total_risk_adjusted_cost": 302492.730022,
+          "mean_risk_regret": 283.555695
+        },
+        "oracle-feasible": {
+          "total_cost": 222022.022086,
+          "cost_ratio": 0.9961,
+          "on_time_rate": 0.976719,
+          "feasible_rate": 1.0,
+          "pareto_rate": 0.962963,
+          "mean_regret": 0.0,
+          "total_risk_adjusted_cost": 296202.202882,
+          "mean_risk_regret": 50.573208
+        }
+      }
+    },
+    "underestimated-events": {
+      "environment": {
+        "delay_probability_scale": 1.5,
+        "delay_length_scale": 1.0,
+        "disruption_scale": 2.0,
+        "regional_shock_probability": 0.0,
+        "regional_shock_hours": 72.0
+      },
+      "feasible_shipment_count": 27,
+      "feasible_stats": {
+        "recommended": {
+          "total_cost": 241737.364095,
+          "cost_ratio": 1.0,
+          "on_time_rate": 0.97363,
+          "feasible_rate": 1.0,
+          "pareto_rate": 1.0,
+          "mean_regret": 14.027615,
+          "total_risk_adjusted_cost": 380508.286153,
+          "mean_risk_regret": 151.087063
+        },
+        "cheapest-feasible": {
+          "total_cost": 1499817.150001,
+          "cost_ratio": 4.797765,
+          "on_time_rate": 0.64677,
+          "feasible_rate": 1.0,
+          "pareto_rate": 0.814815,
+          "mean_regret": 46609.575241,
+          "total_risk_adjusted_cost": 3248609.983372,
+          "mean_risk_regret": 106377.075849
+        },
+        "fastest-feasible": {
+          "total_cost": 249076.219066,
+          "cost_ratio": 1.038317,
+          "on_time_rate": 0.999948,
+          "feasible_rate": 1.0,
+          "pareto_rate": 1.0,
+          "mean_regret": 285.837059,
+          "total_risk_adjusted_cost": 383936.540829,
+          "mean_risk_regret": 278.059459
+        },
+        "oracle-feasible": {
+          "total_cost": 241358.618487,
+          "cost_ratio": 0.999075,
+          "on_time_rate": 0.97363,
+          "feasible_rate": 1.0,
+          "pareto_rate": 0.962963,
+          "mean_regret": 0.0,
+          "total_risk_adjusted_cost": 378491.652886,
+          "mean_risk_regret": 76.396942
+        }
+      }
+    },
+    "regional-shocks": {
+      "environment": {
+        "delay_probability_scale": 1.0,
+        "delay_length_scale": 1.0,
+        "disruption_scale": 1.0,
+        "regional_shock_probability": 0.1,
+        "regional_shock_hours": 72.0
+      },
+      "feasible_shipment_count": 27,
+      "feasible_stats": {
+        "recommended": {
+          "total_cost": 236398.054989,
+          "cost_ratio": 1.0,
+          "on_time_rate": 0.978015,
+          "feasible_rate": 1.0,
+          "pareto_rate": 1.0,
+          "mean_regret": 77.023178,
+          "total_risk_adjusted_cost": 332348.599503,
+          "mean_risk_regret": 217.528124
+        },
+        "cheapest-feasible": {
+          "total_cost": 1281644.432447,
+          "cost_ratio": 4.052812,
+          "on_time_rate": 0.6874,
+          "feasible_rate": 1.0,
+          "pareto_rate": 0.814815,
+          "mean_regret": 38789.851973,
+          "total_risk_adjusted_cost": 2805402.635131,
+          "mean_risk_regret": 91812.122036
+        },
+        "fastest-feasible": {
+          "total_cost": 245151.516803,
+          "cost_ratio": 1.049766,
+          "on_time_rate": 0.998363,
+          "feasible_rate": 1.0,
+          "pareto_rate": 1.0,
+          "mean_regret": 401.225467,
+          "total_risk_adjusted_cost": 337899.8633,
+          "mean_risk_regret": 423.130487
+        },
+        "oracle-feasible": {
+          "total_cost": 234318.429189,
+          "cost_ratio": 0.99535,
+          "on_time_rate": 0.978015,
+          "feasible_rate": 1.0,
+          "pareto_rate": 0.962963,
+          "mean_regret": 0.0,
+          "total_risk_adjusted_cost": 327394.889741,
+          "mean_risk_regret": 34.057392
+        }
+      }
+    },
+    "combined": {
+      "environment": {
+        "delay_probability_scale": 1.5,
+        "delay_length_scale": 1.5,
+        "disruption_scale": 2.0,
+        "regional_shock_probability": 0.1,
+        "regional_shock_hours": 72.0
+      },
+      "feasible_shipment_count": 27,
+      "feasible_stats": {
+        "recommended": {
+          "total_cost": 263470.835675,
+          "cost_ratio": 1.0,
+          "on_time_rate": 0.951681,
+          "feasible_rate": 1.0,
+          "pareto_rate": 1.0,
+          "mean_regret": 126.74452,
+          "total_risk_adjusted_cost": 425583.655521,
+          "mean_risk_regret": 425.130679
+        },
+        "cheapest-feasible": {
+          "total_cost": 2367341.21714,
+          "cost_ratio": 6.627895,
+          "on_time_rate": 0.5174,
+          "feasible_rate": 1.0,
+          "pareto_rate": 0.814815,
+          "mean_regret": 78047.869759,
+          "total_risk_adjusted_cost": 5050452.710538,
+          "mean_risk_regret": 171716.577161
+        },
+        "fastest-feasible": {
+          "total_cost": 266268.937594,
+          "cost_ratio": 1.014974,
+          "on_time_rate": 0.997956,
+          "feasible_rate": 1.0,
+          "pareto_rate": 1.0,
+          "mean_regret": 230.377924,
+          "total_risk_adjusted_cost": 421312.81483,
+          "mean_risk_regret": 266.951394
+        },
+        "oracle-feasible": {
+          "total_cost": 260048.733641,
+          "cost_ratio": 0.991407,
+          "on_time_rate": 0.966237,
+          "feasible_rate": 1.0,
+          "pareto_rate": 0.962963,
+          "mean_regret": 0.0,
+          "total_risk_adjusted_cost": 414622.179463,
+          "mean_risk_regret": 19.150084
+        }
+      }
+    }
+  }
+}

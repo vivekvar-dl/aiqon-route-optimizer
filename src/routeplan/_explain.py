@@ -62,6 +62,14 @@ def explain_choice(
             details.append(_infeasible_sentence(item, deadline))
     details.append(_robustness(sensitivity, weights))
     details.append(_other_profiles(sensitivity, weights, pick.label))
+    low, high = pick.criteria.on_time_interval95
+    details.append(
+        f"The quoted schedule has {_whole(deadline - pick.route.hours)} hours of deadline slack. "
+        f"Estimated on-time arrivals: {1 - pick.criteria.late:.1%} "
+        f"(95% sampling interval {low:.1%} to {high:.1%}, {pick.criteria.samples:,} scenarios). "
+        f"The 90th-percentile arrival is {_whole(round(pick.criteria.p90_hours, 1))} hours. "
+        "This interval covers simulation sampling, not model error or a delivery guarantee."
+    )
     return Explanation(headline, tuple(details))
 
 
@@ -161,7 +169,7 @@ def _late_clause(subject: Criteria, other: Criteria, worse: list[str], better: l
         return
     if subject.late == 0:
         if other.late >= MATERIAL_CHANGE:
-            better.append(f"avoids a {_percent(other.late)} chance of missing the deadline")
+            better.append(f"has no simulated deadline misses (vs {_percent(other.late)} late arrivals)")
         return
     delta = (subject.late - other.late) / other.late
     if abs(delta) < MATERIAL_CHANGE:

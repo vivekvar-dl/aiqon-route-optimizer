@@ -9,6 +9,7 @@ import numpy as np
 
 from routeplan._explain import explain_choice, explain_infeasible
 from routeplan._simulate import Outcomes, Stream, simulate
+from routeplan._statistics import wilson_interval
 from routeplan.model import (
     Axis,
     Breakdown,
@@ -126,7 +127,13 @@ def summarize(shipment: Shipment, route: Route, outcomes: Outcomes) -> Criteria:
     loss = float(outcomes.loss.mean())
     hours = float(outcomes.hours.mean())
     late = float(np.mean(outcomes.hours > shipment.deadline))
-    return Criteria(route.cost + loss, hours, late)
+    samples = len(outcomes.hours)
+    on_time = int(np.count_nonzero(outcomes.hours <= shipment.deadline))
+    return Criteria(
+        route.cost + loss, hours, late, wilson_interval(on_time, samples),
+        float(np.quantile(outcomes.hours, 0.9)),
+        float(np.maximum(outcomes.hours - shipment.deadline, 0.0).mean()), samples,
+    )
 
 
 def landed_cost(

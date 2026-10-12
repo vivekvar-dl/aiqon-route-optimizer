@@ -6,9 +6,9 @@ requires-python = ">=3.12"
 dependencies = ["numpy>=1.26"]
 
 [project.optional-dependencies]
-demo = ["streamlit>=1.33"]
+demo = ["streamlit>=1.65,<2"]
 test = ["pytest>=8"]
-report = ["fpdf2>=2.7"]
+report = ["fpdf2>=2.8.9,<3"]
 
 [project.scripts]
 routeplan = "routeplan.cli:main"

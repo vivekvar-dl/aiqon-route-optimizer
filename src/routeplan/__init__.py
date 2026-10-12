@@ -1,6 +1,8 @@
 """Public API. Shells and tests import from here, not from private modules."""
 
 from routeplan._decide import recommend
+from routeplan._audit import Audit, Sampling, Stress, audit
+from routeplan._simulate import Environment
 from routeplan._evaluate import Policy, PolicyStats, Report, evaluate
 from routeplan._generate import generate
 from routeplan._io import parse_shipments, to_json
@@ -27,6 +29,7 @@ from routeplan.model import (
 )
 
 __all__ = [
+    "Audit", "Sampling", "Stress", "audit", "Environment",
     "Axis",
     "Breakdown",
     "Chosen",

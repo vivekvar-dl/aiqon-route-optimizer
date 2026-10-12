@@ -1,0 +1,3062 @@
+[
+  {
+    "id": "SHP-001",
+    "origin": "Singapore",
+    "destination": "Dubai",
+    "priority": "cost-first",
+    "deadline": 206.0,
+    "cargo_value": 430981.0,
+    "routes": [
+      {
+        "first": {
+          "mode": "sea",
+          "cost": 496.72,
+          "hours": 117.89,
+          "delay_probability": 0.43,
+          "congestion": 0.625,
+          "geopolitical_risk": 0.3
+        },
+        "onward": [
+          {
+            "at": "Colombo",
+            "leg": {
+              "mode": "sea",
+              "cost": 590.84,
+              "hours": 183.25,
+              "delay_probability": 0.39,
+              "congestion": 0.525,
+              "geopolitical_risk": 0.45
+            }
+          }
+        ]
+      },
+      {
+        "first": {
+          "mode": "air",
+          "cost": 2403.44,
+          "hours": 8.5,
+          "delay_probability": 0.1125,
+          "congestion": 0.625,
+          "geopolitical_risk": 0.105
+        },
+        "onward": [
+          {
+            "at": "Colombo",
+            "leg": {
+              "mode": "air",
+              "cost": 2719.46,
+              "hours": 9.24,
+              "delay_probability": 0.1025,
+              "congestion": 0.525,
+              "geopolitical_risk": 0.1575
+            }
+          }
+        ]
+      },
+      {
+        "first": {
+          "mode": "sea",
+          "cost": 554.9,
+          "hours": 158.29,
+          "delay_probability": 0.47,
+          "congestion": 0.725,
+          "geopolitical_risk": 0.2
+        },
+        "onward": [
+          {
+            "at": "Shanghai",
+            "leg": {
+              "mode": "air",
+              "cost": 4434.44,
+              "hours": 13.24,
+              "delay_probability": 0.1125,
+              "congestion": 0.625,
+              "geopolitical_risk": 0.1575
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "SHP-002",
+    "origin": "Busan",
+    "destination": "Dubai",
+    "priority": "balanced",
+    "deadline": 446.0,
+    "cargo_value": 265562.0,
+    "routes": [
+      {
+        "first": {
+          "mode": "sea",
+          "cost": 595.25,
+          "hours": 186.31,
+          "delay_probability": 0.4,
+          "congestion": 0.55,
+          "geopolitical_risk": 0.2
+        },
+        "onward": [
+          {
+            "at": "Singapore",
+            "leg": {
+              "mode": "sea",
+              "cost": 737.55,
+              "hours": 285.14,
+              "delay_probability": 0.42,
+              "congestion": 0.6,
+              "geopolitical_risk": 0.45
+            }
+          }
+        ]
+      },
+      {
+        "first": {
+          "mode": "air",
+          "cost": 1353.88,
+          "hours": 6.06,
+          "delay_probability": 0.1075,
+          "congestion": 0.575,
+          "geopolitical_risk": 0.07
+        },
+        "onward": [
+          {
+            "at": "Shanghai",
+            "leg": {
+              "mode": "air",
+              "cost": 4434.44,
+              "hours": 13.24,
+              "delay_probability": 0.1125,
+              "congestion": 0.625,
+              "geopolitical_risk": 0.1575
+            }
+          }
+        ]
+      },
+      {
+        "first": {
+          "mode": "sea",
+          "cost": 741.97,
+          "hours": 288.2,
+          "delay_probability": 0.37,
+          "congestion": 0.475,
+          "geopolitical_risk": 0.3
+        },
+        "onward": [
+          {
+            "at": "Colombo",
+            "leg": {
+              "mode": "air",
+              "cost": 2719.46,
+              "hours": 9.24,
+              "delay_probability": 0.1025,
+              "congestion": 0.525,
+              "geopolitical_risk": 0.1575
+            }
+          }
+        ]
+      },
+      {
+        "first": {
+          "mode": "air",
+          "cost": 5448.09,
+          "hours": 15.6,
+          "delay_probability": 0.0975,
+          "congestion": 0.475,
+          "geopolitical_risk": 0.14
+        },
+        "onward": [
+          {
+            "at": "Istanbul",
+            "leg": {
+              "mode": "sea",
+              "cost": 685.37,
+              "hours": 248.9,
+              "delay_probability": 0.39,
+              "congestion": 0.525,
+              "geopolitical_risk": 0.45
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "SHP-003",
+    "origin": "Hamburg",
+    "destination": "Colombo",
+    "priority": "time-critical",
+    "deadline": 520.0,
+    "cargo_value": 105252.0,
+    "routes": [
+      {
+        "first": {
+          "mode": "sea",
+          "cost": 731.38,
+          "hours": 280.85,
+          "delay_probability": 0.37,
+          "congestion": 0.475,
+          "geopolitical_risk": 0.35
+        },
+        "onward": [
+          {
+            "at": "Port Said",
+            "leg": {
+              "mode": "sea",
+              "cost": 673.95,
+              "hours": 240.96,
+              "delay_probability": 0.4,
+              "congestion": 0.55,
+              "geopolitical_risk": 0.35
+            }
+          }
+        ]
+      },
+      {
+        "first": {
+          "mode": "air",
+          "cost": 3583.8,
+          "hours": 11.26,
+          "delay_probability": 0.095,
+          "congestion": 0.45,
+          "geopolitical_risk": 0.1575
+        },
+        "onward": [
+          {
+            "at": "Dubai",
+            "leg": {
+              "mode": "air",
+              "cost": 2719.46,
+              "hours": 9.24,
+              "delay_probability": 0.1025,
+              "congestion": 0.525,
+              "geopolitical_risk": 0.1575
+            }
+          }
+        ]
+      },
+      {
+        "first": {
+          "mode": "sea",
+          "cost": 664.68,
+          "hours": 234.53,
+          "delay_probability": 0.37,
+          "congestion": 0.475,
+          "geopolitical_risk": 0.4
+        },
+        "onward": [
+          {
+            "at": "Istanbul",
+            "leg": {
+              "mode": "air",
+              "cost": 4355.51,
+              "hours": 13.05,
+              "delay_probability": 0.105,
+              "congestion": 0.55,
+              "geopolitical_risk": 0.14
+            }
+          }
+        ]
+      },
+      {
+        "first": {
+          "mode": "air",
+          "cost": 5587.26,
+          "hours": 15.93,
+          "delay_probability": 0.1075,
+          "congestion": 0.575,
+          "geopolitical_risk": 0.07
+        },
+        "onward": [
+          {
+            "at": "Shanghai",
+            "leg": {
+              "mode": "sea",
+              "cost": 701.62,
+              "hours": 260.18,
+              "delay_probability": 0.44,
+              "congestion": 0.65,
+              "geopolitical_risk": 0.3
+            }
+          }
+        ]
+      },
+      {
+        "first": {
+          "mode": "air",
+          "cost": 1993.0,
+          "hours": 7.55,
+          "delay_probability": 0.0975,
+          "congestion": 0.475,
+          "geopolitical_risk": 0.14
+        },
+        "onward": [
+          {
+            "at": "Istanbul",
+            "leg": {
+              "mode": "air",
+              "cost": 4355.51,
+              "hours": 13.05,
+              "delay_probability": 0.105,
+              "congestion": 0.55,
+              "geopolitical_risk": 0.14
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "SHP-004",
+    "origin": "Shanghai",
+    "destination": "Santos",
+    "priority": "risk-averse",
+    "deadline": 528.0,
+    "cargo_value": 273084.0,
+    "routes": [
+      {
+        "first": {
+          "mode": "sea",
+          "cost": 701.62,
+          "hours": 260.18,
+          "delay_probability": 0.44,
+          "congestion": 0.65,
+          "geopolitical_risk": 0.3
+        },
+        "onward": [
+          {
+            "at": "Colombo",
+            "leg": {
+              "mode": "sea",
+              "cost": 1093.94,
+              "hours": 532.63,
+              "delay_probability": 0.38,
+              "congestion": 0.5,
+              "geopolitical_risk": 0.3
+            }
+          }
+        ]
+      },
+      {
+        "first": {
+          "mode": "air",
+          "cost": 5291.64,
+          "hours": 15.24,
+          "delay_probability": 0.115,
+          "congestion": 0.65,
+          "geopolitical_risk": 0.14
+        },
+        "onward": [
+          {
+            "at": "Istanbul",
+            "leg": {
+              "mode": "air",
+              "cost": 6725.61,
+              "hours": 18.58,
+              "delay_probability": 0.1,
+              "congestion": 0.5,
+              "geopolitical_risk": 0.14
+            }
+          }
+        ]
+      },
+      {
+        "first": {
+          "mode": "sea",
+          "cost": 934.57,
+          "hours": 421.95,
+          "delay_probability": 0.46,
+          "congestion": 0.7,
+          "geopolitical_risk": 0.2
+        },
+        "onward": [
+          {
+            "at": "Los Angeles",
+            "leg": {
+              "mode": "air",
+              "cost": 6369.02,
+              "hours": 17.75,
+              "delay_probability": 0.105,
+              "congestion": 0.55,
+              "geopolitical_risk": 0.07
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "SHP-005",
+    "origin": "Dubai",
+    "destination": "Los Angeles",
+    "priority": "cost-first",
+    "deadline": 669.0,
+    "cargo_value": 86947.0,
+    "routes": [
+      {
+        "first": {
+          "mode": "sea",
+          "cost": 942.46,
+          "hours": 427.43,
+          "delay_probability": 0.43,
+          "congestion": 0.625,
+          "geopolitical_risk": 0.45
+        },
+        "onward": [
+          {
+            "at": "Shanghai",
+            "leg": {
+              "mode": "sea",
+              "cost": 934.57,
+              "hours": 421.95,
+              "delay_probability": 0.46,
+              "congestion": 0.7,
+              "geopolitical_risk": 0.2
+            }
+          }
+        ]
+      },
+      {
+        "first": {
+          "mode": "air",
+          "cost": 3583.8,
+          "hours": 11.26,
+          "delay_probability": 0.095,
+          "congestion": 0.45,
+          "geopolitical_risk": 0.1575
+        },
+        "onward": [
+          {
+            "at": "Hamburg",
+            "leg": {
+              "mode": "air",
+              "cost": 5909.0,
+              "hours": 16.68,
+              "delay_probability": 0.1025,
+              "congestion": 0.525,
+              "geopolitical_risk": 0.035
+            }
+          }
+        ]
+      },
+      {
+        "first": {
+          "mode": "sea",
+          "cost": 942.46,
+          "hours": 427.43,
+          "delay_probability": 0.43,
+          "congestion": 0.625,
+          "geopolitical_risk": 0.45
+        },
+        "onward": [
+          {
+            "at": "Shanghai",
+            "leg": {
+              "mode": "air",
+              "cost": 6650.86,
+              "hours": 18.41,
+              "delay_probability": 0.12,
+              "congestion": 0.7,
+              "geopolitical_risk": 0.07
+            }
+          }
+        ]
+      },
+      {
+        "first": {
+          "mode": "air",
+          "cost": 4434.44,
+          "hours": 13.24,
+          "delay_probability": 0.1125,
+          "congestion": 0.625,
+          "geopolitical_risk": 0.1575
+        },
+        "onward": [
+          {
+            "at": "Shanghai",
+            "leg": {
+              "mode": "sea",
+              "cost": 934.57,
+              "hours": 421.95,
+              "delay_probability": 0.46,
+              "congestion": 0.7,
+              "geopolitical_risk": 0.2
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "SHP-006",
+    "origin": "Santos",
+    "destination": "Shanghai",
+    "priority": "balanced",
+    "deadline": 865.0,
+    "cargo_value": 982306.0,
+    "routes": [
+      {
+        "first": {
+          "mode": "sea",
+          "cost": 1093.94,
+          "hours": 532.63,
+          "delay_probability": 0.38,
+          "congestion": 0.5,
+          "geopolitical_risk": 0.3
+        },
+        "onward": [
+          {
+            "at": "Colombo",
+            "leg": {
+              "mode": "sea",
+              "cost": 701.62,
+              "hours": 260.18,
+              "delay_probability": 0.44,
+              "congestion": 0.65,
+              "geopolitical_risk": 0.3
+            }
+          }
+        ]
+      },
+      {
+        "first": {
+          "mode": "air",
+          "cost": 6725.61,
+          "hours": 18.58,
+          "delay_probability": 0.1,
+          "congestion": 0.5,
+          "geopolitical_risk": 0.14
+        },
+        "onward": [
+          {
+            "at": "Istanbul",
+            "leg": {
+              "mode": "air",
+              "cost": 5291.64,
+              "hours": 15.24,
+              "delay_probability": 0.115,
+              "congestion": 0.65,
+              "geopolitical_risk": 0.14
+            }
+          }
+        ]
+      },
+      {
+        "first": {
+          "mode": "sea",
+          "cost": 897.48,
+          "hours": 396.2,
+          "delay_probability": 0.35,
+          "congestion": 0.425,
+          "geopolitical_risk": 0.2
+        },
+        "onward": [
+          {
+            "at": "Hamburg",
+            "leg": {
+              "mode": "air",
+              "cost": 5587.26,
+              "hours": 15.93,
+              "delay_probability": 0.1075,
+              "congestion": 0.575,
+              "geopolitical_risk": 0.07
+            }
+          }
+        ]
+      },
+      {
+        "first": {
+          "mode": "air",
+          "cost": 6369.02,
+          "hours": 17.75,
+          "delay_probability": 0.105,
+          "congestion": 0.55,
+          "geopolitical_risk": 0.07
+        },
+        "onward": [
+          {
+            "at": "Los Angeles",
+            "leg": {
+              "mode": "sea",
+              "cost": 934.57,
+              "hours": 421.95,
+              "delay_probability": 0.46,
+              "congestion": 0.7,
+              "geopolitical_risk": 0.2
+            }
+          }
+        ]
+      },
+      {
+        "first": {
+          "mode": "air",
+          "cost": 7616.68,
+          "hours": 20.66,
+          "delay_probability": 0.0975,
+          "congestion": 0.475,
+          "geopolitical_risk": 0.1575
+        },
+        "onward": [
+          {
+            "at": "Dubai",
+            "leg": {
+              "mode": "air",
+              "cost": 4434.44,
+              "hours": 13.24,
+              "delay_probability": 0.1125,
+              "congestion": 0.625,
+              "geopolitical_risk": 0.1575
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "SHP-007",
+    "origin": "Singapore",
+    "destination": "Rotterdam",
+    "priority": "time-critical",
+    "deadline": 356.0,
+    "cargo_value": 1415444.0,
+    "routes": [
+      {
+        "first": {
+          "mode": "sea",
+          "cost": 820.67,
+          "hours": 342.85,
+          "delay_probability": 0.43,
+          "congestion": 0.625,
+          "geopolitical_risk": 0.35
+        },
+        "onward": [
+          {
+            "at": "Port Said",
+            "leg": {
+              "mode": "sea",
+              "cost": 701.64,
+              "hours": 260.19,
+              "delay_probability": 0.38,
+              "congestion": 0.5,
+              "geopolitical_risk": 0.35
+            }
+          }
+        ]
+      },
+      {
+        "first": {
+          "mode": "air",
+          "cost": 6480.81,
+          "hours": 18.01,
+          "delay_probability": 0.105,
+          "congestion": 0.55,
+          "geopolitical_risk": 0.0525
+        },
+        "onward": [
+          {
+            "at": "Hamburg",
+            "leg": {
+              "mode": "air",
+              "cost": 1137.54,
+              "hours": 5.55,
+              "delay_probability": 0.0925,
+              "congestion": 0.425,
+              "geopolitical_risk": 0.0175
+            }
+          }
+        ]
+      },
+      {
+        "first": {
+          "mode": "sea",
+          "cost": 737.55,
+          "hours": 285.14,
+          "delay_probability": 0.42,
+          "congestion": 0.6,
+          "geopolitical_risk": 0.45
+        },
+        "onward": [
+          {
+            "at": "Dubai",
+            "leg": {
+              "mode": "air",
+              "cost": 3758.68,
+              "hours": 11.66,
+              "delay_probability": 0.0975,
+              "congestion": 0.475,
+              "geopolitical_risk": 0.1575
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "SHP-008",
+    "origin": "Shanghai",
+    "destination": "Colombo",
+    "priority": "risk-averse",
+    "deadline": 250.0,
+    "cargo_value": 293436.0,
+    "routes": [
+      {
+        "first": {
+          "mode": "sea",
+          "cost": 554.9,
+          "hours": 158.29,
+          "delay_probability": 0.47,
+          "congestion": 0.725,
+          "geopolitical_risk": 0.2
+        },
+        "onward": [
+          {
+            "at": "Singapore",
+            "leg": {
+              "mode": "sea",
+              "cost": 496.72,
+              "hours": 117.89,
+              "delay_probability": 0.43,
+              "congestion": 0.625,
+              "geopolitical_risk": 0.3
+            }
+          }
+        ]
+      },
+      {
+        "first": {
+          "mode": "air",
+          "cost": 1567.25,
+          "hours": 6.56,
+          "delay_probability": 0.1175,
+          "congestion": 0.675,
+          "geopolitical_risk": 0.0875
+        },
+        "onward": [
+          {
+            "at": "Shenzhen",
+            "leg": {
+              "mode": "air",
+              "cost": 3128.55,
+              "hours": 10.19,
+              "delay_probability": 0.1075,
+              "congestion": 0.575,
+              "geopolitical_risk": 0.105
+            }
+          }
+        ]
+      },
+      {
+        "first": {
+          "mode": "sea",
+          "cost": 554.9,
+          "hours": 158.29,
+          "delay_probability": 0.47,
+          "congestion": 0.725,
+          "geopolitical_risk": 0.2
+        },
+        "onward": [
+          {
+            "at": "Singapore",
+            "leg": {
+              "mode": "air",
+              "cost": 2403.44,
+              "hours": 8.5,
+              "delay_probability": 0.1125,
+              "congestion": 0.625,
+              "geopolitical_risk": 0.105
+            }
+          }
+        ]
+      },
+      {
+        "first": {
+          "mode": "air",
+          "cost": 2995.55,
+          "hours": 9.88,
+          "delay_probability": 0.1225,
+          "congestion": 0.725,
+          "geopolitical_risk": 0.07
+        },
+        "onward": [
+          {
+            "at": "Singapore",
+            "leg": {
+              "mode": "sea",
+              "cost": 496.72,
+              "hours": 117.89,
+              "delay_probability": 0.43,
+              "congestion": 0.625,
+              "geopolitical_risk": 0.3
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "SHP-009",
+    "origin": "Busan",
+    "destination": "New York",
+    "priority": "cost-first",
+    "deadline": 733.0,
+    "cargo_value": 539009.0,
+    "routes": [
+      {
+        "first": {
+          "mode": "sea",
+          "cost": 894.23,
+          "hours": 393.93,
+          "delay_probability": 0.39,
+          "congestion": 0.525,
+          "geopolitical_risk": 0.2
+        },
+        "onward": [
+          {
+            "at": "Los Angeles",
+            "leg": {
+              "mode": "sea",
+              "cost": 773.17,
+              "hours": 309.87,
+              "delay_probability": 0.41,
+              "congestion": 0.575,
+              "geopolitical_risk": 0.1
+            }
+          }
+        ]
+      },
+      {
+        "first": {
+          "mode": "air",
+          "cost": 1353.88,
+          "hours": 6.06,
+          "delay_probability": 0.1075,
+          "congestion": 0.575,
+          "geopolitical_risk": 0.07
+        },
+        "onward": [
+          {
+            "at": "Shanghai",
+            "leg": {
+              "mode": "air",
+              "cost": 7423.77,
+              "hours": 20.21,
+              "delay_probability": 0.1125,
+              "congestion": 0.625,
+              "geopolitical_risk": 0.07
+            }
+          }
+        ]
+      },
+      {
+        "first": {
+          "mode": "sea",
+          "cost": 894.23,
+          "hours": 393.93,
+          "delay_probability": 0.39,
+          "congestion": 0.525,
+          "geopolitical_risk": 0.2
+        },
+        "onward": [
+          {
+            "at": "Los Angeles",
+            "leg": {
+              "mode": "air",
+              "cost": 3072.27,
+              "hours": 10.06,
+              "delay_probability": 0.1075,
+              "congestion": 0.575,
+              "geopolitical_risk": 0.035
+            }
+          }
+        ]
+      },
+      {
+        "first": {
+          "mode": "air",
+          "cost": 5448.09,
+          "hours": 15.6,
+          "delay_probability": 0.0975,
+          "congestion": 0.475,
+          "geopolitical_risk": 0.14
+        },
+        "onward": [
+          {
+            "at": "Istanbul",
+            "leg": {
+              "mode": "sea",
+              "cost": 807.42,
+              "hours": 333.65,
+              "delay_probability": 0.39,
+              "congestion": 0.525,
+              "geopolitical_risk": 0.4
+            }
+          }
+        ]
+      },
+      {
+        "first": {
+          "mode": "air",
+          "cost": 6204.55,
+          "hours": 17.36,
+          "delay_probability": 0.1025,
+          "congestion": 0.525,
+          "geopolitical_risk": 0.07
+        },
+        "onward": [
+          {
+            "at": "Los Angeles",
+            "leg": {
+              "mode": "air",
+              "cost": 3072.27,
+              "hours": 10.06,
+              "delay_probability": 0.1075,
+              "congestion": 0.575,
+              "geopolitical_risk": 0.035
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "SHP-010",
+    "origin": "Los Angeles",
+    "destination": "Shenzhen",
+    "priority": "balanced",
+    "deadline": 19.0,
+    "cargo_value": 169846.0,
+    "routes": [
+      {
+        "first": {
+          "mode": "sea",
+          "cost": 547.6,
+          "hours": 153.22,
+          "delay_probability": 0.37,
+          "congestion": 0.475,
+          "geopolitical_risk": 0.1
+        },
+        "onward": [
+          {
+            "at": "Honolulu",
+            "leg": {
+              "mode": "sea",
+              "cost": 814.26,
+              "hours": 338.41,
+              "delay_probability": 0.36,
+              "congestion": 0.45,
+              "geopolitical_risk": 0.25
+            }
+          }
+        ]
+      },
+      {
+        "first": {
+          "mode": "air",
+          "cost": 6204.55,
+          "hours": 17.36,
+          "delay_probability": 0.1025,
+          "congestion": 0.525,
+          "geopolitical_risk": 0.07
+        },
+        "onward": [
+          {
+            "at": "Busan",
+            "leg": {
+              "mode": "air",
+              "cost": 2008.38,
+              "hours": 7.58,
+              "delay_probability": 0.1,
+              "congestion": 0.5,
+              "geopolitical_risk": 0.0875
+            }
+          }
+        ]
+      },
+      {
+        "first": {
+          "mode": "sea",
+          "cost": 773.17,
+          "hours": 309.87,
+          "delay_probability": 0.41,
+          "congestion": 0.575,
+          "geopolitical_risk": 0.1
+        },
+        "onward": [
+          {
+            "at": "New York",
+            "leg": {
+              "mode": "air",
+              "cost": 8014.57,
+              "hours": 21.58,
+              "delay_probability": 0.105,
+              "congestion": 0.55,
+              "geopolitical_risk": 0.0875
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "SHP-011",
+    "origin": "Singapore",
+    "destination": "Istanbul",
+    "priority": "time-critical",
+    "deadline": 349.0,
+    "cargo_value": 131847.0,
+    "routes": [
+      {
+        "first": {
+          "mode": "sea",
+          "cost": 644.78,
+          "hours": 220.71,
+          "delay_probability": 0.38,
+          "congestion": 0.5,
+          "geopolitical_risk": 0.2
+        },
+        "onward": [
+          {
+            "at": "Salalah",
+            "leg": {
+              "mode": "sea",
+              "cost": 592.59,
+              "hours": 184.47,
+              "delay_probability": 0.35,
+              "congestion": 0.425,
+              "geopolitical_risk": 0.4
+            }
+          }
+        ]
+      },
+      {
+        "first": {
+          "mode": "air",
+          "cost": 4113.92,
+          "hours": 12.49,
+          "delay_probability": 0.11,
+          "congestion": 0.6,
+          "geopolitical_risk": 0.1575
+        },
+        "onward": [
+          {
+            "at": "Dubai",
+            "leg": {
+              "mode": "air",
+              "cost": 2547.07,
+              "hours": 8.84,
+              "delay_probability": 0.1025,
+              "congestion": 0.525,
+              "geopolitical_risk": 0.1575
+            }
+          }
+        ]
+      },
+      {
+        "first": {
+          "mode": "sea",
+          "cost": 595.25,
+          "hours": 186.31,
+          "delay_probability": 0.4,
+          "congestion": 0.55,
+          "geopolitical_risk": 0.2
+        },
+        "onward": [
+          {
+            "at": "Busan",
+            "leg": {
+              "mode": "air",
+              "cost": 5448.09,
+              "hours": 15.6,
+              "delay_probability": 0.0975,
+              "congestion": 0.475,
+              "geopolitical_risk": 0.14
+            }
+          }
+        ]
+      },
+      {
+        "first": {
+          "mode": "air",
+          "cost": 6706.57,
+          "hours": 18.54,
+          "delay_probability": 0.1075,
+          "congestion": 0.575,
+          "geopolitical_risk": 0.0525
+        },
+        "onward": [
+          {
+            "at": "Rotterdam",
+            "leg": {
+              "mode": "sea",
+              "cost": 634.94,
+              "hours": 213.87,
+              "delay_probability": 0.38,
+              "congestion": 0.5,
+              "geopolitical_risk": 0.4
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "SHP-012",
+    "origin": "Shanghai",
+    "destination": "Los Angeles",
+    "priority": "risk-averse",
+    "deadline": 598.0,
+    "cargo_value": 955838.0,
+    "routes": [
+      {
+        "first": {
+          "mode": "sea",
+          "cost": 736.97,
+          "hours": 284.73,
+          "delay_probability": 0.39,
+          "congestion": 0.525,
+          "geopolitical_risk": 0.2
+        },
+        "onward": [
+          {
+            "at": "Honolulu",
+            "leg": {
+              "mode": "sea",
+              "cost": 547.6,
+              "hours": 153.22,
+              "delay_probability": 0.37,
+              "congestion": 0.475,
+              "geopolitical_risk": 0.1
+            }
+          }
+        ]
+      },
+      {
+        "first": {
+          "mode": "air",
+          "cost": 1353.88,
+          "hours": 6.06,
+          "delay_probability": 0.1075,
+          "congestion": 0.575,
+          "geopolitical_risk": 0.07
+        },
+        "onward": [
+          {
+            "at": "Busan",
+            "leg": {
+              "mode": "air",
+              "cost": 6204.55,
+              "hours": 17.36,
+              "delay_probability": 0.1025,
+              "congestion": 0.525,
+              "geopolitical_risk": 0.07
+            }
+          }
+        ]
+      },
+      {
+        "first": {
+          "mode": "sea",
+          "cost": 701.62,
+          "hours": 260.18,
+          "delay_probability": 0.44,
+          "congestion": 0.65,
+          "geopolitical_risk": 0.3
+        },
+        "onward": [
+          {
+            "at": "Colombo",
+            "leg": {
+              "mode": "air",
+              "cost": 9208.3,
+              "hours": 24.37,
+              "delay_probability": 0.11,
+              "congestion": 0.6,
+              "geopolitical_risk": 0.105
+            }
+          }
+        ]
+      },
+      {
+        "first": {
+          "mode": "air",
+          "cost": 7423.77,
+          "hours": 20.21,
+          "delay_probability": 0.1125,
+          "congestion": 0.625,
+          "geopolitical_risk": 0.07
+        },
+        "onward": [
+          {
+            "at": "New York",
+            "leg": {
+              "mode": "sea",
+              "cost": 773.17,
+              "hours": 309.87,
+              "delay_probability": 0.41,
+              "congestion": 0.575,
+              "geopolitical_risk": 0.1
+            }
+          }
+        ]
+      },
+      {
+        "first": {
+          "mode": "air",
+          "cost": 1567.25,
+          "hours": 6.56,
+          "delay_probability": 0.1175,
+          "congestion": 0.675,
+          "geopolitical_risk": 0.0875
+        },
+        "onward": [
+          {
+            "at": "Shenzhen",
+            "leg": {
+              "mode": "air",
+              "cost": 7312.92,
+              "hours": 19.95,
+              "delay_probability": 0.1125,
+              "congestion": 0.625,
+              "geopolitical_risk": 0.0875
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "SHP-013",
+    "origin": "Dubai",
+    "destination": "Shanghai",
+    "priority": "cost-first",
+    "deadline": 317.0,
+    "cargo_value": 403243.0,
+    "routes": [
+      {
+        "first": {
+          "mode": "sea",
+          "cost": 590.84,
+          "hours": 183.25,
+          "delay_probability": 0.39,
+          "congestion": 0.525,
+          "geopolitical_risk": 0.45
+        },
+        "onward": [
+          {
+            "at": "Colombo",
+            "leg": {
+              "mode": "sea",
+              "cost": 701.62,
+              "hours": 260.18,
+              "delay_probability": 0.44,
+              "congestion": 0.65,
+              "geopolitical_risk": 0.3
+            }
+          }
+        ]
+      },
+      {
+        "first": {
+          "mode": "air",
+          "cost": 4165.65,
+          "hours": 12.61,
+          "delay_probability": 0.105,
+          "congestion": 0.55,
+          "geopolitical_risk": 0.1575
+        },
+        "onward": [
+          {
+            "at": "Shenzhen",
+            "leg": {
+              "mode": "air",
+              "cost": 1567.25,
+              "hours": 6.56,
+              "delay_probability": 0.1175,
+              "congestion": 0.675,
+              "geopolitical_risk": 0.0875
+            }
+          }
+        ]
+      },
+      {
+        "first": {
+          "mode": "sea",
+          "cost": 685.37,
+          "hours": 248.9,
+          "delay_probability": 0.39,
+          "congestion": 0.525,
+          "geopolitical_risk": 0.45
+        },
+        "onward": [
+          {
+            "at": "Istanbul",
+            "leg": {
+              "mode": "air",
+              "cost": 5291.64,
+              "hours": 15.24,
+              "delay_probability": 0.115,
+              "congestion": 0.65,
+              "geopolitical_risk": 0.14
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "SHP-014",
+    "origin": "Dubai",
+    "destination": "Hamburg",
+    "priority": "balanced",
+    "deadline": 385.0,
+    "cargo_value": 1389071.0,
+    "routes": [
+      {
+        "first": {
+          "mode": "sea",
+          "cost": 685.37,
+          "hours": 248.9,
+          "delay_probability": 0.39,
+          "congestion": 0.525,
+          "geopolitical_risk": 0.45
+        },
+        "onward": [
+          {
+            "at": "Istanbul",
+            "leg": {
+              "mode": "sea",
+              "cost": 664.68,
+              "hours": 234.53,
+              "delay_probability": 0.37,
+              "congestion": 0.475,
+              "geopolitical_risk": 0.4
+            }
+          }
+        ]
+      },
+      {
+        "first": {
+          "mode": "air",
+          "cost": 2547.07,
+          "hours": 8.84,
+          "delay_probability": 0.1025,
+          "congestion": 0.525,
+          "geopolitical_risk": 0.1575
+        },
+        "onward": [
+          {
+            "at": "Istanbul",
+            "leg": {
+              "mode": "air",
+              "cost": 1993.0,
+              "hours": 7.55,
+              "delay_probability": 0.0975,
+              "congestion": 0.475,
+              "geopolitical_risk": 0.14
+            }
+          }
+        ]
+      },
+      {
+        "first": {
+          "mode": "sea",
+          "cost": 685.37,
+          "hours": 248.9,
+          "delay_probability": 0.39,
+          "congestion": 0.525,
+          "geopolitical_risk": 0.45
+        },
+        "onward": [
+          {
+            "at": "Istanbul",
+            "leg": {
+              "mode": "air",
+              "cost": 1993.0,
+              "hours": 7.55,
+              "delay_probability": 0.0975,
+              "congestion": 0.475,
+              "geopolitical_risk": 0.14
+            }
+          }
+        ]
+      },
+      {
+        "first": {
+          "mode": "air",
+          "cost": 2547.07,
+          "hours": 8.84,
+          "delay_probability": 0.1025,
+          "congestion": 0.525,
+          "geopolitical_risk": 0.1575
+        },
+        "onward": [
+          {
+            "at": "Istanbul",
+            "leg": {
+              "mode": "sea",
+              "cost": 664.68,
+              "hours": 234.53,
+              "delay_probability": 0.37,
+              "congestion": 0.475,
+              "geopolitical_risk": 0.4
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "SHP-015",
+    "origin": "Colombo",
+    "destination": "Los Angeles",
+    "priority": "time-critical",
+    "deadline": 642.0,
+    "cargo_value": 735159.0,
+    "routes": [
+      {
+        "first": {
+          "mode": "sea",
+          "cost": 741.97,
+          "hours": 288.2,
+          "delay_probability": 0.37,
+          "congestion": 0.475,
+          "geopolitical_risk": 0.3
+        },
+        "onward": [
+          {
+            "at": "Busan",
+            "leg": {
+              "mode": "sea",
+              "cost": 894.23,
+              "hours": 393.93,
+              "delay_probability": 0.39,
+              "congestion": 0.525,
+              "geopolitical_risk": 0.2
+            }
+          }
+        ]
+      },
+      {
+        "first": {
+          "mode": "air",
+          "cost": 3701.19,
+          "hours": 11.53,
+          "delay_probability": 0.115,
+          "congestion": 0.65,
+          "geopolitical_risk": 0.105
+        },
+        "onward": [
+          {
+            "at": "Shanghai",
+            "leg": {
+              "mode": "air",
+              "cost": 6650.86,
+              "hours": 18.41,
+              "delay_probability": 0.12,
+              "congestion": 0.7,
+              "geopolitical_risk": 0.07
+            }
+          }
+        ]
+      },
+      {
+        "first": {
+          "mode": "sea",
+          "cost": 741.97,
+          "hours": 288.2,
+          "delay_probability": 0.37,
+          "congestion": 0.475,
+          "geopolitical_risk": 0.3
+        },
+        "onward": [
+          {
+            "at": "Busan",
+            "leg": {
+              "mode": "air",
+              "cost": 6204.55,
+              "hours": 17.36,
+              "delay_probability": 0.1025,
+              "congestion": 0.525,
+              "geopolitical_risk": 0.07
+            }
+          }
+        ]
+      },
+      {
+        "first": {
+          "mode": "air",
+          "cost": 4148.52,
+          "hours": 12.57,
+          "delay_probability": 0.0975,
+          "congestion": 0.475,
+          "geopolitical_risk": 0.105
+        },
+        "onward": [
+          {
+            "at": "Busan",
+            "leg": {
+              "mode": "sea",
+              "cost": 894.23,
+              "hours": 393.93,
+              "delay_probability": 0.39,
+              "congestion": 0.525,
+              "geopolitical_risk": 0.2
+            }
+          }
+        ]
+      },
+      {
+        "first": {
+          "mode": "air",
+          "cost": 4148.52,
+          "hours": 12.57,
+          "delay_probability": 0.0975,
+          "congestion": 0.475,
+          "geopolitical_risk": 0.105
+        },
+        "onward": [
+          {
+            "at": "Busan",
+            "leg": {
+              "mode": "air",
+              "cost": 6204.55,
+              "hours": 17.36,
+              "delay_probability": 0.1025,
+              "congestion": 0.525,
+              "geopolitical_risk": 0.07
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "SHP-016",
+    "origin": "Singapore",
+    "destination": "Shenzhen",
+    "priority": "risk-averse",
+    "deadline": 145.0,
+    "cargo_value": 587505.0,
+    "routes": [
+      {
+        "first": {
+          "mode": "sea",
+          "cost": 476.24,
+          "hours": 103.67,
+          "delay_probability": 0.42,
+          "congestion": 0.6,
+          "geopolitical_risk": 0.15
+        },
+        "onward": [
+          {
+            "at": "Hong Kong",
+            "leg": {
+              "mode": "sea",
+              "cost": 351.37,
+              "hours": 16.95,
+              "delay_probability": 0.4,
+              "congestion": 0.55,
+              "geopolitical_risk": 0.25
+            }
+          }
+        ]
+      },
+      {
+        "first": {
+          "mode": "air",
+          "cost": 2995.55,
+          "hours": 9.88,
+          "delay_probability": 0.1225,
+          "congestion": 0.725,
+          "geopolitical_risk": 0.07
+        },
+        "onward": [
+          {
+            "at": "Shanghai",
+            "leg": {
+              "mode": "air",
+              "cost": 1567.25,
+              "hours": 6.56,
+              "delay_probability": 0.1175,
+              "congestion": 0.675,
+              "geopolitical_risk": 0.0875
+            }
+          }
+        ]
+      },
+      {
+        "first": {
+          "mode": "sea",
+          "cost": 496.72,
+          "hours": 117.89,
+          "delay_probability": 0.43,
+          "congestion": 0.625,
+          "geopolitical_risk": 0.3
+        },
+        "onward": [
+          {
+            "at": "Colombo",
+            "leg": {
+              "mode": "air",
+              "cost": 3128.55,
+              "hours": 10.19,
+              "delay_probability": 0.1075,
+              "congestion": 0.575,
+              "geopolitical_risk": 0.105
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "SHP-017",
+    "origin": "Istanbul",
+    "destination": "Singapore",
+    "priority": "cost-first",
+    "deadline": 349.0,
+    "cargo_value": 458916.0,
+    "routes": [
+      {
+        "first": {
+          "mode": "sea",
+          "cost": 592.59,
+          "hours": 184.47,
+          "delay_probability": 0.35,
+          "congestion": 0.425,
+          "geopolitical_risk": 0.4
+        },
+        "onward": [
+          {
+            "at": "Salalah",
+            "leg": {
+              "mode": "sea",
+              "cost": 644.78,
+              "hours": 220.71,
+              "delay_probability": 0.38,
+              "congestion": 0.5,
+              "geopolitical_risk": 0.2
+            }
+          }
+        ]
+      },
+      {
+        "first": {
+          "mode": "air",
+          "cost": 2547.07,
+          "hours": 8.84,
+          "delay_probability": 0.1025,
+          "congestion": 0.525,
+          "geopolitical_risk": 0.1575
+        },
+        "onward": [
+          {
+            "at": "Dubai",
+            "leg": {
+              "mode": "air",
+              "cost": 4113.92,
+              "hours": 12.49,
+              "delay_probability": 0.11,
+              "congestion": 0.6,
+              "geopolitical_risk": 0.1575
+            }
+          }
+        ]
+      },
+      {
+        "first": {
+          "mode": "sea",
+          "cost": 634.94,
+          "hours": 213.87,
+          "delay_probability": 0.38,
+          "congestion": 0.5,
+          "geopolitical_risk": 0.4
+        },
+        "onward": [
+          {
+            "at": "Rotterdam",
+            "leg": {
+              "mode": "air",
+              "cost": 6706.57,
+              "hours": 18.54,
+              "delay_probability": 0.1075,
+              "congestion": 0.575,
+              "geopolitical_risk": 0.0525
+            }
+          }
+        ]
+      },
+      {
+        "first": {
+          "mode": "air",
+          "cost": 5448.09,
+          "hours": 15.6,
+          "delay_probability": 0.0975,
+          "congestion": 0.475,
+          "geopolitical_risk": 0.14
+        },
+        "onward": [
+          {
+            "at": "Busan",
+            "leg": {
+              "mode": "sea",
+              "cost": 595.25,
+              "hours": 186.31,
+              "delay_probability": 0.4,
+              "congestion": 0.55,
+              "geopolitical_risk": 0.2
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "SHP-018",
+    "origin": "Singapore",
+    "destination": "Dubai",
+    "priority": "balanced",
+    "deadline": 360.0,
+    "cargo_value": 87411.0,
+    "routes": [
+      {
+        "first": {
+          "mode": "sea",
+          "cost": 496.72,
+          "hours": 117.89,
+          "delay_probability": 0.43,
+          "congestion": 0.625,
+          "geopolitical_risk": 0.3
+        },
+        "onward": [
+          {
+            "at": "Colombo",
+            "leg": {
+              "mode": "sea",
+              "cost": 590.84,
+              "hours": 183.25,
+              "delay_probability": 0.39,
+              "congestion": 0.525,
+              "geopolitical_risk": 0.45
+            }
+          }
+        ]
+      },
+      {
+        "first": {
+          "mode": "air",
+          "cost": 2403.44,
+          "hours": 8.5,
+          "delay_probability": 0.1125,
+          "congestion": 0.625,
+          "geopolitical_risk": 0.105
+        },
+        "onward": [
+          {
+            "at": "Colombo",
+            "leg": {
+              "mode": "air",
+              "cost": 2719.46,
+              "hours": 9.24,
+              "delay_probability": 0.1025,
+              "congestion": 0.525,
+              "geopolitical_risk": 0.1575
+            }
+          }
+        ]
+      },
+      {
+        "first": {
+          "mode": "sea",
+          "cost": 554.9,
+          "hours": 158.29,
+          "delay_probability": 0.47,
+          "congestion": 0.725,
+          "geopolitical_risk": 0.2
+        },
+        "onward": [
+          {
+            "at": "Shanghai",
+            "leg": {
+              "mode": "air",
+              "cost": 4434.44,
+              "hours": 13.24,
+              "delay_probability": 0.1125,
+              "congestion": 0.625,
+              "geopolitical_risk": 0.1575
+            }
+          }
+        ]
+      },
+      {
+        "first": {
+          "mode": "air",
+          "cost": 2403.44,
+          "hours": 8.5,
+          "delay_probability": 0.1125,
+          "congestion": 0.625,
+          "geopolitical_risk": 0.105
+        },
+        "onward": [
+          {
+            "at": "Colombo",
+            "leg": {
+              "mode": "sea",
+              "cost": 590.84,
+              "hours": 183.25,
+              "delay_probability": 0.39,
+              "congestion": 0.525,
+              "geopolitical_risk": 0.45
+            }
+          }
+        ]
+      },
+      {
+        "first": {
+          "mode": "air",
+          "cost": 2334.33,
+          "hours": 8.34,
+          "delay_probability": 0.115,
+          "congestion": 0.65,
+          "geopolitical_risk": 0.0875
+        },
+        "onward": [
+          {
+            "at": "Shenzhen",
+            "leg": {
+              "mode": "air",
+              "cost": 4165.65,
+              "hours": 12.61,
+              "delay_probability": 0.105,
+              "congestion": 0.55,
+              "geopolitical_risk": 0.1575
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "SHP-019",
+    "origin": "Colombo",
+    "destination": "Dubai",
+    "priority": "time-critical",
+    "deadline": 156.0,
+    "cargo_value": 233844.0,
+    "routes": [
+      {
+        "first": {
+          "mode": "sea",
+          "cost": 498.06,
+          "hours": 118.82,
+          "delay_probability": 0.35,
+          "congestion": 0.425,
+          "geopolitical_risk": 0.3
+        },
+        "onward": [
+          {
+            "at": "Salalah",
+            "leg": {
+              "mode": "sea",
+              "cost": 442.78,
+              "hours": 80.43,
+              "delay_probability": 0.34,
+              "congestion": 0.4,
+              "geopolitical_risk": 0.45
+            }
+          }
+        ]
+      },
+      {
+        "first": {
+          "mode": "air",
+          "cost": 2403.44,
+          "hours": 8.5,
+          "delay_probability": 0.1125,
+          "congestion": 0.625,
+          "geopolitical_risk": 0.105
+        },
+        "onward": [
+          {
+            "at": "Singapore",
+            "leg": {
+              "mode": "air",
+              "cost": 4113.92,
+              "hours": 12.49,
+              "delay_probability": 0.11,
+              "congestion": 0.6,
+              "geopolitical_risk": 0.1575
+            }
+          }
+        ]
+      },
+      {
+        "first": {
+          "mode": "sea",
+          "cost": 496.72,
+          "hours": 117.89,
+          "delay_probability": 0.43,
+          "congestion": 0.625,
+          "geopolitical_risk": 0.3
+        },
+        "onward": [
+          {
+            "at": "Singapore",
+            "leg": {
+              "mode": "air",
+              "cost": 4113.92,
+              "hours": 12.49,
+              "delay_probability": 0.11,
+              "congestion": 0.6,
+              "geopolitical_risk": 0.1575
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "SHP-020",
+    "origin": "Dubai",
+    "destination": "Shanghai",
+    "priority": "risk-averse",
+    "deadline": 14.0,
+    "cargo_value": 88979.0,
+    "routes": [
+      {
+        "first": {
+          "mode": "sea",
+          "cost": 590.84,
+          "hours": 183.25,
+          "delay_probability": 0.39,
+          "congestion": 0.525,
+          "geopolitical_risk": 0.45
+        },
+        "onward": [
+          {
+            "at": "Colombo",
+            "leg": {
+              "mode": "sea",
+              "cost": 701.62,
+              "hours": 260.18,
+              "delay_probability": 0.44,
+              "congestion": 0.65,
+              "geopolitical_risk": 0.3
+            }
+          }
+        ]
+      },
+      {
+        "first": {
+          "mode": "air",
+          "cost": 4165.65,
+          "hours": 12.61,
+          "delay_probability": 0.105,
+          "congestion": 0.55,
+          "geopolitical_risk": 0.1575
+        },
+        "onward": [
+          {
+            "at": "Shenzhen",
+            "leg": {
+              "mode": "air",
+              "cost": 1567.25,
+              "hours": 6.56,
+              "delay_probability": 0.1175,
+              "congestion": 0.675,
+              "geopolitical_risk": 0.0875
+            }
+          }
+        ]
+      },
+      {
+        "first": {
+          "mode": "sea",
+          "cost": 685.37,
+          "hours": 248.9,
+          "delay_probability": 0.39,
+          "congestion": 0.525,
+          "geopolitical_risk": 0.45
+        },
+        "onward": [
+          {
+            "at": "Istanbul",
+            "leg": {
+              "mode": "air",
+              "cost": 5291.64,
+              "hours": 15.24,
+              "delay_probability": 0.115,
+              "congestion": 0.65,
+              "geopolitical_risk": 0.14
+            }
+          }
+        ]
+      },
+      {
+        "first": {
+          "mode": "air",
+          "cost": 2719.46,
+          "hours": 9.24,
+          "delay_probability": 0.1025,
+          "congestion": 0.525,
+          "geopolitical_risk": 0.1575
+        },
+        "onward": [
+          {
+            "at": "Colombo",
+            "leg": {
+              "mode": "sea",
+              "cost": 701.62,
+              "hours": 260.18,
+              "delay_probability": 0.44,
+              "congestion": 0.65,
+              "geopolitical_risk": 0.3
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "SHP-021",
+    "origin": "Hamburg",
+    "destination": "Singapore",
+    "priority": "cost-first",
+    "deadline": 622.0,
+    "cargo_value": 228143.0,
+    "routes": [
+      {
+        "first": {
+          "mode": "sea",
+          "cost": 731.38,
+          "hours": 280.85,
+          "delay_probability": 0.37,
+          "congestion": 0.475,
+          "geopolitical_risk": 0.35
+        },
+        "onward": [
+          {
+            "at": "Port Said",
+            "leg": {
+              "mode": "sea",
+              "cost": 820.67,
+              "hours": 342.85,
+              "delay_probability": 0.43,
+              "congestion": 0.625,
+              "geopolitical_risk": 0.35
+            }
+          }
+        ]
+      },
+      {
+        "first": {
+          "mode": "air",
+          "cost": 1993.0,
+          "hours": 7.55,
+          "delay_probability": 0.0975,
+          "congestion": 0.475,
+          "geopolitical_risk": 0.14
+        },
+        "onward": [
+          {
+            "at": "Istanbul",
+            "leg": {
+              "mode": "air",
+              "cost": 5656.76,
+              "hours": 16.09,
+              "delay_probability": 0.1125,
+              "congestion": 0.625,
+              "geopolitical_risk": 0.14
+            }
+          }
+        ]
+      },
+      {
+        "first": {
+          "mode": "sea",
+          "cost": 799.1,
+          "hours": 327.87,
+          "delay_probability": 0.36,
+          "congestion": 0.45,
+          "geopolitical_risk": 0.08
+        },
+        "onward": [
+          {
+            "at": "New York",
+            "leg": {
+              "mode": "air",
+              "cost": 9338.84,
+              "hours": 24.67,
+              "delay_probability": 0.11,
+              "congestion": 0.6,
+              "geopolitical_risk": 0.0525
+            }
+          }
+        ]
+      },
+      {
+        "first": {
+          "mode": "air",
+          "cost": 3583.8,
+          "hours": 11.26,
+          "delay_probability": 0.095,
+          "congestion": 0.45,
+          "geopolitical_risk": 0.1575
+        },
+        "onward": [
+          {
+            "at": "Dubai",
+            "leg": {
+              "mode": "sea",
+              "cost": 737.55,
+              "hours": 285.14,
+              "delay_probability": 0.42,
+              "congestion": 0.6,
+              "geopolitical_risk": 0.45
+            }
+          }
+        ]
+      },
+      {
+        "first": {
+          "mode": "air",
+          "cost": 3583.8,
+          "hours": 11.26,
+          "delay_probability": 0.095,
+          "congestion": 0.45,
+          "geopolitical_risk": 0.1575
+        },
+        "onward": [
+          {
+            "at": "Dubai",
+            "leg": {
+              "mode": "air",
+              "cost": 4113.92,
+              "hours": 12.49,
+              "delay_probability": 0.11,
+              "congestion": 0.6,
+              "geopolitical_risk": 0.1575
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "SHP-022",
+    "origin": "Busan",
+    "destination": "Hamburg",
+    "priority": "balanced",
+    "deadline": 493.0,
+    "cargo_value": 440666.0,
+    "routes": [
+      {
+        "first": {
+          "mode": "sea",
+          "cost": 890.03,
+          "hours": 391.02,
+          "delay_probability": 0.32,
+          "congestion": 0.35,
+          "geopolitical_risk": 0.2
+        },
+        "onward": [
+          {
+            "at": "Salalah",
+            "leg": {
+              "mode": "sea",
+              "cost": 907.27,
+              "hours": 402.99,
+              "delay_probability": 0.32,
+              "congestion": 0.35,
+              "geopolitical_risk": 0.2
+            }
+          }
+        ]
+      },
+      {
+        "first": {
+          "mode": "air",
+          "cost": 1353.88,
+          "hours": 6.06,
+          "delay_probability": 0.1075,
+          "congestion": 0.575,
+          "geopolitical_risk": 0.07
+        },
+        "onward": [
+          {
+            "at": "Shanghai",
+            "leg": {
+              "mode": "air",
+              "cost": 5587.26,
+              "hours": 15.93,
+              "delay_probability": 0.1075,
+              "congestion": 0.575,
+              "geopolitical_risk": 0.07
+            }
+          }
+        ]
+      },
+      {
+        "first": {
+          "mode": "sea",
+          "cost": 894.23,
+          "hours": 393.93,
+          "delay_probability": 0.39,
+          "congestion": 0.525,
+          "geopolitical_risk": 0.2
+        },
+        "onward": [
+          {
+            "at": "Los Angeles",
+            "leg": {
+              "mode": "air",
+              "cost": 5909.0,
+              "hours": 16.68,
+              "delay_probability": 0.1025,
+              "congestion": 0.525,
+              "geopolitical_risk": 0.035
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "SHP-023",
+    "origin": "Hamburg",
+    "destination": "Dubai",
+    "priority": "time-critical",
+    "deadline": 385.0,
+    "cargo_value": 103938.0,
+    "routes": [
+      {
+        "first": {
+          "mode": "sea",
+          "cost": 664.68,
+          "hours": 234.53,
+          "delay_probability": 0.37,
+          "congestion": 0.475,
+          "geopolitical_risk": 0.4
+        },
+        "onward": [
+          {
+            "at": "Istanbul",
+            "leg": {
+              "mode": "sea",
+              "cost": 685.37,
+              "hours": 248.9,
+              "delay_probability": 0.39,
+              "congestion": 0.525,
+              "geopolitical_risk": 0.45
+            }
+          }
+        ]
+      },
+      {
+        "first": {
+          "mode": "air",
+          "cost": 1993.0,
+          "hours": 7.55,
+          "delay_probability": 0.0975,
+          "congestion": 0.475,
+          "geopolitical_risk": 0.14
+        },
+        "onward": [
+          {
+            "at": "Istanbul",
+            "leg": {
+              "mode": "air",
+              "cost": 2547.07,
+              "hours": 8.84,
+              "delay_probability": 0.1025,
+              "congestion": 0.525,
+              "geopolitical_risk": 0.1575
+            }
+          }
+        ]
+      },
+      {
+        "first": {
+          "mode": "sea",
+          "cost": 664.68,
+          "hours": 234.53,
+          "delay_probability": 0.37,
+          "congestion": 0.475,
+          "geopolitical_risk": 0.4
+        },
+        "onward": [
+          {
+            "at": "Istanbul",
+            "leg": {
+              "mode": "air",
+              "cost": 2547.07,
+              "hours": 8.84,
+              "delay_probability": 0.1025,
+              "congestion": 0.525,
+              "geopolitical_risk": 0.1575
+            }
+          }
+        ]
+      },
+      {
+        "first": {
+          "mode": "air",
+          "cost": 1993.0,
+          "hours": 7.55,
+          "delay_probability": 0.0975,
+          "congestion": 0.475,
+          "geopolitical_risk": 0.14
+        },
+        "onward": [
+          {
+            "at": "Istanbul",
+            "leg": {
+              "mode": "sea",
+              "cost": 685.37,
+              "hours": 248.9,
+              "delay_probability": 0.39,
+              "congestion": 0.525,
+              "geopolitical_risk": 0.45
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "SHP-024",
+    "origin": "Rotterdam",
+    "destination": "Shanghai",
+    "priority": "risk-averse",
+    "deadline": 849.0,
+    "cargo_value": 677323.0,
+    "routes": [
+      {
+        "first": {
+          "mode": "sea",
+          "cost": 877.53,
+          "hours": 382.34,
+          "delay_probability": 0.33,
+          "congestion": 0.375,
+          "geopolitical_risk": 0.2
+        },
+        "onward": [
+          {
+            "at": "Salalah",
+            "leg": {
+              "mode": "sea",
+              "cost": 849.68,
+              "hours": 363.0,
+              "delay_probability": 0.39,
+              "congestion": 0.525,
+              "geopolitical_risk": 0.2
+            }
+          }
+        ]
+      },
+      {
+        "first": {
+          "mode": "air",
+          "cost": 1137.54,
+          "hours": 5.55,
+          "delay_probability": 0.0925,
+          "congestion": 0.425,
+          "geopolitical_risk": 0.0175
+        },
+        "onward": [
+          {
+            "at": "Hamburg",
+            "leg": {
+              "mode": "air",
+              "cost": 5587.26,
+              "hours": 15.93,
+              "delay_probability": 0.1075,
+              "congestion": 0.575,
+              "geopolitical_risk": 0.07
+            }
+          }
+        ]
+      },
+      {
+        "first": {
+          "mode": "sea",
+          "cost": 867.74,
+          "hours": 375.54,
+          "delay_probability": 0.36,
+          "congestion": 0.45,
+          "geopolitical_risk": 0.2
+        },
+        "onward": [
+          {
+            "at": "Santos",
+            "leg": {
+              "mode": "air",
+              "cost": 11112.37,
+              "hours": 28.81,
+              "delay_probability": 0.11,
+              "congestion": 0.6,
+              "geopolitical_risk": 0.07
+            }
+          }
+        ]
+      },
+      {
+        "first": {
+          "mode": "air",
+          "cost": 3758.68,
+          "hours": 11.66,
+          "delay_probability": 0.0975,
+          "congestion": 0.475,
+          "geopolitical_risk": 0.1575
+        },
+        "onward": [
+          {
+            "at": "Dubai",
+            "leg": {
+              "mode": "sea",
+              "cost": 942.46,
+              "hours": 427.43,
+              "delay_probability": 0.43,
+              "congestion": 0.625,
+              "geopolitical_risk": 0.45
+            }
+          }
+        ]
+      },
+      {
+        "first": {
+          "mode": "air",
+          "cost": 5825.86,
+          "hours": 16.48,
+          "delay_probability": 0.0925,
+          "congestion": 0.425,
+          "geopolitical_risk": 0.07
+        },
+        "onward": [
+          {
+            "at": "Busan",
+            "leg": {
+              "mode": "air",
+              "cost": 1353.88,
+              "hours": 6.06,
+              "delay_probability": 0.1075,
+              "congestion": 0.575,
+              "geopolitical_risk": 0.07
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "SHP-025",
+    "origin": "Hamburg",
+    "destination": "Dubai",
+    "priority": "cost-first",
+    "deadline": 292.0,
+    "cargo_value": 983536.0,
+    "routes": [
+      {
+        "first": {
+          "mode": "sea",
+          "cost": 664.68,
+          "hours": 234.53,
+          "delay_probability": 0.37,
+          "congestion": 0.475,
+          "geopolitical_risk": 0.4
+        },
+        "onward": [
+          {
+            "at": "Istanbul",
+            "leg": {
+              "mode": "sea",
+              "cost": 685.37,
+              "hours": 248.9,
+              "delay_probability": 0.39,
+              "congestion": 0.525,
+              "geopolitical_risk": 0.45
+            }
+          }
+        ]
+      },
+      {
+        "first": {
+          "mode": "air",
+          "cost": 1993.0,
+          "hours": 7.55,
+          "delay_probability": 0.0975,
+          "congestion": 0.475,
+          "geopolitical_risk": 0.14
+        },
+        "onward": [
+          {
+            "at": "Istanbul",
+            "leg": {
+              "mode": "air",
+              "cost": 2547.07,
+              "hours": 8.84,
+              "delay_probability": 0.1025,
+              "congestion": 0.525,
+              "geopolitical_risk": 0.1575
+            }
+          }
+        ]
+      },
+      {
+        "first": {
+          "mode": "sea",
+          "cost": 664.68,
+          "hours": 234.53,
+          "delay_probability": 0.37,
+          "congestion": 0.475,
+          "geopolitical_risk": 0.4
+        },
+        "onward": [
+          {
+            "at": "Istanbul",
+            "leg": {
+              "mode": "air",
+              "cost": 2547.07,
+              "hours": 8.84,
+              "delay_probability": 0.1025,
+              "congestion": 0.525,
+              "geopolitical_risk": 0.1575
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "SHP-026",
+    "origin": "Santos",
+    "destination": "Rotterdam",
+    "priority": "balanced",
+    "deadline": 505.0,
+    "cargo_value": 892055.0,
+    "routes": [
+      {
+        "first": {
+          "mode": "sea",
+          "cost": 744.3,
+          "hours": 289.82,
+          "delay_probability": 0.34,
+          "congestion": 0.4,
+          "geopolitical_risk": 0.2
+        },
+        "onward": [
+          {
+            "at": "Algeciras",
+            "leg": {
+              "mode": "sea",
+              "cost": 473.43,
+              "hours": 101.72,
+              "delay_probability": 0.34,
+              "congestion": 0.4,
+              "geopolitical_risk": 0.1
+            }
+          }
+        ]
+      },
+      {
+        "first": {
+          "mode": "air",
+          "cost": 6493.77,
+          "hours": 18.04,
+          "delay_probability": 0.0925,
+          "congestion": 0.425,
+          "geopolitical_risk": 0.07
+        },
+        "onward": [
+          {
+            "at": "Hamburg",
+            "leg": {
+              "mode": "air",
+              "cost": 1137.54,
+              "hours": 5.55,
+              "delay_probability": 0.0925,
+              "congestion": 0.425,
+              "geopolitical_risk": 0.0175
+            }
+          }
+        ]
+      },
+      {
+        "first": {
+          "mode": "sea",
+          "cost": 794.02,
+          "hours": 324.35,
+          "delay_probability": 0.37,
+          "congestion": 0.475,
+          "geopolitical_risk": 0.2
+        },
+        "onward": [
+          {
+            "at": "New York",
+            "leg": {
+              "mode": "air",
+              "cost": 4109.5,
+              "hours": 12.48,
+              "delay_probability": 0.0975,
+              "congestion": 0.475,
+              "geopolitical_risk": 0.028
+            }
+          }
+        ]
+      },
+      {
+        "first": {
+          "mode": "air",
+          "cost": 6725.61,
+          "hours": 18.58,
+          "delay_probability": 0.1,
+          "congestion": 0.5,
+          "geopolitical_risk": 0.14
+        },
+        "onward": [
+          {
+            "at": "Istanbul",
+            "leg": {
+              "mode": "sea",
+              "cost": 634.94,
+              "hours": 213.87,
+              "delay_probability": 0.38,
+              "congestion": 0.5,
+              "geopolitical_risk": 0.4
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "SHP-027",
+    "origin": "Shenzhen",
+    "destination": "Dubai",
+    "priority": "time-critical",
+    "deadline": 406.0,
+    "cargo_value": 1493615.0,
+    "routes": [
+      {
+        "first": {
+          "mode": "sea",
+          "cost": 624.33,
+          "hours": 206.51,
+          "delay_probability": 0.41,
+          "congestion": 0.575,
+          "geopolitical_risk": 0.3
+        },
+        "onward": [
+          {
+            "at": "Colombo",
+            "leg": {
+              "mode": "sea",
+              "cost": 590.84,
+              "hours": 183.25,
+              "delay_probability": 0.39,
+              "congestion": 0.525,
+              "geopolitical_risk": 0.45
+            }
+          }
+        ]
+      },
+      {
+        "first": {
+          "mode": "air",
+          "cost": 3128.55,
+          "hours": 10.19,
+          "delay_probability": 0.1075,
+          "congestion": 0.575,
+          "geopolitical_risk": 0.105
+        },
+        "onward": [
+          {
+            "at": "Colombo",
+            "leg": {
+              "mode": "air",
+              "cost": 2719.46,
+              "hours": 9.24,
+              "delay_probability": 0.1025,
+              "congestion": 0.525,
+              "geopolitical_risk": 0.1575
+            }
+          }
+        ]
+      },
+      {
+        "first": {
+          "mode": "sea",
+          "cost": 624.33,
+          "hours": 206.51,
+          "delay_probability": 0.41,
+          "congestion": 0.575,
+          "geopolitical_risk": 0.3
+        },
+        "onward": [
+          {
+            "at": "Colombo",
+            "leg": {
+              "mode": "air",
+              "cost": 2719.46,
+              "hours": 9.24,
+              "delay_probability": 0.1025,
+              "congestion": 0.525,
+              "geopolitical_risk": 0.1575
+            }
+          }
+        ]
+      },
+      {
+        "first": {
+          "mode": "air",
+          "cost": 3128.55,
+          "hours": 10.19,
+          "delay_probability": 0.1075,
+          "congestion": 0.575,
+          "geopolitical_risk": 0.105
+        },
+        "onward": [
+          {
+            "at": "Colombo",
+            "leg": {
+              "mode": "sea",
+              "cost": 590.84,
+              "hours": 183.25,
+              "delay_probability": 0.39,
+              "congestion": 0.525,
+              "geopolitical_risk": 0.45
+            }
+          }
+        ]
+      },
+      {
+        "first": {
+          "mode": "air",
+          "cost": 1567.25,
+          "hours": 6.56,
+          "delay_probability": 0.1175,
+          "congestion": 0.675,
+          "geopolitical_risk": 0.0875
+        },
+        "onward": [
+          {
+            "at": "Shanghai",
+            "leg": {
+              "mode": "air",
+              "cost": 4434.44,
+              "hours": 13.24,
+              "delay_probability": 0.1125,
+              "congestion": 0.625,
+              "geopolitical_risk": 0.1575
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "SHP-028",
+    "origin": "Singapore",
+    "destination": "Shenzhen",
+    "priority": "risk-averse",
+    "deadline": 145.0,
+    "cargo_value": 765364.0,
+    "routes": [
+      {
+        "first": {
+          "mode": "sea",
+          "cost": 476.24,
+          "hours": 103.67,
+          "delay_probability": 0.42,
+          "congestion": 0.6,
+          "geopolitical_risk": 0.15
+        },
+        "onward": [
+          {
+            "at": "Hong Kong",
+            "leg": {
+              "mode": "sea",
+              "cost": 351.37,
+              "hours": 16.95,
+              "delay_probability": 0.4,
+              "congestion": 0.55,
+              "geopolitical_risk": 0.25
+            }
+          }
+        ]
+      },
+      {
+        "first": {
+          "mode": "air",
+          "cost": 2995.55,
+          "hours": 9.88,
+          "delay_probability": 0.1225,
+          "congestion": 0.725,
+          "geopolitical_risk": 0.07
+        },
+        "onward": [
+          {
+            "at": "Shanghai",
+            "leg": {
+              "mode": "air",
+              "cost": 1567.25,
+              "hours": 6.56,
+              "delay_probability": 0.1175,
+              "congestion": 0.675,
+              "geopolitical_risk": 0.0875
+            }
+          }
+        ]
+      },
+      {
+        "first": {
+          "mode": "sea",
+          "cost": 496.72,
+          "hours": 117.89,
+          "delay_probability": 0.43,
+          "congestion": 0.625,
+          "geopolitical_risk": 0.3
+        },
+        "onward": [
+          {
+            "at": "Colombo",
+            "leg": {
+              "mode": "air",
+              "cost": 3128.55,
+              "hours": 10.19,
+              "delay_probability": 0.1075,
+              "congestion": 0.575,
+              "geopolitical_risk": 0.105
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "SHP-029",
+    "origin": "New York",
+    "destination": "Colombo",
+    "priority": "cost-first",
+    "deadline": 485.0,
+    "cargo_value": 196954.0,
+    "routes": [
+      {
+        "first": {
+          "mode": "sea",
+          "cost": 807.42,
+          "hours": 333.65,
+          "delay_probability": 0.39,
+          "congestion": 0.525,
+          "geopolitical_risk": 0.4
+        },
+        "onward": [
+          {
+            "at": "Istanbul",
+            "leg": {
+              "mode": "sea",
+              "cost": 740.65,
+              "hours": 287.28,
+              "delay_probability": 0.4,
+              "congestion": 0.55,
+              "geopolitical_risk": 0.4
+            }
+          }
+        ]
+      },
+      {
+        "first": {
+          "mode": "air",
+          "cost": 4273.88,
+          "hours": 12.86,
+          "delay_probability": 0.095,
+          "congestion": 0.45,
+          "geopolitical_risk": 0.028
+        },
+        "onward": [
+          {
+            "at": "Hamburg",
+            "leg": {
+              "mode": "air",
+              "cost": 5336.04,
+              "hours": 15.34,
+              "delay_probability": 0.0975,
+              "congestion": 0.475,
+              "geopolitical_risk": 0.105
+            }
+          }
+        ]
+      },
+      {
+        "first": {
+          "mode": "sea",
+          "cost": 769.35,
+          "hours": 307.22,
+          "delay_probability": 0.37,
+          "congestion": 0.475,
+          "geopolitical_risk": 0.08
+        },
+        "onward": [
+          {
+            "at": "Rotterdam",
+            "leg": {
+              "mode": "air",
+              "cost": 5533.08,
+              "hours": 15.8,
+              "delay_probability": 0.1,
+              "congestion": 0.5,
+              "geopolitical_risk": 0.105
+            }
+          }
+        ]
+      },
+      {
+        "first": {
+          "mode": "air",
+          "cost": 5340.89,
+          "hours": 15.35,
+          "delay_probability": 0.1025,
+          "congestion": 0.525,
+          "geopolitical_risk": 0.14
+        },
+        "onward": [
+          {
+            "at": "Istanbul",
+            "leg": {
+              "mode": "sea",
+              "cost": 740.65,
+              "hours": 287.28,
+              "delay_probability": 0.4,
+              "congestion": 0.55,
+              "geopolitical_risk": 0.4
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "SHP-030",
+    "origin": "Singapore",
+    "destination": "Santos",
+    "priority": "balanced",
+    "deadline": 24.0,
+    "cargo_value": 563307.0,
+    "routes": [
+      {
+        "first": {
+          "mode": "sea",
+          "cost": 911.54,
+          "hours": 405.96,
+          "delay_probability": 0.39,
+          "congestion": 0.525,
+          "geopolitical_risk": 0.15
+        },
+        "onward": [
+          {
+            "at": "Cape Town",
+            "leg": {
+              "mode": "sea",
+              "cost": 679.12,
+              "hours": 244.56,
+              "delay_probability": 0.34,
+              "congestion": 0.4,
+              "geopolitical_risk": 0.2
+            }
+          }
+        ]
+      },
+      {
+        "first": {
+          "mode": "air",
+          "cost": 2403.44,
+          "hours": 8.5,
+          "delay_probability": 0.1125,
+          "congestion": 0.625,
+          "geopolitical_risk": 0.105
+        },
+        "onward": [
+          {
+            "at": "Colombo",
+            "leg": {
+              "mode": "air",
+              "cost": 8591.65,
+              "hours": 22.93,
+              "delay_probability": 0.1,
+              "congestion": 0.5,
+              "geopolitical_risk": 0.105
+            }
+          }
+        ]
+      },
+      {
+        "first": {
+          "mode": "sea",
+          "cost": 737.55,
+          "hours": 285.14,
+          "delay_probability": 0.42,
+          "congestion": 0.6,
+          "geopolitical_risk": 0.45
+        },
+        "onward": [
+          {
+            "at": "Dubai",
+            "leg": {
+              "mode": "air",
+              "cost": 7616.68,
+              "hours": 20.66,
+              "delay_probability": 0.0975,
+              "congestion": 0.475,
+              "geopolitical_risk": 0.1575
+            }
+          }
+        ]
+      },
+      {
+        "first": {
+          "mode": "air",
+          "cost": 9338.84,
+          "hours": 24.67,
+          "delay_probability": 0.11,
+          "congestion": 0.6,
+          "geopolitical_risk": 0.0525
+        },
+        "onward": [
+          {
+            "at": "New York",
+            "leg": {
+              "mode": "sea",
+              "cost": 794.02,
+              "hours": 324.35,
+              "delay_probability": 0.37,
+              "congestion": 0.475,
+              "geopolitical_risk": 0.2
+            }
+          }
+        ]
+      },
+      {
+        "first": {
+          "mode": "air",
+          "cost": 4113.92,
+          "hours": 12.49,
+          "delay_probability": 0.11,
+          "congestion": 0.6,
+          "geopolitical_risk": 0.1575
+        },
+        "onward": [
+          {
+            "at": "Dubai",
+            "leg": {
+              "mode": "air",
+              "cost": 7616.68,
+              "hours": 20.66,
+              "delay_probability": 0.0975,
+              "congestion": 0.475,
+              "geopolitical_risk": 0.1575
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
