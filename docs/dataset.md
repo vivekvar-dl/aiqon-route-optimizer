@@ -39,3 +39,9 @@ The deadline is a whole number of hours. For nine shipments out of ten it is the
 ## What the simulation then does with those fields
 
 Congestion does not have its own price. It lengthens a delay after a delay happens. Geopolitical risk does not have its own price. It raises the chance of a 96-hour disruption, and a disruption damages cargo with probability 0.25, destroying 30% of the cargo that is still intact. Those outcomes show up as expected hours, a chance of missing the deadline, and dollars of loss. The scorer prices those dollars. It does not price the risk labels a second time.
+
+## Scope of the synthetic geography
+
+The port coordinates, congestion scores, geopolitical scores, speeds, and prices are illustrative model inputs, not measured carrier data. Great-circle distance provides a reproducible scale for cost and time; it does not trace navigable sea lanes. Rail-priced routes are an abstract intermediate-speed option and can connect ports with no physical rail link, including intercontinental pairs. These options exercise the decision framework and must be replaced with mode-valid carrier routes before operational use.
+
+The model has no cargo weight or volume, capacity, sailing calendars, border checks, or carrier-specific quotes. A lane's fixed fields assume one booking context. The committed `data/shipments.json` is generated with seed 7 and 30 shipments; the generator and evaluator require no network access.

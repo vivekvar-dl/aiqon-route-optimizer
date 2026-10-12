@@ -5,6 +5,44 @@
     "realizations": 1000,
     "stability": 0.9768518518518519,
     "infeasible": 3,
+    "feasible_shipment_count": 27,
+    "fallback_is": "fastest scheduled route for the recommended and feasible policies on infeasible shipments; not a recommendation",
+    "all_shipment_regret_reference": "unconstrained held-out mean-cost oracle",
+    "feasible_only_regret_reference": "deadline-constrained held-out mean-cost oracle",
+    "feasible_only": {
+      "recommended": {
+        "total_cost": 179016.02,
+        "cost_ratio": 1.0,
+        "on_time_rate": 0.9734,
+        "feasible_rate": 1.0,
+        "pareto_rate": 1.0,
+        "mean_regret": 158.65
+      },
+      "cheapest-feasible": {
+        "total_cost": 401667.1,
+        "cost_ratio": 1.9757,
+        "on_time_rate": 0.857,
+        "feasible_rate": 1.0,
+        "pareto_rate": 0.8889,
+        "mean_regret": 8404.98
+      },
+      "fastest-feasible": {
+        "total_cost": 223712.7,
+        "cost_ratio": 1.5068,
+        "on_time_rate": 0.9993,
+        "feasible_rate": 1.0,
+        "pareto_rate": 1.0,
+        "mean_regret": 1814.08
+      },
+      "oracle-feasible": {
+        "total_cost": 174732.56,
+        "cost_ratio": 0.983,
+        "on_time_rate": 0.9662,
+        "feasible_rate": 1.0,
+        "pareto_rate": 0.963,
+        "mean_regret": 0.0
+      }
+    },
     "cost_ratio_is": "mean of per-shipment realized-cost ratios versus the recommended pick",
     "ratio_of_totals_is": "this policy's total realized cost divided by the recommended total",
     "recommended": {
@@ -46,6 +84,36 @@
       "pareto_rate": 0.9667,
       "mean_regret": 0.0,
       "freight_quote": 136061.89
+    },
+    "cheapest-feasible": {
+      "total_cost": 432124.31,
+      "cost_ratio": 1.8782,
+      "ratio_of_totals": 2.0629,
+      "on_time_rate": 0.7713,
+      "feasible_rate": 0.9,
+      "pareto_rate": 0.9,
+      "mean_regret": 7564.48,
+      "freight_quote": 68399.36
+    },
+    "fastest-feasible": {
+      "total_cost": 254169.91,
+      "cost_ratio": 1.4561,
+      "ratio_of_totals": 1.2134,
+      "on_time_rate": 0.8994,
+      "feasible_rate": 0.9,
+      "pareto_rate": 1.0,
+      "mean_regret": 1632.67,
+      "freight_quote": 212530.87
+    },
+    "oracle-feasible": {
+      "total_cost": 205189.77,
+      "cost_ratio": 0.9847,
+      "ratio_of_totals": 0.9796,
+      "on_time_rate": 0.8696,
+      "feasible_rate": 0.9,
+      "pareto_rate": 0.9667,
+      "mean_regret": 0.0,
+      "freight_quote": 136061.89
     }
   },
   {
@@ -54,6 +122,44 @@
     "realizations": 1000,
     "stability": 0.9691358024691359,
     "infeasible": 3,
+    "feasible_shipment_count": 27,
+    "fallback_is": "fastest scheduled route for the recommended and feasible policies on infeasible shipments; not a recommendation",
+    "all_shipment_regret_reference": "unconstrained held-out mean-cost oracle",
+    "feasible_only_regret_reference": "deadline-constrained held-out mean-cost oracle",
+    "feasible_only": {
+      "recommended": {
+        "total_cost": 179509.94,
+        "cost_ratio": 1.0,
+        "on_time_rate": 0.976,
+        "feasible_rate": 1.0,
+        "pareto_rate": 1.0,
+        "mean_regret": 201.07
+      },
+      "cheapest-feasible": {
+        "total_cost": 389488.75,
+        "cost_ratio": 1.7022,
+        "on_time_rate": 0.8971,
+        "feasible_rate": 1.0,
+        "pareto_rate": 0.8889,
+        "mean_regret": 7978.06
+      },
+      "fastest-feasible": {
+        "total_cost": 235655.83,
+        "cost_ratio": 1.6526,
+        "on_time_rate": 0.9993,
+        "feasible_rate": 1.0,
+        "pareto_rate": 1.0,
+        "mean_regret": 2280.54
+      },
+      "oracle-feasible": {
+        "total_cost": 174081.15,
+        "cost_ratio": 0.9705,
+        "on_time_rate": 0.9574,
+        "feasible_rate": 1.0,
+        "pareto_rate": 1.0,
+        "mean_regret": 0.0
+      }
+    },
     "cost_ratio_is": "mean of per-shipment realized-cost ratios versus the recommended pick",
     "ratio_of_totals_is": "this policy's total realized cost divided by the recommended total",
     "recommended": {
@@ -95,6 +201,36 @@
       "pareto_rate": 1.0,
       "mean_regret": 0.0,
       "freight_quote": 116797.22
+    },
+    "cheapest-feasible": {
+      "total_cost": 412873.64,
+      "cost_ratio": 1.632,
+      "ratio_of_totals": 2.0349,
+      "on_time_rate": 0.8074,
+      "feasible_rate": 0.9,
+      "pareto_rate": 0.9,
+      "mean_regret": 7180.25,
+      "freight_quote": 66626.84
+    },
+    "fastest-feasible": {
+      "total_cost": 259040.73,
+      "cost_ratio": 1.5874,
+      "ratio_of_totals": 1.2767,
+      "on_time_rate": 0.8994,
+      "feasible_rate": 0.9,
+      "pareto_rate": 1.0,
+      "mean_regret": 2052.49,
+      "freight_quote": 222426.36
+    },
+    "oracle-feasible": {
+      "total_cost": 197466.05,
+      "cost_ratio": 0.9735,
+      "ratio_of_totals": 0.9732,
+      "on_time_rate": 0.8617,
+      "feasible_rate": 0.9,
+      "pareto_rate": 1.0,
+      "mean_regret": 0.0,
+      "freight_quote": 116797.22
     }
   },
   {
@@ -103,6 +239,44 @@
     "realizations": 1000,
     "stability": 0.9753086419753086,
     "infeasible": 3,
+    "feasible_shipment_count": 27,
+    "fallback_is": "fastest scheduled route for the recommended and feasible policies on infeasible shipments; not a recommendation",
+    "all_shipment_regret_reference": "unconstrained held-out mean-cost oracle",
+    "feasible_only_regret_reference": "deadline-constrained held-out mean-cost oracle",
+    "feasible_only": {
+      "recommended": {
+        "total_cost": 166394.52,
+        "cost_ratio": 1.0,
+        "on_time_rate": 0.9655,
+        "feasible_rate": 1.0,
+        "pareto_rate": 1.0,
+        "mean_regret": 380.01
+      },
+      "cheapest-feasible": {
+        "total_cost": 447230.21,
+        "cost_ratio": 1.95,
+        "on_time_rate": 0.8373,
+        "feasible_rate": 1.0,
+        "pareto_rate": 0.8519,
+        "mean_regret": 10781.34
+      },
+      "fastest-feasible": {
+        "total_cost": 223550.24,
+        "cost_ratio": 1.6731,
+        "on_time_rate": 1.0,
+        "feasible_rate": 1.0,
+        "pareto_rate": 1.0,
+        "mean_regret": 2496.89
+      },
+      "oracle-feasible": {
+        "total_cost": 156134.16,
+        "cost_ratio": 0.943,
+        "on_time_rate": 0.9397,
+        "feasible_rate": 1.0,
+        "pareto_rate": 1.0,
+        "mean_regret": 0.0
+      }
+    },
     "cost_ratio_is": "mean of per-shipment realized-cost ratios versus the recommended pick",
     "ratio_of_totals_is": "this policy's total realized cost divided by the recommended total",
     "recommended": {
@@ -144,6 +318,36 @@
       "pareto_rate": 1.0,
       "mean_regret": 0.0,
       "freight_quote": 108556.66
+    },
+    "cheapest-feasible": {
+      "total_cost": 481987.29,
+      "cost_ratio": 1.855,
+      "ratio_of_totals": 2.3961,
+      "on_time_rate": 0.7536,
+      "feasible_rate": 0.9,
+      "pareto_rate": 0.8667,
+      "mean_regret": 9703.2,
+      "freight_quote": 66844.93
+    },
+    "fastest-feasible": {
+      "total_cost": 258307.32,
+      "cost_ratio": 1.6057,
+      "ratio_of_totals": 1.2841,
+      "on_time_rate": 0.9,
+      "feasible_rate": 0.9,
+      "pareto_rate": 1.0,
+      "mean_regret": 2247.2,
+      "freight_quote": 214245.98
+    },
+    "oracle-feasible": {
+      "total_cost": 190891.24,
+      "cost_ratio": 0.9487,
+      "ratio_of_totals": 0.949,
+      "on_time_rate": 0.8457,
+      "feasible_rate": 0.9,
+      "pareto_rate": 1.0,
+      "mean_regret": 0.0,
+      "freight_quote": 108556.66
     }
   },
   {
@@ -152,6 +356,44 @@
     "realizations": 1000,
     "stability": 0.95679012345679,
     "infeasible": 3,
+    "feasible_shipment_count": 27,
+    "fallback_is": "fastest scheduled route for the recommended and feasible policies on infeasible shipments; not a recommendation",
+    "all_shipment_regret_reference": "unconstrained held-out mean-cost oracle",
+    "feasible_only_regret_reference": "deadline-constrained held-out mean-cost oracle",
+    "feasible_only": {
+      "recommended": {
+        "total_cost": 202484.46,
+        "cost_ratio": 1.0,
+        "on_time_rate": 0.9756,
+        "feasible_rate": 1.0,
+        "pareto_rate": 0.963,
+        "mean_regret": 331.26
+      },
+      "cheapest-feasible": {
+        "total_cost": 403027.59,
+        "cost_ratio": 1.7155,
+        "on_time_rate": 0.8688,
+        "feasible_rate": 1.0,
+        "pareto_rate": 0.8889,
+        "mean_regret": 7758.78
+      },
+      "fastest-feasible": {
+        "total_cost": 233870.99,
+        "cost_ratio": 1.4551,
+        "on_time_rate": 0.9987,
+        "feasible_rate": 1.0,
+        "pareto_rate": 1.0,
+        "mean_regret": 1493.72
+      },
+      "oracle-feasible": {
+        "total_cost": 193540.49,
+        "cost_ratio": 0.959,
+        "on_time_rate": 0.9588,
+        "feasible_rate": 1.0,
+        "pareto_rate": 1.0,
+        "mean_regret": 0.0
+      }
+    },
     "cost_ratio_is": "mean of per-shipment realized-cost ratios versus the recommended pick",
     "ratio_of_totals_is": "this policy's total realized cost divided by the recommended total",
     "recommended": {
@@ -193,6 +435,36 @@
       "pareto_rate": 1.0,
       "mean_regret": 0.0,
       "freight_quote": 140061.32
+    },
+    "cheapest-feasible": {
+      "total_cost": 443932.87,
+      "cost_ratio": 1.6439,
+      "ratio_of_totals": 1.824,
+      "on_time_rate": 0.7819,
+      "feasible_rate": 0.9,
+      "pareto_rate": 0.9,
+      "mean_regret": 6982.9,
+      "freight_quote": 65033.54
+    },
+    "fastest-feasible": {
+      "total_cost": 274776.28,
+      "cost_ratio": 1.4096,
+      "ratio_of_totals": 1.129,
+      "on_time_rate": 0.8988,
+      "feasible_rate": 0.9,
+      "pareto_rate": 1.0,
+      "mean_regret": 1344.35,
+      "freight_quote": 205176.02
+    },
+    "oracle-feasible": {
+      "total_cost": 234445.77,
+      "cost_ratio": 0.9631,
+      "ratio_of_totals": 0.9633,
+      "on_time_rate": 0.8629,
+      "feasible_rate": 0.9,
+      "pareto_rate": 1.0,
+      "mean_regret": 0.0,
+      "freight_quote": 140061.32
     }
   },
   {
@@ -201,6 +473,44 @@
     "realizations": 1000,
     "stability": 0.9583333333333334,
     "infeasible": 3,
+    "feasible_shipment_count": 27,
+    "fallback_is": "fastest scheduled route for the recommended and feasible policies on infeasible shipments; not a recommendation",
+    "all_shipment_regret_reference": "unconstrained held-out mean-cost oracle",
+    "feasible_only_regret_reference": "deadline-constrained held-out mean-cost oracle",
+    "feasible_only": {
+      "recommended": {
+        "total_cost": 154220.02,
+        "cost_ratio": 1.0,
+        "on_time_rate": 0.9719,
+        "feasible_rate": 1.0,
+        "pareto_rate": 1.0,
+        "mean_regret": 393.61
+      },
+      "cheapest-feasible": {
+        "total_cost": 327510.06,
+        "cost_ratio": 1.7329,
+        "on_time_rate": 0.8801,
+        "feasible_rate": 1.0,
+        "pareto_rate": 0.8148,
+        "mean_regret": 6811.76
+      },
+      "fastest-feasible": {
+        "total_cost": 211636.41,
+        "cost_ratio": 1.6315,
+        "on_time_rate": 0.9975,
+        "feasible_rate": 1.0,
+        "pareto_rate": 1.0,
+        "mean_regret": 2520.14
+      },
+      "oracle-feasible": {
+        "total_cost": 143592.6,
+        "cost_ratio": 0.9462,
+        "on_time_rate": 0.9527,
+        "feasible_rate": 1.0,
+        "pareto_rate": 1.0,
+        "mean_regret": 0.0
+      }
+    },
     "cost_ratio_is": "mean of per-shipment realized-cost ratios versus the recommended pick",
     "ratio_of_totals_is": "this policy's total realized cost divided by the recommended total",
     "recommended": {
@@ -242,6 +552,36 @@
       "pareto_rate": 1.0,
       "mean_regret": 0.0,
       "freight_quote": 89194.92
+    },
+    "cheapest-feasible": {
+      "total_cost": 353706.49,
+      "cost_ratio": 1.6596,
+      "ratio_of_totals": 1.9605,
+      "on_time_rate": 0.7921,
+      "feasible_rate": 0.9,
+      "pareto_rate": 0.8333,
+      "mean_regret": 6149.53,
+      "freight_quote": 59564.87
+    },
+    "fastest-feasible": {
+      "total_cost": 237832.84,
+      "cost_ratio": 1.5684,
+      "ratio_of_totals": 1.3182,
+      "on_time_rate": 0.8977,
+      "feasible_rate": 0.9,
+      "pareto_rate": 1.0,
+      "mean_regret": 2287.08,
+      "freight_quote": 194082.45
+    },
+    "oracle-feasible": {
+      "total_cost": 169789.03,
+      "cost_ratio": 0.9516,
+      "ratio_of_totals": 0.9411,
+      "on_time_rate": 0.8575,
+      "feasible_rate": 0.9,
+      "pareto_rate": 1.0,
+      "mean_regret": 18.95,
+      "freight_quote": 92630.65
     }
   }
 ]

@@ -1,27 +1,35 @@
-# Demo script
+# Demo recording outline
 
-Five minutes. Use seed 7 and the Streamlit page. The spoken lines are cues, not a transcript to read verbatim.
+Target duration: 4 minutes 40 seconds. The recording is optional; this outline is ready to record. Run `streamlit run src/routeplan/app.py` first. Keep seed 7, 30 shipments, and 2,000 scenarios.
 
-## 0:00 The decision
+## 0:00-0:30 - Define the decision
 
-Open with one sentence. A cheaper sailing can miss the deadline, and a faster flight can cost more than the cargo can justify. The tool prices that choice in dollars and says which alternative it beat.
+"Routeplan compares supplied shipment routes under cost, time, and risk. It checks the schedule deadline, then minimizes landed cost with a premium for expensive tail outcomes. The explanation shows the trade-off in dollars."
 
-## 0:40 Show the catalog
+## 0:30-1:15 - Show the catalog
 
-Run `python -m routeplan generate --seed 7 --shipments 30`. Say that each shipment has three to five routes, and that sea, rail, and air prices come from distance rather than from independent random fields. Point at `docs/dataset.md` if someone asks how a cheap route became the risky one.
+Point to the committed `data/shipments.json`: 30 shipments with 3-5 multi-leg routes each. Show the app's origin, destination, cargo value, deadline, route table, and scheduled versus expected time. Mention that the risk scores and geography are synthetic; rail options illustrate an intermediate-speed alternative rather than a real carrier network.
 
-## 1:20 One recommendation
+## 1:15-2:30 - Change a real trade-off
 
-Run `python -m routeplan recommend shipments.json SHP-007`. Read the headline only. It should name the route, the cost gap against the cheapest quote, and the change in delay risk. Then read one detail line that splits the dollar gap into freight, holding, lateness, and tail risk.
+Select **SHP-005**. Its default cost-first profile selects sea route A. Switch to **balanced**: route C wins via Istanbul. Read the explanation's dollar reconciliation: C pays $1,059 more in freight and expected loss, but saves $1,174 in holding, $547 in lateness, and $1,816 in tail risk. It comes out $2,478 ahead. The faster air route B costs $5,740 more on this score. Routes and random scenarios stay fixed when the profile changes.
 
-## 2:20 Priority changes the pick
+## 2:30-3:10 - Handle an impossible deadline
 
-In the Streamlit page, keep the same shipment and switch the priority from the shipment's own profile to time-critical, then to cost-first. Say that the routes and the simulated delays stay fixed. Only the prices change. If the headline route changes, read the new comparison. If it does not, say the pick held, and point at the line that names the price change that would flip it.
+Select **SHP-010**. Show the "No route meets" headline and the fastest schedule's shortfall. Explain that this is an abstention, not authorization to ship an infeasible route. The evaluation's forced-shipment fallback is labeled and excluded from feasible-only results.
 
-## 3:20 A shipment with no feasible route
+## 3:10-4:10 - Show the fair evaluation
 
-Select SHP-010. The page should say that no route meets the deadline and name how late the fastest schedule is. A saved frame of that page is `docs/streamlit-shp010.png`. Say that the tool refuses to pretend a late schedule is on time, and that lateness is still priced when a planner has to ship anyway.
+In a terminal, run:
 
-## 4:10 The scorecard
+```bash
+python -m routeplan evaluate data/shipments.json --seed 7
+```
 
-Run `python -m routeplan evaluate shipments.json --seed 7`. Read three numbers from the table. Recommended on-time rate, the cheapest policy's mean per-shipment cost ratio, and the share of price probes that keep the pick. Say that the mean ratio is not the ratio of the two totals. Stop on the limitation. The held-out arrivals use the same delay model the planner used, so the regret is the value of pricing risk inside that model, not proof against a wrong model.
+Focus on the **feasible-only** section: 27 shipments. Recommended has 97.34% simulated on-time arrivals and $179,016 total mean landed cost. Cheapest-feasible has 85.70% and $401,667. Fastest-feasible has 99.93% and $223,713. All three obey the same schedule constraint; the comparison makes the cost/reliability trade-off visible.
+
+## 4:10-4:40 - Limits and reproducibility
+
+"These are synthetic-model results, not real-world savings. Independent evaluation draws use the same assumed delay physics. Contractual prices, valid carrier lanes, correlated shocks, and calibrated uncertainty would be required for production. The repository includes the three-page report, five-seed results, and tests."
+
+Stop before five minutes. Check that the text is readable in the recording and that the microphone captured your explanation.

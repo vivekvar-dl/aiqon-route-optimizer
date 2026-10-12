@@ -1,58 +1,93 @@
-# Route selection under cost, time, and risk
+# Shipment route selection under cost, time, and risk
 
-A logistics planner does not want a score with no unit. They want to know what they pay, what they save, and which alternative they turned down. This note defines a dollar notion of optimal for a synthetic catalog, states the choices that notion forces, and reports how it behaves against the cheapest quote and the fastest schedule.
+Aiqon AI Internship | Technical report | 12 October 2026
 
-## What optimal means
+Repository: https://github.com/vivekvar-dl/aiqon-route-optimizer
 
-A route is eligible when its scheduled hours meet the shipment deadline. That check uses the quote, not a random draw, so eligibility does not move when the sample gets larger. Every eligible route is scored. Dominance is a label the explanation reports. A route is dominated when another eligible route is no worse on expected cost, expected hours, and the chance of missing the deadline, and better on at least one. Expected cost here is the freight quote plus expected cargo loss. A dominated route can still win when its dollar score is lower. The explanation says so.
+## 1. Decision framework
 
-For each simulated arrival the landed cost is freight, plus cargo loss, plus holding, plus lateness. Holding and lateness are shares of cargo value per day. The score is the mean landed cost, blended toward the mean of the worst 10% of arrivals. The blend weight is the profile's tail weight. At 0 the score is the mean. At 1 it is that worst-10% mean, a CVaR at 90%. The recommended route is the eligible route with the lowest score. Ties break on expected cost, then on the route letter.
+Routeplan selects from supplied candidate routes; it does not discover paths through a live transport network. Optimal means the lowest risk-adjusted landed cost among routes whose quoted schedule meets the shipment deadline. The shipment supplies its origin, destination, cargo value, deadline, priority, and routes with leg-level freight, time, delay probability, congestion, and geopolitical risk.
 
-Each priority is those three prices and nothing else.
+For scenario s, let F be freight, V cargo value, L(s) cargo loss, T(s) transit hours, and D the deadline. Holding price h and lateness price p are fractions of cargo value per day. Each scenario costs:
 
-| Priority | Holding per day | Lateness per day | Tail weight |
+```
+C(s) = F + L(s) + h * V * T(s) / 24
+                  + p * V * max(T(s) - D, 0) / 24
+Score = mean(C) + a * [CVaR90(C) - mean(C)]
+```
+
+CVaR90 is the mean of the worst 10% of simulated costs. Tail weight a ranges from 0 to 1: zero optimizes the mean, while one optimizes that tail mean. The lowest score wins; ties break on freight plus expected loss, then route letter. All terms are dollars, so an explanation can reconcile a freight premium with savings in holding, lateness, and tail risk. A normalized weighted score would obscure those economic trade-offs and make rankings depend on the alternatives used for normalization.
+
+| Priority | Holding / day | Lateness / day | Tail weight |
 | --- | --- | --- | --- |
-| Cost-first | 0.03% | 0.2% | 0.10 |
-| Balanced | 0.10% | 1% | 0.30 |
-| Time-critical | 0.30% | 5% | 0.30 |
-| Risk-averse | 0.10% | 2% | 0.90 |
+| Cost-first | 0.03% of V | 0.2% of V | 0.10 |
+| Balanced | 0.10% of V | 1% of V | 0.30 |
+| Time-critical | 0.30% of V | 5% of V | 0.30 |
+| Risk-averse | 0.10% of V | 2% of V | 0.90 |
 
-Congestion and geopolitical risk are not extra weights. Congestion lengthens a delay. Geopolitical risk raises the chance of a 96-hour disruption, which can destroy 30% of intact cargo. Those effects already sit inside hours and loss. Pricing them again would count the same event twice.
+These prices are explicit judgments, not learned coefficients or quoted contractual penalties. Eligibility checks scheduled hours, not a sampled arrival; simulated lateness remains a priced outcome. If every schedule misses the deadline, the system returns NoFeasibleRoute and the fastest schedule's shortfall. It does not authorize shipping that fallback.
 
-The explanation compares freight quotes and scheduled hours, then reconciles the dollar score. The stated lead is the gap between the rounded parts, so the parts add up to the lead. Each price is scaled by 0.5, 0.67, 0.8, 1.25, 1.5, and 2, and the same arrivals are re-ranked. A scale that lands on a price already probed is skipped. That is what happens when a tail weight near 1 is raised and then capped at 1. A flip is a price change, not a new sample.
+## 2. Synthetic catalog and uncertainty
 
-## How the catalog forces a trade-off
+The committed seed-7 catalog contains 30 shipments and 120 candidate routes, cycling through 3, 4, and 5 options. Twelve named ports have illustrative congestion and geopolitical scores. Freight and schedules depend on great-circle distance and transport mode; sea is slow and cheap, air is fast and expensive, and a rail-priced option lies between them. Sea and air use the nearest hub, rail uses the second-nearest, and extra options add detours. Cargo value is log-uniform from $80,000 to $1,500,000. Every tenth shipment deliberately has an impossible deadline.
 
-The catalog has 30 shipments and 120 routes at seed 7. Lane cost and time come from great-circle distance. Sea is 32 km/h and $0.045 per km. Air is 780 km/h and $0.55 per km. Rail sits between them. The same port pair and mode always produce the same leg, and the parser rejects a file that breaks that rule. Each shipment's cheap route is sea through the nearest hub. Its fast route is air through that hub. A longer sea detour is available on some shipments. Every tenth shipment sets the deadline below the fastest schedule, so three shipments in 30 have no feasible route. Cargo value is log-uniform from $80,000 to $1,500,000. The construction is written out in `docs/dataset.md`.
+Each leg draws a delay event at its supplied probability; delay length is exponential with mean hours * (0.15 + 0.60 * congestion). A separate disruption occurs with probability 0.08 * geopolitical risk, adding 96 hours. A disruption damages 30% of remaining cargo with probability 0.25. Congestion and geopolitics are therefore priced through realized time and loss, without an additional risk-label penalty. Shared hops within one shipment reuse the same random draws; different hops are independent. Generation, planning, and evaluation are reproducible from seeds. Full lane formulas are in docs/dataset.md.
 
-Two consequences follow. A route that is cheaper, faster, and safer at once is rare, because air buys speed with freight and sea buys freight with time and disruption. And a shared hop uses one random stream, so two routes that share a hop see the same draw.
+<!-- pagebreak -->
 
-## What the evaluation shows
+## 3. Explanation and sensitivity
 
-`evaluate` replays four policies on a held-out sample of 1,000 arrivals per route. The planner used a separate sample of 2,000. Cheapest is the lowest freight quote. Fastest is the shortest schedule. The oracle picks the route with the lowest mean held-out landed cost after the fact, with no tail premium. Regret is the policy's held-out landed cost minus the oracle's. `cost_ratio` is the mean of the per-shipment ratios against the recommended pick. The ratio of the two policy totals is a different number, and both are stored in `results/evaluation.json`.
+The explanation names the route and hubs, contrasts the freight quote, schedule, and estimated deadline-miss probability with alternatives, and then reconciles the dollar score. Rejected schedules carry a deadline shortfall. A Pareto label compares freight plus expected loss, expected hours, and late probability; it is diagnostic rather than a veto because these three summaries do not capture tail severity.
 
-On seed 7 the recommended policy realizes $209,473, is on time for 87.6% of held-out arrivals, meets the schedule on 90% of shipments, and is Pareto-optimal on 100% of picks. Mean regret against the oracle is $143 per shipment. The pick holds under 97.7% of single-price changes. Three shipments have no feasible route. Recommended freight on those picks is $145,842.
+A concrete example is SHP-005 at seed 7: Dubai to Los Angeles, cargo $86,947, deadline 704 hours. Cost-first selects sea route A. Balanced selects rail-priced route C via Istanbul. C has an 86% higher freight quote than A but a 57% shorter schedule. In the planning sample its late probability is below 0.1%, compared with about 11% for A. C pays $1,059 more in freight and expected loss, but saves $1,174 in holding, $547 in expected lateness, and $1,816 in tail risk: a rounded net advantage of $2,478. Its score is also $5,740 below the fastest air option B. The choice illustrates why the fastest route can be unnecessarily expensive and the cheapest quote can have hidden costs.
 
-The cheapest quote realizes $2,454,826. The mean of the per-shipment ratios is 8.19. The ratio of the two totals is 11.72. It is on time for 29.7% of arrivals. Freight on those cheapest quotes totals $33,971. The extra realized cost is lateness and cargo loss on slow sea routes, especially under the time-critical price of 5% of cargo value per day. The mean ratio and the ratio of totals disagree because a few shipments carry very large dollar misses, and those misses weigh more in the totals than in an average of ratios. The fastest schedule realizes $254,170. Its mean ratio is 1.46 and its ratio of totals is 1.21, with an on-time rate of 89.9% and regret of $1,633 per shipment.
+Each price is independently scaled by 0.5, 0.67, 0.8, 1.25, 1.5, and 2, using the same simulated arrivals. Duplicate capped tail prices are skipped. The explanation reports switches and choices under all four profiles. This measures preference sensitivity, not uncertainty in the simulator. At seed 42, SHP-015 selects E even though B dominates it on the three summary metrics: E's tail-adjusted score is $546 lower. The explanation reports that small margin and cautions about sampling variability.
 
-Five seeds, 7, 11, 21, 42, and 99, keep the same shape. Recommended on-time rates run from 86.9% to 87.8%. Cheapest on-time rates run from 26.3% to 34.7%. The cheapest mean ratio runs from 5.24 to 8.19, and the cheapest ratio of totals runs from 6.31 to 11.72. The fastest mean ratio runs from 1.41 to 1.61. Recommended regret runs from $143 to $373 per shipment. Stability runs from 95.7% to 97.7%. Pareto rate for the recommended pick is 100% on four seeds and 96.7% on seed 42, which is 29 of 30 shipments. On that seed, shipment SHP-015 is time-critical and ships route E even though route B dominates it on expected cost, expected hours, and delay risk. E's risk-adjusted cost is $546 lower because the tail of B is expensive. That gap is under 5% of the score, so the explanation says another sample of the same routes can flip the pick. The infeasible count is 3 on every seed.
+## 4. Evaluation with matching constraints
 
-Recommended on-time stays near 88% because three shipments, 10% of the set, have no schedule that meets the deadline, and the policy still has to name a route for the scorecard. On seed 7 the feasible rate is 90% and the on-time rate is 87.6%, so 2.4 points are held-out arrivals that were scheduled to make the deadline and missed it. The cost ratio moves with how often a time-critical cargo is paired with a slow sea quote. Seed 11's mean ratio is 5.24. Seed 7's is 8.19.
+Planning uses 2,000 scenarios per route. Evaluation uses 1,000 scenarios per route from a distinct random stream under the same model. Each policy sees the same held-out outcomes. Cheapest-feasible minimizes freight among eligible routes; fastest-feasible minimizes scheduled time among those routes. Oracle-feasible chooses the lowest held-out mean landed cost among eligible routes. It is a hindsight reference, not a deployable policy, and its objective excludes the tail premium.
 
-## Limitations
+The primary scorecard excludes the three infeasible shipments. Every compared policy obeys the same schedule constraint. Seed 7, 27 feasible shipments:
 
-The prices are a judgment, not a fit to a contract. A real penalty clause would replace `lateness_per_day`. Dominance uses three summaries, while the score uses the full distribution, so the two can disagree. The explanation names that disagreement when the winning route is dominated. The dominance label compares simulated means, so a larger sample can change a near tie. Planning and evaluation share one delay model. The held-out stream changes the draws, not the physics, so the regret measures the value of pricing risk inside this model. It does not measure a wrong model. The probe list is one axis at a time, and capped prices are not repeated. The network is twelve ports. The catalog uses sea, rail, and air. Road is a legal mode the generator does not emit.
+| Policy | Total mean cost | On-time arrivals | Mean regret |
+| --- | --- | --- | --- |
+| Recommended | $179,016 | 97.34% | $159 |
+| Cheapest-feasible | $401,667 | 85.70% | $8,405 |
+| Fastest-feasible | $223,713 | 99.93% | $1,814 |
+| Oracle-feasible | $174,733 | 96.62% | $0 |
 
-## Reproduce
+Total cost sums each shipment's held-out mean landed cost; it is not a freight-only total. On-time rate averages each shipment's simulated fraction of on-time arrivals. Mean regret is average cost above the constrained oracle. Recommended pays 2.45% above the hindsight mean-cost reference while attaining a slightly higher on-time rate. Compared with cheapest-feasible, it reduces total mean cost by 55.4%; compared with fastest-feasible, it reduces cost by 20.0% while accepting 2.59 percentage points fewer on-time arrivals.
 
-```bash
-pip install -e ".[demo,test]"
+Across seeds 7, 11, 21, 42, and 99, recommended on-time rate on feasible shipments ranges from 96.55% to 97.60%, and mean regret from $159 to $394. Recommended Pareto rate is 100% on four seeds and 96.3% on seed 42. Average within-shipment price-probe stability ranges from 95.7% to 97.7%. Results are saved in results/evaluation.json, with sample counts, comparator definitions, and separate feasible-only statistics.
+
+<!-- pagebreak -->
+
+## 5. Interpreting the full-catalog scorecard
+
+The evaluator also preserves the original unconstrained cheapest and fastest policies to show what happens when schedules are ignored. On seed 7, unconstrained cheapest has total mean landed cost $2,454,826 and 29.74% on-time arrivals. Its mean per-shipment cost ratio against recommended is 8.19, whereas its ratio of total costs is 11.72. These differ because large cargo values and expensive deadline misses have greater weight in totals. Those large ratios also reflect the synthetic 5%-of-value daily penalty for time-critical cargo; they are not evidence of comparable savings in real logistics.
+
+For a forced-shipment comparison across all 30 shipments, recommended and the constrained baselines use the fastest schedule when no schedule is eligible. Each such row is explicitly flagged fallback=true. These are evaluation assumptions, not successful recommendations. With that fallback included, recommended total mean cost is $209,473 and on-time rate is 87.60%. Its actual decision coverage is 27 of 30 shipments, or 90%; the feasible-only on-time rate is 97.34%. Separating these quantities avoids attributing impossible deadlines to poor route selection or presenting abstentions as approved shipments.
+
+## 6. Design, verification, and limitations
+
+The Python package separates domain types, JSON validation, generation, simulation, pricing and selection, explanations, and evaluation. CLI and Streamlit call the same recommend function. JSON validation catches malformed fields, duplicate shipment IDs, invalid ranges, and inconsistent attributes for an identical hop. The demo shows route comparison, priority overrides, and an infeasible case. Tests include closed-form deterministic costs, risk-sensitive choices, dominance, capped sensitivity probes, CLI exit codes, constraint-matched baselines, fallback exclusion, and interactive shipment changes. The completed local suite has 31 passing tests; the GitHub workflow reruns it on Python 3.12 and 3.13.
+
+The transport topology is deliberately illustrative. Great-circle paths are not navigable sea distances, and the generator can assign rail to intercontinental pairs without a physical rail link. Port risk scores and mode prices are synthetic assumptions, not live assessments, capacity, or carrier quotes. Real deployment requires a mode-valid lane catalog with units, shipment size, schedules, border and transfer rules, availability, and calibrated delay and loss estimates. The parser's identical-hop rule also assumes a single quote context; it cannot represent different carrier or booking-date quotes for the same hop.
+
+Held-out draws test decisions inside the same assumed model. They do not establish robustness to model error or rare events absent from it. Delay and disruption are independent within each hop, and different hops have no regional common shock. Single-price probes omit joint preference shifts. The stated small-margin warning is not a confidence interval. A next step would repeat planning simulations and stress common disruptions, calibrate contractual prices, and report uncertainty bands before relying on near-tie decisions. No learning model is needed without historical outcome labels; a transparent simulator and economic objective are appropriate for this take-home scope.
+
+## 7. Reproduce and demonstrate
+
+Use Python 3.12 or newer, create a virtual environment, and install from the repository root:
+
+```
+pip install -e ".[demo,test,report]"
 pytest
-python -m routeplan generate --seed 7 --shipments 30 > shipments.json
-python -m routeplan recommend shipments.json SHP-007 --seed 7
-python -m routeplan evaluate shipments.json --seed 7
+python -m routeplan recommend data/shipments.json SHP-005 --seed 7
+python -m routeplan evaluate data/shipments.json --seed 7
 python scripts/run_evaluation.py
+python scripts/render_report.py
 streamlit run src/routeplan/app.py
 ```
 
-The five-seed file is `results/evaluation.json`. A five-minute spoken outline is `docs/demo-script.md`.
+The catalog can be regenerated with python -m routeplan generate --seed 7 --shipments 30. docs/demo-script.md gives a recording outline under five minutes: change SHP-005 from cost-first to balanced, show SHP-010's infeasible deadline, then explain the feasible-only scorecard. The README documents setup, JSON input, CLI exit codes, assumptions, and submission files.

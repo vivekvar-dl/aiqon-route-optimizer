@@ -19,6 +19,15 @@ class Policy(StrEnum):
     CHEAPEST = "cheapest"
     FASTEST = "fastest"
     ORACLE = "oracle"
+    CHEAPEST_FEASIBLE = "cheapest-feasible"
+    FASTEST_FEASIBLE = "fastest-feasible"
+    ORACLE_FEASIBLE = "oracle-feasible"
+
+
+DEADLINE_POLICIES = (
+    Policy.RECOMMENDED, Policy.CHEAPEST_FEASIBLE,
+    Policy.FASTEST_FEASIBLE, Policy.ORACLE_FEASIBLE,
+)
 
 
 @dataclass(frozen=True, slots=True)
@@ -28,6 +37,7 @@ class Realized:
     on_time: float
     feasible: bool
     pareto: bool
+    fallback: bool = False
 
 
 @dataclass(frozen=True, slots=True)
@@ -54,6 +64,7 @@ class Report:
     stats: dict[Policy, PolicyStats]
     stability: float
     infeasible: int
+    feasible_stats: dict[Policy, PolicyStats]
 
 
 def evaluate(
@@ -88,14 +99,24 @@ def _row(
         for label, draw in outcomes.items()
     }
     owners = dominated_by(_criteria(recommendation))
+    eligible = tuple(item for item in shipment.labeled() if item[1].hours <= shipment.deadline)
+    # A forced-shipment scorecard needs a route even when recommendation abstains.
+    # Flag that fallback explicitly; it is excluded from feasible_stats.
+    pool = eligible or (min(shipment.labeled(), key=lambda item: (item[1].hours, item[0])),)
     labels = {
         Policy.RECOMMENDED: _recommended_label(recommendation),
         Policy.CHEAPEST: min(shipment.labeled(), key=lambda item: (item[1].cost, item[0]))[0],
         Policy.FASTEST: min(shipment.labeled(), key=lambda item: (item[1].hours, item[0]))[0],
         Policy.ORACLE: min(means, key=lambda label: (means[label], label)),
+        Policy.CHEAPEST_FEASIBLE: min(pool, key=lambda item: (item[1].cost, item[0]))[0],
+        Policy.FASTEST_FEASIBLE: min(pool, key=lambda item: (item[1].hours, item[0]))[0],
+        Policy.ORACLE_FEASIBLE: min(pool, key=lambda item: (means[item[0]], item[0]))[0],
     }
     realized = {
-        policy: _realized(shipment, label, outcomes[label], means[label], label not in owners)
+        policy: _realized(
+            shipment, label, outcomes[label], means[label], label not in owners,
+            fallback=not eligible and policy in DEADLINE_POLICIES,
+        )
         for policy, label in labels.items()
     }
     return Row(shipment.id, shipment.priority, recommendation, realized)
@@ -107,9 +128,13 @@ def _realized(
     outcomes: Outcomes,
     cost: float,
     pareto: bool,
+    *,
+    fallback: bool = False,
 ) -> Realized:
     on_time = float(np.mean(outcomes.hours <= shipment.deadline))
-    return Realized(label, cost, on_time, shipment.route(label).hours <= shipment.deadline, pareto)
+    return Realized(
+        label, cost, on_time, shipment.route(label).hours <= shipment.deadline, pareto, fallback
+    )
 
 
 def _criteria(recommendation: Chosen | NoFeasibleRoute) -> dict[str, Criteria]:
@@ -127,11 +152,25 @@ def _recommended_label(recommendation: Chosen | NoFeasibleRoute) -> str:
 
 
 def _aggregate(rows: tuple[Row, ...]) -> Report:
+    stats = _policy_stats(rows, Policy.ORACLE)
+    feasible_rows = tuple(row for row in rows if isinstance(row.recommendation, Chosen))
+    feasible_stats = (
+        _policy_stats(feasible_rows, Policy.ORACLE_FEASIBLE, policies=DEADLINE_POLICIES)
+        if feasible_rows else {}
+    )
+    chosen = [row.recommendation for row in rows if isinstance(row.recommendation, Chosen)]
+    stability = sum(item.sensitivity.stability for item in chosen) / len(chosen) if chosen else 0.0
+    return Report(rows, stats, stability, len(rows) - len(feasible_rows), feasible_stats)
+
+
+def _policy_stats(
+    rows: tuple[Row, ...], reference: Policy, *, policies: tuple[Policy, ...] = tuple(Policy)
+) -> dict[Policy, PolicyStats]:
     stats: dict[Policy, PolicyStats] = {}
-    for policy in Policy:
+    for policy in policies:
         costs = [row.realized[policy].cost for row in rows]
         recommended = [row.realized[Policy.RECOMMENDED].cost for row in rows]
-        oracle = [row.realized[Policy.ORACLE].cost for row in rows]
+        oracle = [row.realized[reference].cost for row in rows]
         ratios = [cost / base if base else 1.0 for cost, base in zip(costs, recommended, strict=True)]
         regrets = [cost - best for cost, best in zip(costs, oracle, strict=True)]
         picked = [row.realized[policy] for row in rows]
@@ -143,9 +182,4 @@ def _aggregate(rows: tuple[Row, ...]) -> Report:
             sum(item.pareto for item in picked) / len(picked),
             sum(regrets) / len(regrets),
         )
-    chosen = [row.recommendation for row in rows if isinstance(row.recommendation, Chosen)]
-    stability = (
-        sum(item.sensitivity.stability for item in chosen) / len(chosen) if chosen else 0.0
-    )
-    infeasible = sum(isinstance(row.recommendation, NoFeasibleRoute) for row in rows)
-    return Report(rows, stats, stability, infeasible)
+    return stats

@@ -106,16 +106,31 @@ def _evaluate(args: argparse.Namespace) -> int:
         f"{len(report.rows)} shipments, {report.infeasible} with no feasible route."
     )
     print(
-        f"{'policy':<14}{'realized $':>14}{'mean ratio':>16}"
+        "All shipments: recommended and feasible baselines use "
+        "fastest-schedule fallback when no route qualifies."
+    )
+    print(
+        f"{'policy':<20}{'realized $':>14}{'mean ratio':>16}"
         f"{'on time':>10}{'feasible':>12}{'Pareto':>10}{'regret $':>12}"
     )
     for policy, stats in report.stats.items():
         print(
-            f"{policy.value:<14}{stats.total_cost:14,.0f}{stats.cost_ratio:16.2f}"
+            f"{policy.value:<20}{stats.total_cost:14,.0f}{stats.cost_ratio:16.2f}"
             f"{stats.on_time_rate:10.0%}{stats.feasible_rate:12.0%}"
             f"{stats.pareto_rate:10.0%}{stats.mean_regret:12,.0f}"
         )
     print(f"Recommended picks hold under {report.stability:.0%} of single-price changes.")
+    print(
+        f"\nFeasible shipments only: {len(report.rows) - report.infeasible}; "
+        "regret versus the deadline-constrained mean-cost oracle."
+    )
+    if not report.feasible_stats:
+        print("No feasible shipments to evaluate.")
+    for policy, stats in report.feasible_stats.items():
+        print(
+            f"{policy.value:<20} cost ${stats.total_cost:,.0f}, "
+            f"on time {stats.on_time_rate:.1%}, mean regret ${stats.mean_regret:,.0f}"
+        )
     return 0
 
 

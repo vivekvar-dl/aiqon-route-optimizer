@@ -25,14 +25,14 @@ def main() -> None:
 
     with st.sidebar:
         seed = int(st.number_input("Seed", min_value=0, max_value=10_000, value=7, step=1))
-        count = int(st.slider("Shipments", min_value=20, max_value=50, value=20))
-        scenarios = int(st.select_slider("Scenarios", options=(200, 500, 2_000), value=500))
+        count = int(st.slider("Shipments", min_value=20, max_value=50, value=30))
+        scenarios = int(st.select_slider("Scenarios", options=(200, 500, 2_000), value=2_000))
         uploaded = st.file_uploader("Catalog JSON", type="json")
 
     if uploaded is not None:
         try:
             shipments = parse_shipments(uploaded.getvalue().decode())
-        except DatasetError as err:
+        except (DatasetError, UnicodeDecodeError) as err:
             st.error(str(err))
             return
     else:
@@ -41,11 +41,16 @@ def main() -> None:
     labels = [shipment.id for shipment in shipments]
     shipment_id = st.selectbox("Shipment", labels)
     shipment = next(item for item in shipments if item.id == shipment_id)
+    st.caption(
+        f"{shipment.origin} to {shipment.destination} | "
+        f"Deadline {shipment.deadline:g} h | Cargo ${shipment.cargo_value:,.0f}"
+    )
     profile_names = [priority.slug for priority in Priority]
     selected = st.selectbox(
         "Priority",
         profile_names,
         index=profile_names.index(shipment.priority.slug),
+        key=f"priority-{shipment.id}",
     )
     result = recommend(
         shipment,
@@ -76,6 +81,7 @@ def _option_row(option: Option, status: str) -> dict[str, object]:
         "via": ", ".join(option.route.hubs) or "direct",
         "status": status,
         "freight $": round(option.route.cost),
+        "scheduled hours": round(option.route.hours, 1),
         "expected hours": round(option.criteria.hours, 1),
         "late %": round(option.criteria.late * 100, 1),
         "risk-adjusted $": round(option.breakdown.total),
@@ -91,6 +97,7 @@ def _rejected_row(item: Dominated | Infeasible, status: str | None = None) -> di
         "via": ", ".join(item.route.hubs) or "direct",
         "status": status,
         "freight $": round(item.route.cost),
+        "scheduled hours": round(item.route.hours, 1),
         "expected hours": round(item.criteria.hours, 1),
         "late %": round(item.criteria.late * 100, 1),
         "risk-adjusted $": priced,
